@@ -21,4 +21,31 @@ class ListStoredEvents extends XotBaseListRecords
             Tables\Columns\ViewColumn::make('event_properties')->view('activity::filament.tables.columns.event-properties'),
         ];
     }
+<<<<<<< HEAD
+=======
+
+    public function getTableActions(): array
+    {
+        return [
+            EditAction::make()
+                ->label(''),
+        ];
+    }
+
+    public function getTableBulkActions(): array
+    {
+        return [
+            DeleteBulkAction::make(),
+        ];
+    }
+
+    
+
+    protected function getHeaderActions(): array
+    {
+        return [
+            Actions\CreateAction::make(),
+        ];
+    }
+>>>>>>> 8c47309d84dafebeb94abdfee3ee9eb754fdd7a5
 }
