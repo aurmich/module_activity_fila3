@@ -1,9 +1,18 @@
-.DS_Store
-
+# Dependency directories
 /vendor/
-node_modules/
+/node_modules/
+
+# Dependency logs and cache
 npm-debug.log
+*.log
+*.cache
+*.phar
+*.lock
+package-lock.json
 yarn-error.log
+
+# Build directories
+/build/
 
 # Laravel 4 specific
 bootstrap/compiled.php
@@ -13,82 +22,35 @@ app/storage/
 public/storage
 public/hot
 
-# Laravel 5 & Lumen specific with changed public path
+# Laravel with changed public path
 public_html/storage
 public_html/hot
 
-public_html/assets
-public_html/build
-
-
+# Laravel specific keys and environment
 storage/*.key
 .env
-laravel/.env
-laravel/storage/*.key
 
+# Homestead specific files
 Homestead.yaml
 Homestead.json
 /.vagrant
+
+# PHPUnit specific files
 .phpunit.result.cache
-*.lock
-*.phar
-*.log
-*.old
-*.old1
-*.old2
-*.old3
 
+# PHP CS Fixer
 .php-cs-fixer.cache
-logs
-error.log
 
-/laravel/database/migrations
-/public_html/media
-/laravel/storage/media-library
-/laravel/build
-.phpstorm.meta.php
-_ide_helper.php
+# Git specific
+.git-blame-ignore-revs
+.git-rewrite/
 
-.gnupg/
+# Documentation
+/docs/
+/docs/cache/
 
-.idea
-.vscode-server
-.vscode/launch.json
-
-.cache
-.nodenv
-.phpenv
-.ssh
-/error_docs
-/logs
-vendor
-vendor
-docker
-vendor
-/public_html/deploy/config.php
-*.lock
-/public_html/css
-/public_html/js
-
-.git-rewrite
-/*.phar
-uploads
-laravel/database/migrations/
-laravel/composer.phar
-uploads
-laravel/composer.phar
-public_html/modules
-npm install -g opencommit
-laravel/stubs/
-laravel/stubs/
-public_html/js
-public_html/css
-public_html/themes/
-public_html/modules/
-laravel/public/
-laravel/public
-laravel/stubs/
-public_html/js
-cache/
-orbit.sqlite
-cache
+# Ignored temporary files
+*.tmp
+*.swp
+*.swo
+.php-cs-fixer.cache
