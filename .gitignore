@@ -1,7 +1,18 @@
+# Dependency directories
 /vendor/
-node_modules/
+/node_modules/
+
+# Dependency logs and cache
 npm-debug.log
+*.log
+*.cache
+*.phar
+*.lock
+package-lock.json
 yarn-error.log
+
+# Build directories
+/build/
 
 # Laravel 4 specific
 bootstrap/compiled.php
@@ -11,37 +22,35 @@ app/storage/
 public/storage
 public/hot
 
-# Laravel 5 & Lumen specific with changed public path
+# Laravel with changed public path
 public_html/storage
 public_html/hot
 
+# Laravel specific keys and environment
 storage/*.key
 .env
+
+# Homestead specific files
 Homestead.yaml
 Homestead.json
 /.vagrant
+
+# PHPUnit specific files
 .phpunit.result.cache
 
-/public/build
-/storage/pail
-.env.backup
-.env.production
-.phpactor.json
-auth.json
-*.mdb
-*.csv
-*.log
-*.phar
-laravel/database/migrations/
-laravel/stubs/
-laravel/lang/vendor/
-composer.lock
-public_html/deploy/config.php
-public_html/deploy/*.txt
-laravel/tmp/
-<<<<<<< HEAD
-laravel/venv/
-=======
-laravel/resources/lang/vendor/
->>>>>>> origin/dev
-laravel/composer.lock
+# PHP CS Fixer
+.php-cs-fixer.cache
+
+# Git specific
+.git-blame-ignore-revs
+.git-rewrite/
+
+# Documentation
+/docs/
+/docs/cache/
+
+# Ignored temporary files
+*.tmp
+*.swp
+*.swo
+.php-cs-fixer.cache
