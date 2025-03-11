@@ -18,40 +18,23 @@ class StoredEventResource extends XotBaseResource
         return [
             'event_class' => Forms\Components\TextInput::make('event_class')
                 ->required()
-                ->maxLength(255)
-                ->label('Event Class')
-                ->placeholder('Enter event class')
-                ->helperText('The class name of the event'),
+                ->maxLength(255),
 
             'event_properties' => Forms\Components\KeyValue::make('event_properties')
-                ->columnSpanFull()
-                ->label('Event Properties')
-                ->helperText('Properties associated with this event'),
+                ->columnSpanFull(),
 
             'aggregate_uuid' => Forms\Components\TextInput::make('aggregate_uuid')
-                ->maxLength(36)
-                ->label('Aggregate UUID')
-                ->placeholder('Enter aggregate UUID')
-                ->helperText('UUID of the aggregate (optional)'),
+                ->maxLength(36),
 
             'aggregate_version' => Forms\Components\TextInput::make('aggregate_version')
-                ->numeric()
-                ->label('Aggregate Version')
-                ->placeholder('Enter aggregate version')
-                ->helperText('Version number of the aggregate'),
+                ->numeric(),
 
             'meta_data' => Forms\Components\Textarea::make('meta_data')
-                ->columnSpanFull()
-                ->label('Meta Data')
-                ->placeholder('Enter meta data')
-                ->helperText('Additional metadata for this event'),
+                ->columnSpanFull(),
 
             'created_at' => Forms\Components\DateTimePicker::make('created_at')
-                ->required()
-                ->label('Created At')
-                ->helperText('When this event was created'),
+                ->required(),
         ];
-
     }
 
     public static function getRelations(): array
