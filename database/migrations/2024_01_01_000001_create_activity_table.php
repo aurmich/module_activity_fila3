@@ -13,11 +13,8 @@ return new class extends XotBaseMigration
     {
         // -- CREATE --
         $this->tableCreate(
-<<<<<<< HEAD
-            function (Blueprint $table): void {
-=======
+// -- CREATE --
             static function (Blueprint $table): void {
->>>>>>> 2afd92c (.)
                 $table->bigIncrements('id');
                 $table->string('log_name')->nullable();
                 $table->text('description');
@@ -26,13 +23,8 @@ return new class extends XotBaseMigration
                 $table->json('properties')->nullable();
                 $table->index('log_name');
                 $table->uuid('batch_uuid')->nullable();
-<<<<<<< HEAD
-                $table->string('event')->nullable();
-=======
-                // ->after('properties');
-                $table->string('event')->nullable();
-                // ->after('subject_type');
->>>>>>> 2afd92c (.)
+                // Campo event aggiunto per compatibilità futura
+                $table->string('event')->nullable(); // ->after('properties');
             }
         );
         // -- UPDATE --

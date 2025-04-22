@@ -29,12 +29,9 @@ class ActivityResource extends XotBaseResource
     protected static ?string $model = Activity::class;
 
     /**
-     * Define the form schema for the Activity resource.
+     * Definisce lo schema del form per la risorsa Activity.
      *
-<<<<<<< HEAD
-=======
-     * @return array The form schema configuration
->>>>>>> 2afd92c (.)
+     * @return array Configurazione dello schema del form
      */
     public static function getFormSchema(): array
     {
