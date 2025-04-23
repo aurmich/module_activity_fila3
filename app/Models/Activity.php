@@ -26,7 +26,7 @@ namespace Modules\Activity\Models;
  * @property string|null $deleted_at
  * @property string|null $deleted_by
  * @property-read \Illuminate\Database\Eloquent\Model|\Eloquent $causer
- * @property-read \Illuminate\Support\Collection $changes
+ * @property-read \Illuminate\Support\Collection<int, mixed> $changes
  * @property-read \Illuminate\Database\Eloquent\Model|\Eloquent|null $subject
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Activity causedBy(\Illuminate\Database\Eloquent\Model $causer)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Activity forBatch(string $batchUuid)
