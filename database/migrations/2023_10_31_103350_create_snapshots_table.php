@@ -11,6 +11,7 @@ return new class extends XotBaseMigration
 {
     public function up(): void
     {
+<<<<<<< HEAD
         $this->tableCreate( function ($table) {
             $table->bigIncrements('id');
             $table->uuid('aggregate_uuid');
@@ -22,5 +23,28 @@ return new class extends XotBaseMigration
         $this->tableUpdate( function ($table) {
             $this->updateTimestamps($table, false);
         });
+=======
+        $this->tableCreate(
+            /**
+             * @param Blueprint $table
+             */
+            function (Blueprint $table) {
+                $table->bigIncrements('id');
+                $table->uuid('aggregate_uuid');
+                $table->unsignedInteger('aggregate_version');
+                $table->jsonb('state');
+                $table->index('aggregate_uuid');
+            }
+        );
+
+        $this->tableUpdate(
+            /**
+             * @param Blueprint $table
+             */
+            function (Blueprint $table) {
+                $this->updateTimestamps($table, false);
+            }
+        );
+>>>>>>> aurmich/dev
     }
 };
