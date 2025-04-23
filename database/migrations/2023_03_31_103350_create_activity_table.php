@@ -11,6 +11,7 @@ return new class extends XotBaseMigration
     {
         $this->tableCreate(
 <<<<<<< HEAD
+<<<<<<< HEAD
              function ($table) {
             $table->bigIncrements('id');
             $table->string('log_name')->nullable();
@@ -22,6 +23,8 @@ return new class extends XotBaseMigration
             $table->uuid('batch_uuid')->nullable();
             $table->string('event')->nullable();
 =======
+=======
+>>>>>>> aurmich/dev
             /**
              * @param Blueprint $table
              */
@@ -35,18 +38,27 @@ return new class extends XotBaseMigration
                 $table->index('log_name');
                 $table->uuid('batch_uuid')->nullable();
                 $table->string('event')->nullable();
+<<<<<<< HEAD
+>>>>>>> aurmich/dev
+=======
 >>>>>>> aurmich/dev
             }
         );
 
         $this->tableUpdate(
 <<<<<<< HEAD
+<<<<<<< HEAD
              function ($table) {
 =======
+=======
+>>>>>>> aurmich/dev
             /**
              * @param Blueprint $table
              */
             function (Blueprint $table) {
+<<<<<<< HEAD
+>>>>>>> aurmich/dev
+=======
 >>>>>>> aurmich/dev
                 $this->updateTimestamps($table, true);
             }
