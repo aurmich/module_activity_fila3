@@ -1,5 +1,11 @@
-# Rapporto PHPStan Livello 2 per il modulo Activity
+# PHPStan Report - Livello 2
 
-Data analisi: 2025-04-15 22:07:49
+## Errori rilevati
 
-🎉 **Congratulazioni!** Nessun errore trovato a questo livello.
+## Soluzioni proposte
+
+> TODO: descrivere soluzioni architetturali e funzionali
+
+## Collegamenti
+
+- Torna all'indice principale: [Indice Report PHPStan Moduli](/docs/phpstan_modules_index.md)
