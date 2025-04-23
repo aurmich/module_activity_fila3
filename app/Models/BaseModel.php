@@ -14,6 +14,11 @@ use Modules\Xot\Traits\Updater;
 
 /**
  * Class BaseModel.
+<<<<<<< HEAD
+=======
+ *
+ * @template TFactory of \Illuminate\Database\Eloquent\Factories\Factory<static>
+>>>>>>> aurmich/dev
  */
 abstract class BaseModel extends Model
 {
