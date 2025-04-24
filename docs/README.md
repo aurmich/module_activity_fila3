@@ -47,10 +47,19 @@ La risoluzione ha mantenuto la tipizzazione esplicita dei parametri e la documen
 
 Per maggiori dettagli, consultare il [Rapporto sulla Risoluzione dei Conflitti](/docs/risoluzione_conflitti_merge_update.md).
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> aurmich/dev
 ## Scopo della modifica
 - Migliorare l'analisi statica e la leggibilità aggiungendo il type hint `Blueprint $table` e un docblock esplicativo nelle closure delle migrazioni.
 - [Documentazione principale](/docs/README.md)
 
+<<<<<<< HEAD
+=======
+>>>>>>> aurmich/dev
+>>>>>>> aurmich/dev
 ## Collegamenti
 
 - [Documentazione PHPStan generale](/docs/phpstan.md)

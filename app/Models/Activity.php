@@ -6,7 +6,11 @@ namespace Modules\Activity\Models;
 
 /**
  * Class Activity.
+<<<<<<< HEAD
  * 
+=======
+ *
+>>>>>>> aurmich/dev
  * This class extends the BaseActivity model to represent activities in the application.
  *
  * @property int $id
