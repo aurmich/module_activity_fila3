@@ -1,5 +1,6 @@
 # Modulo Activity
 
+<<<<<<< HEAD
 ## Struttura
 - [Attività](./activities/README.md) - Gestione attività
 - [Log](./logs/README.md) - Sistema di log
@@ -27,6 +28,8 @@
 - [Modulo Cms](../../Cms/docs/README.md)
 - [Modulo Lang](../../Lang/docs/README.md)
 
+=======
+>>>>>>> aurmich/dev
 ## Descrizione
 
 Il modulo Activity fornisce funzionalità di tracciamento delle attività e di audit log all'interno dell'applicazione. Permette di registrare e visualizzare le azioni eseguite dagli utenti all'interno del sistema.
@@ -74,10 +77,25 @@ La risoluzione ha mantenuto la tipizzazione esplicita dei parametri e la documen
 
 Per maggiori dettagli, consultare il [Rapporto sulla Risoluzione dei Conflitti](/docs/risoluzione_conflitti_merge_update.md).
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> aurmich/dev
+>>>>>>> aurmich/dev
 ## Scopo della modifica
 - Migliorare l'analisi statica e la leggibilità aggiungendo il type hint `Blueprint $table` e un docblock esplicativo nelle closure delle migrazioni.
 - [Documentazione principale](/docs/README.md)
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> aurmich/dev
+>>>>>>> aurmich/dev
+>>>>>>> aurmich/dev
 ## Collegamenti
 
 - [Documentazione PHPStan generale](/docs/phpstan.md)
