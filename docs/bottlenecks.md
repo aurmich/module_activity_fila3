@@ -298,8 +298,39 @@ class ListActivities extends XotBasePage
 }
 ```
 
+<<<<<<< HEAD
 ## Collegamenti Bidirezionali
 
 - [README Activity](./README.md)
 - [Roadmap](./roadmap.md)
 - [Struttura del Modulo](./structure.md)
+=======
+## Collegamenti
+
+- [Torna a README](./README.md)
+- [Vai a Roadmap](./roadmap.md)
+- [Vai a Struttura](./structure.md)
+
+## Collegamenti tra versioni di bottlenecks.md
+* [bottlenecks.md](../../../../bashscripts/docs/bottlenecks.md)
+* [bottlenecks.md](../../Chart/docs/bottlenecks.md)
+* [bottlenecks.md](../../Chart/docs/performance/bottlenecks.md)
+* [bottlenecks.md](../../Gdpr/docs/bottlenecks.md)
+* [bottlenecks.md](../../Gdpr/docs/performance/bottlenecks.md)
+* [bottlenecks.md](../../Xot/docs/bottlenecks.md)
+* [bottlenecks.md](../../Xot/docs/performance/bottlenecks.md)
+* [bottlenecks.md](../../Xot/docs/roadmap/bottlenecks.md)
+* [bottlenecks.md](../../Dental/docs/bottlenecks.md)
+* [bottlenecks.md](../../User/docs/bottlenecks.md)
+* [bottlenecks.md](../../User/docs/roadmap/bottlenecks.md)
+* [bottlenecks.md](../../UI/docs/bottlenecks.md)
+* [bottlenecks.md](../../UI/docs/roadmap/bottlenecks.md)
+* [bottlenecks.md](../../Lang/docs/bottlenecks.md)
+* [bottlenecks.md](../../Lang/docs/performance/bottlenecks.md)
+* [bottlenecks.md](../../Job/docs/performance/bottlenecks.md)
+* [bottlenecks.md](../../Media/docs/bottlenecks.md)
+* [bottlenecks.md](../../Media/docs/performance/bottlenecks.md)
+* [bottlenecks.md](../../Patient/docs/roadmap/bottlenecks.md)
+* [bottlenecks.md](../../Cms/docs/bottlenecks.md)
+
+>>>>>>> 18e0cf9 (.)
