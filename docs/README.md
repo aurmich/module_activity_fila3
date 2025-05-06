@@ -42,6 +42,7 @@ Il modulo **Activity** gestisce il logging avanzato, la tracciabilità delle azi
 ## Collegamenti Bidirezionali
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 **Tutti i documenti elencati sopra contengono (o devono contenere) una sezione di ritorno a questo README e ai documenti correlati:**
 
 - [README Activity](./README.md)
@@ -89,6 +90,13 @@ _Per contribuire alla documentazione:_
 4. Mantieni alta la qualità e la leggibilità.
 ### Adding Assets
 >>>>>>> 18e0cf9 (.)
+=======
+## Scopo della modifica
+- Migliorare l'analisi statica e la leggibilità aggiungendo il type hint `Blueprint $table` e un docblock esplicativo nelle closure delle migrazioni.
+- [Documentazione principale](/docs/README.md)
+
+## Collegamenti
+>>>>>>> d634854 (.)
 
 - [Modulo Xot](../../Xot/docs/README.md)
 - [Modulo User](../../User/docs/README.md)

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 ## Collegamenti tra versioni di level_8.md
 * [level_8.md](laravel/Modules/Chart/docs/phpstan/level_8.md)
@@ -16,3 +17,5 @@
 * [level_8.md](laravel/Modules/Patient/docs/phpstan/level_8.md)
 * [level_8.md](laravel/Modules/Cms/docs/phpstan/level_8.md)
 
+=======
+>>>>>>> d634854 (.)

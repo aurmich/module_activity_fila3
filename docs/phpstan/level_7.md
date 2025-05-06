@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 ## Collegamenti tra versioni di level_7.md
 * [level_7.md](laravel/Modules/Chart/docs/phpstan/level_7.md)
@@ -16,3 +17,5 @@
 * [level_7.md](laravel/Modules/Patient/docs/phpstan/level_7.md)
 * [level_7.md](laravel/Modules/Cms/docs/phpstan/level_7.md)
 
+=======
+>>>>>>> d634854 (.)

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Rapporto PHPStan Livello 9 per il modulo Activity
 
 Data analisi: 2025-04-15 22:08:20
@@ -21,3 +22,5 @@ Data analisi: 2025-04-15 22:08:20
 * [level_9.md](laravel/Modules/Patient/docs/phpstan/level_9.md)
 * [level_9.md](laravel/Modules/Cms/docs/phpstan/level_9.md)
 
+=======
+>>>>>>> d634854 (.)

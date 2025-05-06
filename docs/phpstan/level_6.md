@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 ## Collegamenti tra versioni di level_6.md
 * [level_6.md](laravel/Modules/Chart/docs/phpstan/level_6.md)
@@ -16,3 +17,5 @@
 * [level_6.md](laravel/Modules/Patient/docs/phpstan/level_6.md)
 * [level_6.md](laravel/Modules/Cms/docs/phpstan/level_6.md)
 
+=======
+>>>>>>> d634854 (.)

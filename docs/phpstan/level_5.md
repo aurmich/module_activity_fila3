@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 ## Collegamenti tra versioni di level_5.md
 * [level_5.md](laravel/Modules/Chart/docs/phpstan/level_5.md)
@@ -16,3 +17,5 @@
 * [level_5.md](laravel/Modules/Patient/docs/phpstan/level_5.md)
 * [level_5.md](laravel/Modules/Cms/docs/phpstan/level_5.md)
 
+=======
+>>>>>>> d634854 (.)
