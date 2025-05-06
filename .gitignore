@@ -51,3 +51,6 @@ Homestead.json
 *.swp
 *.swo
 .php-cs-fixer.cache
+-e 
+# PHPStan documentation
+docs/phpstan/

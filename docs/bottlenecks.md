@@ -298,13 +298,11 @@ class ListActivities extends XotBasePage
 }
 ```
 
-<<<<<<< HEAD
 ## Collegamenti Bidirezionali
 
 - [README Activity](./README.md)
 - [Roadmap](./roadmap.md)
 - [Struttura del Modulo](./structure.md)
-=======
 ## Collegamenti
 
 - [Torna a README](./README.md)
@@ -333,4 +331,3 @@ class ListActivities extends XotBasePage
 * [bottlenecks.md](../../Patient/docs/roadmap/bottlenecks.md)
 * [bottlenecks.md](../../Cms/docs/bottlenecks.md)
 
->>>>>>> 18e0cf9 (.)
