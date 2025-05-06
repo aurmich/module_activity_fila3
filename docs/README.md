@@ -1,9 +1,6 @@
 # Modulo Activity
 
-<<<<<<< HEAD
-=======
 Il modulo **Activity** gestisce il logging avanzato, la tracciabilità delle azioni utente e la generazione di report sulle attività di sistema. È progettato per integrarsi con gli altri moduli della piattaforma SaluteOra, garantendo audit trail, analytics e conformità normativa (es. GDPR).
->>>>>>> bc2ed24 (.)
 Il modulo **Activity** gestisce il logging avanzato, la tracciabilità delle azioni utente e la generazione di report sulle attività di sistema. È progettato per integrarsi con gli altri moduli della piattaforma, garantendo audit trail, analytics e conformità normativa (es. GDPR).
 
 - **Namespace:** `Modules\Activity`
@@ -53,8 +50,6 @@ Il modulo **Activity** gestisce il logging avanzato, la tracciabilità delle azi
 - [translations.md](./translations.md)
 
 > **Nota:** Quando aggiorni o aggiungi nuovi file nella cartella `docs/`, ricordati di:
-<<<<<<< HEAD
-=======
 > - Aggiornare l’indice qui sopra
 - [Struttura](./structure.md) - Panoramica delle directory, classi e dipendenze
 - [Roadmap](./roadmap.md) - Stato di avanzamento, milestone e obiettivi futuri
@@ -72,7 +67,6 @@ Il modulo **Activity** gestisce il logging avanzato, la tracciabilità delle azi
 - [Convenzioni di Naming](../../../docs/standards/file_naming_conventions.md) - Standard per la nomenclatura dei file
 
 > **Nota:** Quando aggiorni o aggiungi nuovi file nella cartella `docs/`, ricordati di:
->>>>>>> bc2ed24 (.)
 > - Aggiornare l'indice qui sopra
 > - Inserire collegamenti di ritorno e riferimenti incrociati nei nuovi documenti
 > - Mantenere la coerenza con le convenzioni di documentazione del progetto
@@ -80,15 +74,12 @@ Il modulo **Activity** gestisce il logging avanzato, la tracciabilità delle azi
 ---
 
 ## Collegamenti ad altri moduli
-<<<<<<< HEAD
-=======
 _Per contribuire alla documentazione:_
 1. Segui le convenzioni di naming e struttura.
 2. Aggiorna sempre i collegamenti bidirezionali.
 3. Documenta le modifiche in modo chiaro.
 4. Mantieni alta la qualità e la leggibilità.
 ### Adding Assets
->>>>>>> bc2ed24 (.)
 
 - [Modulo Xot](../../Xot/docs/README.md)
 - [Modulo User](../../User/docs/README.md)
@@ -101,18 +92,13 @@ _Per contribuire alla documentazione:_
 2. Aggiorna sempre i collegamenti bidirezionali.
 3. Documenta le modifiche in modo chiaro.
 4. Mantieni alta la qualità e la leggibilità.
-<<<<<<< HEAD
-=======
 ## Building Your Site
->>>>>>> bc2ed24 (.)
 
 ---
 
-<<<<<<< HEAD
 ## Scopo della modifica
 - Migliorare l'analisi statica e la leggibilità aggiungendo il type hint `Blueprint $table` e un docblock esplicativo nelle closure delle migrazioni.
 - [Documentazione principale](/docs/README.md)
-=======
 ```bash
 # build static files with Jigsaw
 ./vendor/bin/jigsaw build
@@ -200,4 +186,3 @@ npm run dev
 * [README.md](laravel/Themes/Two/docs/README.md)
 * [README.md](laravel/Themes/One/docs/README.md)
 
->>>>>>> bc2ed24 (.)
