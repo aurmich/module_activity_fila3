@@ -1,7 +1,7 @@
 {
     "name": "Activity",
     "alias": "activity",
-    "description": "",
+    "description": "Modulo per il tracciamento delle attività degli utenti e la gestione di log delle azioni",
     "keywords": [],
     "priority": 0,
     "providers": [
