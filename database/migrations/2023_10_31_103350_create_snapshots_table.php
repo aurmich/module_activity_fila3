@@ -11,6 +11,22 @@ return new class extends XotBaseMigration
 {
     public function up(): void
     {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+        $this->tableCreate( function ($table) {
+            $table->bigIncrements('id');
+            $table->uuid('aggregate_uuid');
+            $table->unsignedInteger('aggregate_version');
+            $table->jsonb('state');
+            $table->index('aggregate_uuid');
+        });
+
+        $this->tableUpdate( function ($table) {
+            $this->updateTimestamps($table, false);
+        });
+=======
+>>>>>>> ecd5971 (.)
         $this->tableCreate(
             /**
              * @param Blueprint $table
@@ -32,5 +48,9 @@ return new class extends XotBaseMigration
                 $this->updateTimestamps($table, false);
             }
         );
+<<<<<<< HEAD
+=======
+>>>>>>> origin/dev
+>>>>>>> ecd5971 (.)
     }
 };
