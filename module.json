@@ -2,10 +2,14 @@
     "name": "Activity",
     "alias": "activity",
 <<<<<<< HEAD
+<<<<<<< HEAD
     "description": "Modulo per il tracciamento delle attività degli utenti e la gestione di log delle azioni",
 =======
     "description": "",
 >>>>>>> ecd5971 (.)
+=======
+    "description": "Modulo per il tracciamento delle attività degli utenti e la gestione di log delle azioni",
+>>>>>>> cc965c3 (.)
     "keywords": [],
     "priority": 0,
     "providers": [

@@ -46,6 +46,7 @@ Homestead.json
 .git-rewrite/
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 # Documentation
@@ -54,6 +55,11 @@ Homestead.json
 =======
 >>>>>>> origin/dev
 >>>>>>> ecd5971 (.)
+=======
+# Documentation
+/docs/
+/docs/cache/
+>>>>>>> cc965c3 (.)
 
 # Ignored temporary files
 *.tmp
@@ -61,8 +67,14 @@ Homestead.json
 *.swo
 .php-cs-fixer.cache
 <<<<<<< HEAD
+<<<<<<< HEAD
 -e 
 # PHPStan documentation
 docs/phpstan/
 =======
 >>>>>>> ecd5971 (.)
+=======
+
+# PHPStan documentation
+docs/phpstan/
+>>>>>>> cc965c3 (.)
