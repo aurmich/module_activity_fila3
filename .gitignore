@@ -45,36 +45,12 @@ Homestead.json
 .git-blame-ignore-revs
 .git-rewrite/
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-# Documentation
-/docs/
-/docs/cache/
-=======
->>>>>>> origin/dev
->>>>>>> ecd5971 (.)
-=======
-# Documentation
-/docs/
-/docs/cache/
->>>>>>> cc965c3 (.)
 
 # Ignored temporary files
 *.tmp
 *.swp
 *.swo
 .php-cs-fixer.cache
-<<<<<<< HEAD
-<<<<<<< HEAD
 -e 
 # PHPStan documentation
 docs/phpstan/
-=======
->>>>>>> ecd5971 (.)
-=======
-
-# PHPStan documentation
-docs/phpstan/
->>>>>>> cc965c3 (.)

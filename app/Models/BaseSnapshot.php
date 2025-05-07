@@ -7,17 +7,12 @@ namespace Modules\Activity\Models;
 use Spatie\EventSourcing\Snapshots\EloquentSnapshot as SpatieSnapshot;
 
 /**
- * Classe BaseSnapshot.
+ * Class BaseSnapshot.
  *
- * Classe base per gli snapshot che estende EloquentSnapshot di Spatie.
- * Fornisce funzionalità comuni per la gestione degli snapshot nel sistema di event sourcing.
+ * Base class for snapshots extending Spatie's EloquentSnapshot.
  */
 abstract class BaseSnapshot extends SpatieSnapshot
 {
-    /**
-     * Nome della connessione al database.
-     *
-     * @var string
-     */
+    /** @var string */
     protected $connection = 'activity';
 }

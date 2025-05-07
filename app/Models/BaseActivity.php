@@ -7,10 +7,9 @@ namespace Modules\Activity\Models;
 use Spatie\Activitylog\Models\Activity as SpatieActivity;
 
 /**
- * Classe BaseActivity.
+ * Class BaseActivity.
  *
- * Classe base per tutti i modelli di attività nel modulo Activity.
- * Estende il modello Activity di Spatie per fornire funzionalità comuni.
- * Gestisce il tracciamento delle attività e delle modifiche ai modelli.
+ * Base class for all activity models in the Activity module.
+ * Extends Spatie's Activity model to provide common functionality.
  */
 abstract class BaseActivity extends SpatieActivity {}
