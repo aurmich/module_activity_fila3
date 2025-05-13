@@ -17,17 +17,12 @@ class ListSnapshots extends XotBaseListRecords
 {
     protected static string $resource = SnapshotResource::class;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> daa3674 (.)
     /**
      * Get the list table columns.
      *
      * @return array<string, Tables\Columns\Column>
      */
     public function getTableColumns(): array
-<<<<<<< HEAD
     {
         return [
             TextColumn::make('id')
@@ -42,35 +37,9 @@ class ListSnapshots extends XotBaseListRecords
             TextColumn::make('created_at')
                 ->dateTime()
                 ->sortable(),
-=======
-    public function getListTableColumns(): array
-=======
->>>>>>> daa3674 (.)
-    {
-        return [
-            TextColumn::make('id')
-                ->sortable()
-                ->searchable(),
-            TextColumn::make('aggregate_uuid')
-                ->searchable(),
-            TextColumn::make('aggregate_version')
-                ->sortable(),
-            TextColumn::make('state')
-                ->searchable(),
-            TextColumn::make('created_at')
+            TextColumn::make('updated_at')
                 ->dateTime()
-<<<<<<< HEAD
-                ->sortable()
-                ->label('Created At'),
-
-            'updated_at' => TextColumn::make('updated_at')
-                ->dateTime()
-                ->sortable()
-                ->label('Updated At'),
->>>>>>> 563330c (.)
-=======
                 ->sortable(),
->>>>>>> daa3674 (.)
         ];
     }
 
@@ -112,11 +81,3 @@ class ListSnapshots extends XotBaseListRecords
         ];
     }
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 563330c (.)
-=======
-
->>>>>>> daa3674 (.)

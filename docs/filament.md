@@ -5,11 +5,10 @@ https://laraveldaily.com/post/filament-activity-logs-three-packages-comparison-r
 [Link risorsa originale _docs]
 https://laraveldaily.com/post/filament-activity-logs-three-packages-comparison-review
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> daa3674 (.)
 # Filament nel Modulo Activity
+
+## Riferimenti
+- [Confronto tra pacchetti di activity log](https://laraveldaily.com/post/filament-activity-logs-three-packages-comparison-review)
 
 ## Documentazione
 
@@ -19,24 +18,21 @@ https://laraveldaily.com/post/filament-activity-logs-three-packages-comparison-r
 
 ## Risorse
 
-- ActivityResource
-- SnapshotResource
-- ActivityLogResource
+- ActivityResource - Gestione delle attività degli utenti
+- SnapshotResource - Gestione degli snapshot di stato
+- ActivityLogResource - Log dettagliati delle attività
 
 ## Widgets
 
-- ActivityOverviewWidget
-- RecentActivitiesWidget
-- ActivityStatsWidget
+- ActivityOverviewWidget - Panoramica generale delle attività
+- RecentActivitiesWidget - Attività recenti
+- ActivityStatsWidget - Statistiche delle attività
 
 ## Note Importanti
 
 - Seguire sempre le best practices documentate
 - Consultare la documentazione degli errori prima di fare modifiche
 - Mantenere aggiornata la documentazione con nuovi errori o soluzioni
-
-<<<<<<< HEAD
-=======
->>>>>>> 563330c (.)
-=======
->>>>>>> daa3674 (.)
+- Assicurarsi che tutte le modifiche siano compatibili con PHPStan livello 10
+- Documentare eventuali breaking changes
+- Mantenere la retrocompatibilità quando possibile

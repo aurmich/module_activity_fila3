@@ -1,16 +1,18 @@
 {
     "name": "Activity",
     "alias": "activity",
-<<<<<<< HEAD
-    "description": "",
-=======
     "description": "Modulo per il tracciamento delle attività degli utenti e la gestione di log delle azioni",
->>>>>>> 563330c (.)
     "keywords": [],
     "priority": 0,
+    "active": 1,
+    "order": 5,
     "providers": [
         "Modules\\Activity\\Providers\\ActivityServiceProvider",
         "Modules\\Activity\\Providers\\Filament\\AdminPanelProvider"
     ],
-    "files": []
+    "aliases": {},
+    "files": [],
+    "requires": ["Xot", "User"],
+    "minimumCoreVersion": "10.0",
+    "phpVersion": "^8.1"
 }
