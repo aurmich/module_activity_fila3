@@ -18,12 +18,16 @@ class ListSnapshots extends XotBaseListRecords
     protected static string $resource = SnapshotResource::class;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> daa3674 (.)
     /**
      * Get the list table columns.
      *
      * @return array<string, Tables\Columns\Column>
      */
     public function getTableColumns(): array
+<<<<<<< HEAD
     {
         return [
             TextColumn::make('id')
@@ -40,29 +44,22 @@ class ListSnapshots extends XotBaseListRecords
                 ->sortable(),
 =======
     public function getListTableColumns(): array
+=======
+>>>>>>> daa3674 (.)
     {
         return [
-            'id' => TextColumn::make('id')
+            TextColumn::make('id')
                 ->sortable()
-                ->label('ID'),
-
-            'aggregate_uuid' => TextColumn::make('aggregate_uuid')
-                ->searchable()
-                ->sortable()
-                ->wrap()
-                ->label('Aggregate UUID'),
-
-            'aggregate_version' => TextColumn::make('aggregate_version')
-                ->numeric()
-                ->sortable()
-                ->label('Aggregate Version'),
-            /*
-            'state' => ViewColumn::make('state')
-                ->view('activity::filament.tables.columns.state')
-                ->label('State'),
-            */
-            'created_at' => TextColumn::make('created_at')
+                ->searchable(),
+            TextColumn::make('aggregate_uuid')
+                ->searchable(),
+            TextColumn::make('aggregate_version')
+                ->sortable(),
+            TextColumn::make('state')
+                ->searchable(),
+            TextColumn::make('created_at')
                 ->dateTime()
+<<<<<<< HEAD
                 ->sortable()
                 ->label('Created At'),
 
@@ -71,6 +68,9 @@ class ListSnapshots extends XotBaseListRecords
                 ->sortable()
                 ->label('Updated At'),
 >>>>>>> 563330c (.)
+=======
+                ->sortable(),
+>>>>>>> daa3674 (.)
         ];
     }
 
@@ -113,6 +113,10 @@ class ListSnapshots extends XotBaseListRecords
     }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 563330c (.)
+=======
+
+>>>>>>> daa3674 (.)

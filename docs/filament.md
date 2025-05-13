@@ -6,6 +6,9 @@ https://laraveldaily.com/post/filament-activity-logs-three-packages-comparison-r
 https://laraveldaily.com/post/filament-activity-logs-three-packages-comparison-review
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> daa3674 (.)
 # Filament nel Modulo Activity
 
 ## Documentazione
@@ -32,5 +35,8 @@ https://laraveldaily.com/post/filament-activity-logs-three-packages-comparison-r
 - Consultare la documentazione degli errori prima di fare modifiche
 - Mantenere aggiornata la documentazione con nuovi errori o soluzioni
 
+<<<<<<< HEAD
 =======
 >>>>>>> 563330c (.)
+=======
+>>>>>>> daa3674 (.)

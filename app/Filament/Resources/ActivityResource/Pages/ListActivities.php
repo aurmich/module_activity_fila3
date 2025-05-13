@@ -8,9 +8,13 @@ use Filament\Tables\Columns\TextColumn;
 use Modules\Activity\Filament\Resources\ActivityResource;
 use Modules\Xot\Filament\Resources\Pages\XotBaseListRecords;
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Filament\Tables\Columns\Tables;
 =======
 >>>>>>> 563330c (.)
+=======
+use Filament\Tables\Columns\Tables;
+>>>>>>> daa3674 (.)
 
 /**
  * @see ActivityResource
@@ -19,6 +23,7 @@ class ListActivities extends XotBaseListRecords
 {
     protected static string $resource = ActivityResource::class;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
     public function getTableColumns(): array
     {
@@ -42,38 +47,34 @@ class ListActivities extends XotBaseListRecords
                 ->sortable(),
 =======
     public function getListTableColumns(): array
+=======
+    public function getTableColumns(): array
+>>>>>>> daa3674 (.)
     {
         return [
-            'id' => TextColumn::make('id')
+            TextColumn::make('id')
                 ->sortable()
-                ->label('ID'),
-
-            'description' => TextColumn::make('description')
+                ->searchable(),
+            TextColumn::make('description')
                 ->searchable()
-                ->label('Description'),
-
-            'subject_type' => TextColumn::make('subject_type')
-                ->searchable()
-                ->label('Subject Type'),
-
-            'subject_id' => TextColumn::make('subject_id')
-                ->sortable()
-                ->label('Subject ID'),
-
-            'causer_type' => TextColumn::make('causer_type')
-                ->searchable()
-                ->label('Causer Type'),
-
-            'causer_id' => TextColumn::make('causer_id')
-                ->sortable()
-                ->label('Causer ID'),
-
-            'created_at' => TextColumn::make('created_at')
-                ->sortable()
+                ->limit(50),
+            TextColumn::make('subject_type')
+                ->searchable(),
+            TextColumn::make('subject_id')
+                ->searchable(),
+            TextColumn::make('causer_type')
+                ->searchable(),
+            TextColumn::make('causer_id')
+                ->searchable(),
+            TextColumn::make('created_at')
                 ->dateTime()
+<<<<<<< HEAD
                 ->label('Created At'),
 
 >>>>>>> 563330c (.)
+=======
+                ->sortable(),
+>>>>>>> daa3674 (.)
         ];
     }
 }
