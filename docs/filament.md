@@ -5,6 +5,7 @@ https://laraveldaily.com/post/filament-activity-logs-three-packages-comparison-r
 [Link risorsa originale _docs]
 https://laraveldaily.com/post/filament-activity-logs-three-packages-comparison-review
 
+<<<<<<< HEAD
 # Filament nel Modulo Activity
 
 ## Documentazione
@@ -31,3 +32,5 @@ https://laraveldaily.com/post/filament-activity-logs-three-packages-comparison-r
 - Consultare la documentazione degli errori prima di fare modifiche
 - Mantenere aggiornata la documentazione con nuovi errori o soluzioni
 
+=======
+>>>>>>> 563330c (.)

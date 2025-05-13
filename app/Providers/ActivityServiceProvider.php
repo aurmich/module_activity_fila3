@@ -17,9 +17,13 @@ class ActivityServiceProvider extends XotBaseServiceProvider
     public function boot(): void
     {
         parent::boot();
+<<<<<<< HEAD
         
         // Registro solo le configurazioni specifiche del modulo
         $this->registerConfig();
+=======
+        // Additional boot logic can be added here
+>>>>>>> 563330c (.)
     }
 
     public function register(): void

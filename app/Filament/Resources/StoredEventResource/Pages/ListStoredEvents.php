@@ -15,7 +15,11 @@ class ListStoredEvents extends XotBaseListRecords
     /**
      * @return array<string, Tables\Columns\Column>
      */
+<<<<<<< HEAD
     public function getTableColumns(): array
+=======
+    public function getListTableColumns(): array
+>>>>>>> 563330c (.)
     {
         return [
             'id' => Tables\Columns\TextColumn::make('id'),
