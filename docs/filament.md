@@ -5,6 +5,7 @@ https://laraveldaily.com/post/filament-activity-logs-three-packages-comparison-r
 [Link risorsa originale _docs]
 https://laraveldaily.com/post/filament-activity-logs-three-packages-comparison-review
 
+<<<<<<< HEAD
 # Filament nel Modulo Activity
 
 ## Riferimenti
@@ -36,3 +37,5 @@ https://laraveldaily.com/post/filament-activity-logs-three-packages-comparison-r
 - Assicurarsi che tutte le modifiche siano compatibili con PHPStan livello 10
 - Documentare eventuali breaking changes
 - Mantenere la retrocompatibilità quando possibile
+=======
+>>>>>>> 47b5495 (.)
