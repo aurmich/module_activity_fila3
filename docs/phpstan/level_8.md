@@ -1,4 +1,3 @@
-<<<<<<< Updated upstream
 # PHPStan Livello 8 - Modulo Activity
 
 Data analisi: 08/04/2024
@@ -33,12 +32,3 @@ Il livello 8 di PHPStan aggiunge ai controlli precedenti:
 2. Documentare l'uso di funzioni di ordine superiore
 3. Verificare regolarmente i pattern matching
 4. Aggiornare la documentazione quando necessario 
-=======
-# Analisi PHPStan Livello 8 per il modulo Activity
-
-Data: Wed Apr 23 21:20:41 CEST 2025
-
-## Nessun errore trovato
-
-Il modulo Activity ha superato l'analisi PHPStan al livello 8 senza errori.
->>>>>>> Stashed changes
