@@ -17,17 +17,6 @@ class ListSnapshots extends XotBaseListRecords
 {
     protected static string $resource = SnapshotResource::class;
 
-<<<<<<< Updated upstream
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< Updated upstream
-<<<<<<< HEAD
-=======
->>>>>>> Stashed changes
->>>>>>> 3c0819e (.)
-=======
->>>>>>> Stashed changes
     /**
      * Get the list table columns.
      *
@@ -51,72 +40,6 @@ class ListSnapshots extends XotBaseListRecords
             TextColumn::make('updated_at')
                 ->dateTime()
                 ->sortable(),
-<<<<<<< Updated upstream
-<<<<<<< HEAD
-=======
-=======
-    public function getListTableColumns(): array
-=======
->>>>>>> Stashed changes
-    {
-        return [
-            TextColumn::make('id')
-                ->sortable()
-                ->searchable(),
-            TextColumn::make('aggregate_uuid')
-                ->searchable(),
-            TextColumn::make('aggregate_version')
-                ->sortable(),
-            TextColumn::make('state')
-                ->searchable(),
-            TextColumn::make('created_at')
-                ->dateTime()
-                ->sortable(),
-            TextColumn::make('updated_at')
-                ->dateTime()
-<<<<<<< Updated upstream
-                ->sortable()
-                ->label('Updated At'),
->>>>>>> 47b5495 (.)
-=======
-                ->sortable(),
->>>>>>> Stashed changes
-=======
-    public function getListTableColumns(): array
-    {
-        return [
-            'id' => TextColumn::make('id')
-                ->sortable()
-                ->label('ID'),
-
-            'aggregate_uuid' => TextColumn::make('aggregate_uuid')
-                ->searchable()
-                ->sortable()
-                ->wrap()
-                ->label('Aggregate UUID'),
-
-            'aggregate_version' => TextColumn::make('aggregate_version')
-                ->numeric()
-                ->sortable()
-                ->label('Aggregate Version'),
-            /*
-            'state' => ViewColumn::make('state')
-                ->view('activity::filament.tables.columns.state')
-                ->label('State'),
-            */
-            'created_at' => TextColumn::make('created_at')
-                ->dateTime()
-                ->sortable()
-                ->label('Created At'),
-
-            'updated_at' => TextColumn::make('updated_at')
-                ->dateTime()
-                ->sortable()
-                ->label('Updated At'),
->>>>>>> 5a93280 (.)
->>>>>>> 3c0819e (.)
-=======
->>>>>>> Stashed changes
         ];
     }
 

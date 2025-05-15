@@ -1,76 +1,18 @@
 {
     "name": "Activity",
     "alias": "activity",
-<<<<<<< Updated upstream
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< Updated upstream
-<<<<<<< HEAD
->>>>>>> 3c0819e (.)
-=======
->>>>>>> Stashed changes
     "description": "Modulo per il tracciamento delle attività degli utenti e la gestione di log delle azioni",
     "keywords": [],
     "priority": 0,
     "active": 1,
     "order": 5,
-<<<<<<< Updated upstream
-<<<<<<< HEAD
-=======
-=======
-    "description": "",
-    "keywords": [],
-    "priority": 0,
->>>>>>> 47b5495 (.)
-=======
-    "description": "Modulo per il tracciamento delle attività degli utenti e la gestione di log delle azioni",
-    "keywords": [],
-    "priority": 0,
-    "active": 1,
-    "order": 5,
->>>>>>> Stashed changes
-=======
-    "description": "",
-    "keywords": [],
-    "priority": 0,
->>>>>>> 5a93280 (.)
->>>>>>> 3c0819e (.)
-=======
->>>>>>> Stashed changes
     "providers": [
         "Modules\\Activity\\Providers\\ActivityServiceProvider",
         "Modules\\Activity\\Providers\\Filament\\AdminPanelProvider"
     ],
-<<<<<<< Updated upstream
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< Updated upstream
-<<<<<<< HEAD
-=======
->>>>>>> Stashed changes
->>>>>>> 3c0819e (.)
-=======
->>>>>>> Stashed changes
     "aliases": {},
     "files": [],
     "requires": ["Xot", "User"],
     "minimumCoreVersion": "10.0",
     "phpVersion": "^8.1"
-<<<<<<< Updated upstream
-<<<<<<< HEAD
-=======
-<<<<<<< Updated upstream
-=======
-    "files": []
->>>>>>> 47b5495 (.)
-=======
->>>>>>> Stashed changes
-=======
-    "files": []
->>>>>>> 5a93280 (.)
->>>>>>> 3c0819e (.)
-=======
->>>>>>> Stashed changes
 }
