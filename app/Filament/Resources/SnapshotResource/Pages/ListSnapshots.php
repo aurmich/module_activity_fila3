@@ -17,13 +17,17 @@ class ListSnapshots extends XotBaseListRecords
 {
     protected static string $resource = SnapshotResource::class;
 
+<<<<<<< Updated upstream
 <<<<<<< HEAD
+=======
+>>>>>>> Stashed changes
     /**
      * Get the list table columns.
      *
      * @return array<string, Tables\Columns\Column>
      */
     public function getTableColumns(): array
+<<<<<<< Updated upstream
     {
         return [
             TextColumn::make('id')
@@ -43,37 +47,31 @@ class ListSnapshots extends XotBaseListRecords
                 ->sortable(),
 =======
     public function getListTableColumns(): array
+=======
+>>>>>>> Stashed changes
     {
         return [
-            'id' => TextColumn::make('id')
+            TextColumn::make('id')
                 ->sortable()
-                ->label('ID'),
-
-            'aggregate_uuid' => TextColumn::make('aggregate_uuid')
-                ->searchable()
-                ->sortable()
-                ->wrap()
-                ->label('Aggregate UUID'),
-
-            'aggregate_version' => TextColumn::make('aggregate_version')
-                ->numeric()
-                ->sortable()
-                ->label('Aggregate Version'),
-            /*
-            'state' => ViewColumn::make('state')
-                ->view('activity::filament.tables.columns.state')
-                ->label('State'),
-            */
-            'created_at' => TextColumn::make('created_at')
+                ->searchable(),
+            TextColumn::make('aggregate_uuid')
+                ->searchable(),
+            TextColumn::make('aggregate_version')
+                ->sortable(),
+            TextColumn::make('state')
+                ->searchable(),
+            TextColumn::make('created_at')
                 ->dateTime()
-                ->sortable()
-                ->label('Created At'),
-
-            'updated_at' => TextColumn::make('updated_at')
+                ->sortable(),
+            TextColumn::make('updated_at')
                 ->dateTime()
+<<<<<<< Updated upstream
                 ->sortable()
                 ->label('Updated At'),
 >>>>>>> 47b5495 (.)
+=======
+                ->sortable(),
+>>>>>>> Stashed changes
         ];
     }
 
