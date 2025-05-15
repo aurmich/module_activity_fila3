@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 
 ### Versione HEAD
 
@@ -35,3 +36,12 @@ Data analisi: 2025-04-15 22:07:44
 
 ---
 
+=======
+# Analisi PHPStan Livello 1 per il modulo Activity
+
+Data: Wed Apr 23 21:20:05 CEST 2025
+
+## Nessun errore trovato
+
+Il modulo Activity ha superato l'analisi PHPStan al livello 1 senza errori.
+>>>>>>> Stashed changes

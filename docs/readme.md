@@ -1,51 +1,41 @@
-# Jigsaw Docs Starter Template
+# Modulo Activity
 
-This is a starter template for creating a beautiful, customizable documentation site for your project with minimal effort. You’ll only have to change a few settings and you’re ready to go.
+## Descrizione
 
-[View a preview of the docs template.](http://jigsaw-docs-template.tighten.co/)
+Il modulo Activity fornisce funzionalità di tracciamento delle attività e di audit log all'interno dell'applicazione. Permette di registrare e visualizzare le azioni eseguite dagli utenti all'interno del sistema.
 
-## Installation
+## Analisi PHPStan
 
-After installing Jigsaw, run the following command from your project directory:
+Il modulo ha raggiunto un livello di qualità PHPStan 9, dimostrando un'eccellente aderenza alle migliori pratiche di programmazione e tipizzazione.
 
-```bash
-./vendor/bin/jigsaw init docs
-```
+- [Riassunto dell'analisi PHPStan](phpstan/README.md)
+- [Correzioni per raggiungere il livello 10](phpstan_fixes.md)
+- [Documentazione generale PHPStan](/docs/phpstan/README.md)
 
-This starter template includes samples of common page types, and comes pre-configured with:
+## Principale Funzionalità
 
-- A fully responsive navigation bar
-- A sidebar navigation menu
-- [Tailwind CSS](https://tailwindcss.com/), a utility CSS framework that allows you to customize your design without touching a line of CSS
-- [Purgecss](https://www.purgecss.com/) to remove unused selectors from your CSS, resulting in smaller CSS files
-- Syntax highlighting using [highlight.js](https://highlightjs.org/)
-- A script that automatically generates a `sitemap.xml` file
-- A search bar powered by [Algolia DocSearch](https://community.algolia.com/docsearch/), and instructions on how to get started with their free indexing service
-- A custom 404 page
+- Registrazione delle attività degli utenti
+- Tracciamento delle modifiche agli oggetti (subject)
+- Identificazione dell'utente che ha eseguito l'azione (causer)
+- Memorizzazione delle proprietà dell'entità prima e dopo le modifiche
 
----
+## Tabelle del Database
 
-![Docs starter template screenshot](https://user-images.githubusercontent.com/357312/50345478-40170c00-04fd-11e9-856c-ad46d1ac45cb.png)
+- `activity` - Tabella principale per il tracciamento delle attività
+- `stored_events` - Archiviazione di eventi nel modello Event Sourcing
+- `snapshots` - Registrazioni periodiche dello stato delle entità
 
----
+## Uso del Modulo
 
-### Configuring your new site
+Per utilizzare il modulo Activity, è necessario:
 
-As with all Jigsaw sites, configuration settings can be found in `config.php`; you can update the variables in that file with settings specific to your project. You can also add new configuration variables there to use across your site; take a look at the [Jigsaw documentation](http://jigsaw.tighten.co/docs/site-variables/) to learn more.
+1. Importare il trait `LogsActivity` nei modelli da monitorare
+2. Configurare gli attributi da registrare tramite le proprietà del modello
+3. Accedere ai log tramite il modello `Activity`
 
-```php
-// config.php
-return [
-    'baseUrl' => 'https://my-awesome-jigsaw-site.com/',
-    'production' => false,
-    'siteName' => 'My Site',
-    'siteDescription' => 'Give your documentation a boost with Jigsaw.',
-    'docsearchApiKey' => '',
-    'docsearchIndexName' => '',
-    'navigation' => require_once('navigation.php'),
-];
-```
+## Collegamenti
 
+<<<<<<< Updated upstream
 > Tip: This configuration file is also where you’ll define any "collections" (for example, a collection of the contributors to your site, or a collection of blog posts). Check out the official [Jigsaw documentation](https://jigsaw.tighten.co/docs/collections/) to learn more.
 
 ---
@@ -101,3 +91,7 @@ npm run dev
 * [readme.md](laravel/Modules/Activity/docs/readme.md)
 * [readme.md](laravel/Modules/Cms/docs/readme.md)
 
+=======
+- [Documentazione PHPStan generale](/docs/phpstan.md)
+- [Problemi e soluzioni PHPStan](/docs/phpstan/problemi_e_soluzioni.md) 
+>>>>>>> Stashed changes

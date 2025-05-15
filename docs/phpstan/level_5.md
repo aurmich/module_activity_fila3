@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 # PHPStan Livello 5 - Modulo Activity
 
 Data analisi: 08/04/2024
@@ -32,3 +33,12 @@ Il livello 5 di PHPStan aggiunge ai controlli precedenti:
 2. Documentare l'uso dei generics
 3. Verificare regolarmente le dipendenze
 4. Aggiornare la documentazione quando necessario 
+=======
+# Analisi PHPStan Livello 5 per il modulo Activity
+
+Data: Wed Apr 23 21:20:24 CEST 2025
+
+## Nessun errore trovato
+
+Il modulo Activity ha superato l'analisi PHPStan al livello 5 senza errori.
+>>>>>>> Stashed changes

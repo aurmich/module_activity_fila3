@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 # PHPStan Livello 7 - Modulo Activity
 
 Data analisi: 08/04/2024
@@ -32,3 +33,12 @@ Il livello 7 di PHPStan aggiunge ai controlli precedenti:
 2. Documentare i template types
 3. Verificare regolarmente le implementazioni
 4. Aggiornare la documentazione quando necessario 
+=======
+# Analisi PHPStan Livello 7 per il modulo Activity
+
+Data: Wed Apr 23 21:20:35 CEST 2025
+
+## Nessun errore trovato
+
+Il modulo Activity ha superato l'analisi PHPStan al livello 7 senza errori.
+>>>>>>> Stashed changes
