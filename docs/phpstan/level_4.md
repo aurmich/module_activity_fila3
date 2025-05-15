@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # PHPStan Livello 4 - Modulo Activity
 
 Data analisi: 08/04/2024
@@ -33,16 +32,3 @@ Il livello 4 di PHPStan aggiunge ai controlli precedenti:
 2. Continuare a utilizzare type hints espliciti
 3. Evitare l'uso eccessivo di proprietà dinamiche
 4. Documentare chiaramente i metodi magici 
-=======
-# PHPStan Report - Livello 4
-
-## Errori rilevati
-
-## Soluzioni proposte
-
-> TODO: descrivere soluzioni architetturali e funzionali
-
-## Collegamenti
-
-- Torna all'indice principale: [Indice Report PHPStan Moduli](/docs/phpstan_modules_index.md)
->>>>>>> 5a93280 (.)

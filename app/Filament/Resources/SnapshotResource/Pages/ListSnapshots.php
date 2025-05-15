@@ -17,6 +17,7 @@ class ListSnapshots extends XotBaseListRecords
 {
     protected static string $resource = SnapshotResource::class;
 
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -25,6 +26,8 @@ class ListSnapshots extends XotBaseListRecords
 =======
 >>>>>>> Stashed changes
 >>>>>>> 3c0819e (.)
+=======
+>>>>>>> Stashed changes
     /**
      * Get the list table columns.
      *
@@ -48,6 +51,7 @@ class ListSnapshots extends XotBaseListRecords
             TextColumn::make('updated_at')
                 ->dateTime()
                 ->sortable(),
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 =======
 =======
@@ -111,6 +115,8 @@ class ListSnapshots extends XotBaseListRecords
                 ->label('Updated At'),
 >>>>>>> 5a93280 (.)
 >>>>>>> 3c0819e (.)
+=======
+>>>>>>> Stashed changes
         ];
     }
 

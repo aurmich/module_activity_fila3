@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # PHPStan Livello 3 - Modulo Activity
 
 Data analisi: 08/04/2024
@@ -42,16 +41,3 @@ Il livello 3 di PHPStan aggiunge ai controlli precedenti:
 - Gli errori sono gli stessi dei livelli precedenti
 - Focus sulle dichiarazioni di tipo di ritorno
 - Necessario refactoring delle migrazioni 
-=======
-# PHPStan Report - Livello 3
-
-## Errori rilevati
-
-## Soluzioni proposte
-
-> TODO: descrivere soluzioni architetturali e funzionali
-
-## Collegamenti
-
-- Torna all'indice principale: [Indice Report PHPStan Moduli](/docs/phpstan_modules_index.md)
->>>>>>> 5a93280 (.)

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # PHPStan Livello 8 - Modulo Activity
 
 Data analisi: 08/04/2024
@@ -33,16 +32,3 @@ Il livello 8 di PHPStan aggiunge ai controlli precedenti:
 2. Documentare l'uso di funzioni di ordine superiore
 3. Verificare regolarmente i pattern matching
 4. Aggiornare la documentazione quando necessario 
-=======
-# PHPStan Report - Livello 8
-
-## Errori rilevati
-
-## Soluzioni proposte
-
-> TODO: descrivere soluzioni architetturali e funzionali
-
-## Collegamenti
-
-- Torna all'indice principale: [Indice Report PHPStan Moduli](/docs/phpstan_modules_index.md)
->>>>>>> 5a93280 (.)

@@ -51,9 +51,6 @@ Homestead.json
 *.swp
 *.swo
 .php-cs-fixer.cache
-<<<<<<< HEAD
 -e 
 # PHPStan documentation
 docs/phpstan/
-=======
->>>>>>> 5a93280 (.)

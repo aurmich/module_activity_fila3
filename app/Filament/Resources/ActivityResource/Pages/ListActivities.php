@@ -7,6 +7,7 @@ namespace Modules\Activity\Filament\Resources\ActivityResource\Pages;
 use Filament\Tables\Columns\TextColumn;
 use Modules\Activity\Filament\Resources\ActivityResource;
 use Modules\Xot\Filament\Resources\Pages\XotBaseListRecords;
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 use Filament\Tables\Columns\Tables;
 =======
@@ -22,6 +23,9 @@ use Filament\Tables\Columns\Tables;
 =======
 >>>>>>> 5a93280 (.)
 >>>>>>> 3c0819e (.)
+=======
+use Filament\Tables\Columns\Tables;
+>>>>>>> Stashed changes
 
 /**
  * @see ActivityResource
@@ -30,12 +34,15 @@ class ListActivities extends XotBaseListRecords
 {
     protected static string $resource = ActivityResource::class;
 
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< Updated upstream
 <<<<<<< HEAD
 >>>>>>> 3c0819e (.)
+=======
+>>>>>>> Stashed changes
     public function getTableColumns(): array
     {
         return [
@@ -56,6 +63,7 @@ class ListActivities extends XotBaseListRecords
             TextColumn::make('created_at')
                 ->dateTime()
                 ->sortable(),
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 =======
 =======
@@ -123,6 +131,8 @@ class ListActivities extends XotBaseListRecords
 
 >>>>>>> 5a93280 (.)
 >>>>>>> 3c0819e (.)
+=======
+>>>>>>> Stashed changes
         ];
     }
 }

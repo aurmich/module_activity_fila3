@@ -6,6 +6,7 @@ namespace Modules\Activity\Providers;
 
 use Modules\Xot\Providers\XotBaseServiceProvider;
 
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -14,6 +15,8 @@ use Modules\Xot\Providers\XotBaseServiceProvider;
 =======
 >>>>>>> Stashed changes
 >>>>>>> 3c0819e (.)
+=======
+>>>>>>> Stashed changes
 /**
  * Service Provider per il modulo Activity.
  *
@@ -64,6 +67,7 @@ class ActivityServiceProvider extends XotBaseServiceProvider
      *
      * @return void
      */
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 =======
 =======
@@ -133,11 +137,14 @@ class ActivityServiceProvider extends XotBaseServiceProvider
 
 >>>>>>> 5a93280 (.)
 >>>>>>> 3c0819e (.)
+=======
+>>>>>>> Stashed changes
     public function register(): void
     {
         parent::register();
         // Additional register logic can be added here
     }
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -146,6 +153,8 @@ class ActivityServiceProvider extends XotBaseServiceProvider
 =======
 >>>>>>> Stashed changes
 >>>>>>> 3c0819e (.)
+=======
+>>>>>>> Stashed changes
     
     /**
      * Registra le configurazioni del modulo.
@@ -162,6 +171,7 @@ class ActivityServiceProvider extends XotBaseServiceProvider
             module_path($this->name, 'config/config.php'), 'activity'
         );
     }
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 =======
 <<<<<<< Updated upstream
@@ -172,4 +182,6 @@ class ActivityServiceProvider extends XotBaseServiceProvider
 =======
 >>>>>>> 5a93280 (.)
 >>>>>>> 3c0819e (.)
+=======
+>>>>>>> Stashed changes
 }

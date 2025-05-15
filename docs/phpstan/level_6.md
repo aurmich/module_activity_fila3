@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # PHPStan Livello 6 - Modulo Activity
 
 Data analisi: 08/04/2024
@@ -33,16 +32,3 @@ Il livello 6 di PHPStan aggiunge ai controlli precedenti:
 2. Verificare regolarmente le catene di chiamate
 3. Documentare le eccezioni attese
 4. Aggiornare i test quando necessario 
-=======
-# PHPStan Report - Livello 6
-
-## Errori rilevati
-
-## Soluzioni proposte
-
-> TODO: descrivere soluzioni architetturali e funzionali
-
-## Collegamenti
-
-- Torna all'indice principale: [Indice Report PHPStan Moduli](/docs/phpstan_modules_index.md)
->>>>>>> 5a93280 (.)
