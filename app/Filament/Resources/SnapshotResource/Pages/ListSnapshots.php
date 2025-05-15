@@ -37,9 +37,18 @@ class ListSnapshots extends XotBaseListRecords
             TextColumn::make('created_at')
                 ->dateTime()
                 ->sortable(),
+<<<<<<< Updated upstream
             TextColumn::make('updated_at')
                 ->dateTime()
                 ->sortable(),
+=======
+<<<<<<< HEAD
+            TextColumn::make('updated_at')
+                ->dateTime()
+                ->sortable(),
+=======
+>>>>>>> 38698b4d9 (fix collisioni sync)
+>>>>>>> Stashed changes
         ];
     }
 
