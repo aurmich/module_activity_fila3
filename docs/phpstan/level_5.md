@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # PHPStan Livello 5 - Modulo Activity
 
 Data analisi: 08/04/2024
@@ -32,3 +33,16 @@ Il livello 5 di PHPStan aggiunge ai controlli precedenti:
 2. Documentare l'uso dei generics
 3. Verificare regolarmente le dipendenze
 4. Aggiornare la documentazione quando necessario 
+=======
+# PHPStan Report - Livello 5
+
+## Errori rilevati
+
+## Soluzioni proposte
+
+> TODO: descrivere soluzioni architetturali e funzionali
+
+## Collegamenti
+
+- Torna all'indice principale: [Indice Report PHPStan Moduli](/docs/phpstan_modules_index.md)
+>>>>>>> 5a93280 (.)

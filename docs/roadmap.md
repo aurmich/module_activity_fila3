@@ -49,6 +49,7 @@
 ### Milestone 3: Storage Base
 - [ ] Schema ottimizzato
 - [ ] Indici performance
+<<<<<<< HEAD
 
 ## Collegamenti
 
@@ -56,6 +57,8 @@
 - [Vai a Struttura](./structure.md)
 - [Vai a Bottlenecks](./bottlenecks.md)
 
+=======
+>>>>>>> 5a93280 (.)
 - [ ] Compressione base
 - [ ] Pulizia manuale
 
@@ -176,6 +179,7 @@
 2. [ ] Setup sistema base
 3. [ ] Implementazione API
 4. [ ] Test performance
+<<<<<<< HEAD
 5. [ ] Documentazione base 
 ## Collegamenti tra versioni di roadmap.md
 * [roadmap.md](bashscripts/docs/roadmap.md)
@@ -195,3 +199,6 @@
 * [roadmap.md](laravel/Modules/Cms/docs/roadmap.md)
 * [roadmap.md](laravel/Themes/One/docs/roadmap.md)
 
+=======
+5. [ ] Documentazione base 
+>>>>>>> 5a93280 (.)

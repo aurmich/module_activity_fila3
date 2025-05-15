@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 ### Versione HEAD
 
@@ -35,3 +36,16 @@ Data analisi: 2025-04-15 22:07:44
 
 ---
 
+=======
+# PHPStan Report - Livello 1
+
+## Errori rilevati
+
+## Soluzioni proposte
+
+> TODO: descrivere soluzioni architetturali e funzionali
+
+## Collegamenti
+
+- Torna all'indice principale: [Indice Report PHPStan Moduli](/docs/phpstan_modules_index.md)
+>>>>>>> 5a93280 (.)
