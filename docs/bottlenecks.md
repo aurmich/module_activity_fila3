@@ -211,6 +211,24 @@ class ActivityService
 }
 ```
 
+## 3. Event Sourcing: Colli di Bottiglia e Soluzioni
+
+### Problema
+- Performance del replay eventi su grandi volumi
+- Proiezioni lente o non idempotenti
+- Gestione versioni eventi e compatibilità
+- Sincronizzazione tra event store e activity_log legacy
+
+### Soluzioni
+1. **Snapshot periodici** per evitare replay completo
+2. **Proiettori idempotenti** e test di consistenza
+3. **Versionamento eventi** e fallback su activitylog in caso di errore
+4. **Monitoraggio e alert su proiezioni lente**
+5. **Script di migrazione e rollback**
+
+### Collegamenti
+- [Best Practice Event Sourcing .mdc](../../.cursor/rules/ACTIVITY_EVENT_SOURCING_BEST_PRACTICES.mdc)
+
 ## 3. Problemi di Performance nei Widget di Attività
 
 ### Problema

@@ -36,3 +36,10 @@ https://laraveldaily.com/post/filament-activity-logs-three-packages-comparison-r
 - Assicurarsi che tutte le modifiche siano compatibili con PHPStan livello 10
 - Documentare eventuali breaking changes
 - Mantenere la retrocompatibilità quando possibile
+
+## Integrazione Filament + Event Sourcing
+
+- Le dashboard Filament possono consumare proiezioni generate da projectors event sourcing
+- È possibile mostrare sia dati da activity_log che da viste aggregate/event sourced
+- Consigliato separare resource Filament legacy e resource basate su proiezioni
+- Vedi [ACTIVITY_EVENT_SOURCING_BEST_PRACTICES.mdc](../../.cursor/rules/ACTIVITY_EVENT_SOURCING_BEST_PRACTICES.mdc)

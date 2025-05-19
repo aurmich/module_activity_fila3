@@ -366,3 +366,36 @@ workbench/routes
 * [structure.md](laravel/Modules/Cms/docs/themes/structure.md)
 * [structure.md](laravel/Modules/Cms/docs/components/structure.md)
 
+## Architettura Event Sourcing e Activity Log
+
+- **Event Store**: tabella/event store per la persistenza degli eventi
+- **Aggregate**: classi che rappresentano la logica di dominio e ricostruiscono lo stato tramite replay eventi
+- **Projector**: classi che trasformano eventi in viste/materializzazioni (es. ActivityProjector, UserActivityProjector)
+- **Reactor**: classi che reagiscono agli eventi per side effect (es. invio notifiche)
+- **Snapshot**: meccanismo per salvare lo stato corrente e velocizzare il replay
+
+### Esempio struttura directory
+```
+Modules/Activity/
+├── app/
+│   ├── Aggregates/
+│   │   └── UserActivityAggregate.php
+│   ├── Projectors/
+│   │   ├── ActivityProjector.php
+│   │   └── UserActivityProjector.php
+│   ├── Reactors/
+│   │   └── NotificationReactor.php
+│   ├── Events/
+│   │   └── UserLoggedIn.php
+│   ├── Snapshots/
+│   │   └── UserActivitySnapshot.php
+│   └── ...
+```
+
+### Integrazione con activitylog
+- Le proiezioni possono scrivere anche su activity_log per compatibilità legacy
+- È possibile sincronizzare eventi e log tramite reactor dedicati
+
+### Collegamenti
+- [Best Practice Event Sourcing .mdc](../../.cursor/rules/ACTIVITY_EVENT_SOURCING_BEST_PRACTICES.mdc)
+

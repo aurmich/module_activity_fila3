@@ -32,6 +32,15 @@
 - [ ] Conformità GDPR
 - [ ] Alert automatici
 
+### 8. Event Sourcing e CQRS (Q1 2025)
+- [ ] Introduzione event store e aggregate
+- [ ] Implementazione projectors e reactors
+- [ ] Migrazione graduale da activitylog tradizionale
+- [ ] Documentazione pattern e best practice
+- [ ] Test di performance e consistenza
+- [ ] Integrazione con dashboard analytics
+- [ ] Collegamento a [ACTIVITY_EVENT_SOURCING_BEST_PRACTICES.mdc](../../.cursor/rules/ACTIVITY_EVENT_SOURCING_BEST_PRACTICES.mdc)
+
 ## Milestone Q2 2024
 
 ### Milestone 1: Logging Base

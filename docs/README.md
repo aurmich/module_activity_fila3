@@ -1,16 +1,16 @@
 # Modulo Activity
 
-Il modulo **Activity** gestisce il logging avanzato, la tracciabilità delle azioni utente e la generazione di report sulle attività di sistema. È progettato per integrarsi con gli altri moduli della piattaforma SaluteOra, garantendo audit trail, analytics e conformità normativa (es. GDPR).
 Il modulo **Activity** gestisce il logging avanzato, la tracciabilità delle azioni utente e la generazione di report sulle attività di sistema. È progettato per integrarsi con gli altri moduli della piattaforma, garantendo audit trail, analytics e conformità normativa (es. GDPR).
 
 - **Namespace:** `Modules\Activity`
-- **Dipendenze:** [Xot](../../Xot/docs/README.md), [User](../../User/docs/README.md), [spatie/laravel-activitylog](https://spatie.be/docs/laravel-activitylog/v4/introduction)
+- **Dipendenze:** [Xot](../../Xot/docs/README.md), [User](../../User/docs/README.md), [spatie/laravel-activitylog](https://spatie.be/docs/laravel-activitylog/v4/introduction), [spatie/laravel-event-sourcing](https://spatie.be/docs/laravel-event-sourcing/v7/introduction)
 
 ---
 
 ## Indice Documentazione
 
 - [Struttura del Modulo](./structure.md): Panoramica delle directory, classi e dipendenze.
+- [Event Sourcing & Proiezioni](./event-sourcing.md): Pattern, esempi, best practice e integrazione con Spatie Event Sourcing.
 - [Roadmap](./roadmap.md): Stato di avanzamento, milestone e obiettivi futuri.
 - [Bottlenecks](./bottlenecks.md): Analisi dei colli di bottiglia e soluzioni per ottimizzare le performance.
 - [phpstan_fixes.md](./phpstan_fixes.md): Correzioni e linee guida per la qualità del codice secondo PHPStan.
@@ -25,21 +25,70 @@ Il modulo **Activity** gestisce il logging avanzato, la tracciabilità delle azi
 
 ---
 
-## Descrizione Sintetica dei Documenti Principali
+## Event Sourcing, Proiezioni e Aggregate (Pattern e Best Practice)
 
-- **[structure.md](./structure.md):** Struttura delle directory, namespace, autoload e overview delle classi principali.
-- **[roadmap.md](./roadmap.md):** Obiettivi strategici, milestone, metriche di successo e dipendenze.
-- **[phpstan_fixes.md](./phpstan_fixes.md):** Dettaglio delle correzioni implementate per raggiungere il livello PHPStan 9+, linee guida per mantenere alta la qualità.
-- **[filament.md](./filament.md):** Link e risorse per l'integrazione dell'activity log con Filament.
-- **[lang-link.md](./lang-link.md):** Regole per la localizzazione e collegamenti alle risorse del modulo Lang.
-- **[translations.md](./translations.md):** Esempi e struttura dei file di traduzione per il modulo Activity.
+### Cos'è l'Event Sourcing?
+L'**Event Sourcing** è un pattern architetturale in cui ogni cambiamento di stato viene rappresentato come un evento immutabile, persistito in una event store. Lo stato attuale viene ricostruito rigiocando la sequenza di eventi.
+
+- **Vantaggi:**
+  - Audit trail completo e immutabile
+  - Debug e replay degli eventi
+  - Facilità di implementazione di proiezioni e analytics
+  - Possibilità di implementare CQRS (Command Query Responsibility Segregation)
+- **Svantaggi:**
+  - Complessità architetturale
+  - Gestione della consistenza eventuale
+  - Necessità di proiezioni/materialized views per query efficienti
+
+### Proiezioni e Aggregate
+- **Proiezione:** Una vista derivata dagli eventi, ottimizzata per la lettura (es. report, dashboard, contatori, timeline utente).
+- **Aggregate:** Un oggetto che incapsula la logica di business e garantisce la coerenza degli eventi correlati a un'entità (es. Account, Order, Patient).
+
+### Implementazione con Spatie Event Sourcing
+- **Pacchetto:** [spatie/laravel-event-sourcing](https://github.com/spatie/laravel-event-sourcing)
+- **Esempi:**
+  - [Larabank Traditional](https://github.com/spatie/larabank-traditional)
+  - [Larabank Event Projector](https://github.com/spatie/larabank-event-projector)
+  - [Larabank Event Projector Aggregates](https://github.com/spatie/larabank-event-projector-aggregates)
+  - [Demo App](https://github.com/spatie/laravel-event-projector-demo-app)
+- **Documentazione:**
+  - [Spatie Event Sourcing Docs](https://docs.spatie.be/laravel-event-sourcing/v7/introduction)
+  - [Microsoft Event Sourcing Pattern](https://docs.microsoft.com/en-us/azure/architecture/patterns/event-sourcing)
+
+### Pattern consigliati nel modulo Activity
+- **Tutte le azioni critiche** (creazione, modifica, cancellazione, login, workflow, ecc.) devono generare un evento.
+- **Gli eventi** devono essere persistiti in una event store dedicata (tabella `stored_events`).
+- **Le proiezioni** devono essere idempotenti e aggiornare viste/materialized views ottimizzate per la lettura.
+- **Gli aggregate** devono essere usati per logiche di business complesse e per garantire la coerenza tra eventi correlati.
+- **Audit trail**: ogni evento deve essere tracciabile, con metadati (utente, timestamp, contesto, IP, ecc.).
+- **Replay**: prevedere comandi/artisan per il replay degli eventi e la rigenerazione delle proiezioni.
+
+### Esempio di flusso (semplificato)
+1. L'utente aggiorna il proprio profilo → viene generato un evento `UserProfileUpdated`.
+2. L'evento viene persistito nella tabella `stored_events`.
+3. Un **projector** aggiorna la tabella `user_profiles` per la lettura rapida.
+4. Un **aggregate** può validare regole di business (es. limiti, workflow, ecc.).
+5. Tutti gli eventi sono disponibili per audit, analytics, debugging.
+
+### Best Practice
+- **Non usare eventi solo per logging**: ogni evento deve rappresentare un cambiamento di stato rilevante.
+- **Proiezioni idempotenti**: ogni evento deve poter essere rigiocato più volte senza effetti collaterali.
+- **Test**: scrivi test per eventi, aggregate e proiezioni.
+- **Documenta** ogni evento e proiezione in `/docs/event-sourcing.md`.
+- **Collega** ogni evento a una user story o requisito di business.
+
+### Collegamenti correlati
+- [Event Sourcing & Proiezioni](./event-sourcing.md)
+- [Struttura del Modulo](./structure.md)
+- [Roadmap](./roadmap.md)
+- [Bottlenecks](./bottlenecks.md)
+- [Modulo Xot](../../Xot/docs/README.md)
+- [Spatie Event Sourcing Docs](https://docs.spatie.be/laravel-event-sourcing/v7/introduction)
+- [Microsoft Event Sourcing Pattern](https://docs.microsoft.com/en-us/azure/architecture/patterns/event-sourcing)
 
 ---
 
-## Collegamenti Bidirezionali
-
-**Tutti i documenti elencati sopra contengono (o devono contenere) una sezione di ritorno a questo README e ai documenti correlati:**
-
+## Collegamenti Bidirezionali (aggiornati)
 - [README Activity](./README.md)
 - [structure.md](./structure.md)
 - [roadmap.md](./roadmap.md)
@@ -48,16 +97,11 @@ Il modulo **Activity** gestisce il logging avanzato, la tracciabilità delle azi
 - [filament.md](./filament.md)
 - [lang-link.md](./lang-link.md)
 - [translations.md](./translations.md)
+- [ACTIVITY_EVENT_SOURCING_BEST_PRACTICES.mdc](../../.cursor/rules/ACTIVITY_EVENT_SOURCING_BEST_PRACTICES.mdc)
 
-> **Nota:** Quando aggiorni o aggiungi nuovi file nella cartella `docs/`, ricordati di:
-> - Aggiornare l’indice qui sopra
-- [Struttura](./structure.md) - Panoramica delle directory, classi e dipendenze
-- [Roadmap](./roadmap.md) - Stato di avanzamento, milestone e obiettivi futuri
-- [Bottlenecks](./bottlenecks.md) - Analisi dei colli di bottiglia e ottimizzazioni
-- [PHPStan Fixes](./phpstan_fixes.md) - Correzioni e linee guida per la qualità del codice
-- [Filament](./filament.md) - Integrazione con Filament
-- [Lang Link](./lang-link.md) - Integrazione con il modulo Lang
-- [Translations](./translations.md) - Struttura e best practice per le traduzioni
+> **Nota:** Aggiornare sempre questa sezione quando si aggiungono nuove regole, pattern o documenti tecnici relativi a event sourcing, aggregate, projector, CQRS, ecc.
+
+---
 
 ## Vedi Anche
 
@@ -66,123 +110,22 @@ Il modulo **Activity** gestisce il logging avanzato, la tracciabilità delle azi
 - [Modulo Lang](../Lang/docs/README.md) - Gestione traduzioni
 - [Convenzioni di Naming](../../../docs/standards/file_naming_conventions.md) - Standard per la nomenclatura dei file
 
-> **Nota:** Quando aggiorni o aggiungi nuovi file nella cartella `docs/`, ricordati di:
-> - Aggiornare l'indice qui sopra
-> - Inserire collegamenti di ritorno e riferimenti incrociati nei nuovi documenti
-> - Mantenere la coerenza con le convenzioni di documentazione del progetto
-
----
-
-## Collegamenti ad altri moduli
-_Per contribuire alla documentazione:_
-1. Segui le convenzioni di naming e struttura.
-2. Aggiorna sempre i collegamenti bidirezionali.
-3. Documenta le modifiche in modo chiaro.
-4. Mantieni alta la qualità e la leggibilità.
-### Adding Assets
-
-- [Modulo Xot](../../Xot/docs/README.md)
-- [Modulo User](../../User/docs/README.md)
-- [Modulo Lang](../../Lang/docs/README.md)
-
----
-
-_Per contribuire alla documentazione:_
-1. Segui le convenzioni di naming e struttura.
-2. Aggiorna sempre i collegamenti bidirezionali.
-3. Documenta le modifiche in modo chiaro.
-4. Mantieni alta la qualità e la leggibilità.
-## Building Your Site
-
 ---
 
 ## Scopo della modifica
 - Migliorare l'analisi statica e la leggibilità aggiungendo il type hint `Blueprint $table` e un docblock esplicativo nelle closure delle migrazioni.
 - [Documentazione principale](/docs/README.md)
-```bash
-# build static files with Jigsaw
-./vendor/bin/jigsaw build
 
-# compile assets with Laravel Mix
-# options: dev, prod
-npm run dev
-```
+## Riferimenti e fonti esterne
+- [spatie/laravel-event-sourcing](https://github.com/spatie/laravel-event-sourcing)
+- [spatie/larabank-traditional](https://github.com/spatie/larabank-traditional)
+- [spatie/larabank-event-projector](https://github.com/spatie/larabank-event-projector)
+- [spatie/larabank-event-projector-aggregates](https://github.com/spatie/larabank-event-projector-aggregates)
+- [spatie/laravel-event-projector-demo-app](https://github.com/spatie/laravel-event-projector-demo-app)
+- [spatie/laravel-event-projector](https://github.com/spatie/laravel-event-projector)
+- [Microsoft Event Sourcing Pattern](https://docs.microsoft.com/en-us/azure/architecture/patterns/event-sourcing)
+- [Spatie Event Projector Docs](https://docs.spatie.be/laravel-event-projector/v1/introduction)
 
-## Collegamenti tra versioni di README.md
-* [README.md](bashscripts/docs/README.md)
-* [README.md](bashscripts/docs/it/README.md)
-* [README.md](docs/laravel-app/phpstan/README.md)
-* [README.md](docs/laravel-app/README.md)
-* [README.md](docs/moduli/struttura/README.md)
-* [README.md](docs/moduli/README.md)
-* [README.md](docs/moduli/manutenzione/README.md)
-* [README.md](docs/moduli/core/README.md)
-* [README.md](docs/moduli/installati/README.md)
-* [README.md](docs/moduli/comandi/README.md)
-* [README.md](docs/phpstan/README.md)
-* [README.md](docs/README.md)
-* [README.md](docs/module-links/README.md)
-* [README.md](docs/troubleshooting/git-conflicts/README.md)
-* [README.md](docs/tecnico/laraxot/README.md)
-* [README.md](docs/modules/README.md)
-* [README.md](docs/conventions/README.md)
-* [README.md](docs/amministrazione/backup/README.md)
-* [README.md](docs/amministrazione/monitoraggio/README.md)
-* [README.md](docs/amministrazione/deployment/README.md)
-* [README.md](docs/translations/README.md)
-* [README.md](docs/roadmap/README.md)
-* [README.md](docs/ide/cursor/README.md)
-* [README.md](docs/implementazione/api/README.md)
-* [README.md](docs/implementazione/testing/README.md)
-* [README.md](docs/implementazione/pazienti/README.md)
-* [README.md](docs/implementazione/ui/README.md)
-* [README.md](docs/implementazione/dental/README.md)
-* [README.md](docs/implementazione/core/README.md)
-* [README.md](docs/implementazione/reporting/README.md)
-* [README.md](docs/implementazione/isee/README.md)
-* [README.md](docs/it/README.md)
-* [README.md](laravel/vendor/mockery/mockery/docs/README.md)
-* [README.md](laravel/Modules/Chart/docs/README.md)
-* [README.md](laravel/Modules/Reporting/docs/README.md)
-* [README.md](laravel/Modules/Gdpr/docs/phpstan/README.md)
-* [README.md](laravel/Modules/Gdpr/docs/README.md)
-* [README.md](laravel/Modules/Notify/docs/phpstan/README.md)
-* [README.md](laravel/Modules/Notify/docs/README.md)
-* [README.md](laravel/Modules/Xot/docs/filament/README.md)
-* [README.md](laravel/Modules/Xot/docs/phpstan/README.md)
-* [README.md](laravel/Modules/Xot/docs/exceptions/README.md)
-* [README.md](laravel/Modules/Xot/docs/README.md)
-* [README.md](laravel/Modules/Xot/docs/standards/README.md)
-* [README.md](laravel/Modules/Xot/docs/conventions/README.md)
-* [README.md](laravel/Modules/Xot/docs/development/README.md)
-* [README.md](laravel/Modules/Dental/docs/README.md)
-* [README.md](laravel/Modules/User/docs/phpstan/README.md)
-* [README.md](laravel/Modules/User/docs/README.md)
-* [README.md](laravel/Modules/User/resources/views/docs/README.md)
-* [README.md](laravel/Modules/UI/docs/phpstan/README.md)
-* [README.md](laravel/Modules/UI/docs/README.md)
-* [README.md](laravel/Modules/UI/docs/standards/README.md)
-* [README.md](laravel/Modules/UI/docs/themes/README.md)
-* [README.md](laravel/Modules/UI/docs/components/README.md)
-* [README.md](laravel/Modules/Lang/docs/phpstan/README.md)
-* [README.md](laravel/Modules/Lang/docs/README.md)
-* [README.md](laravel/Modules/Job/docs/phpstan/README.md)
-* [README.md](laravel/Modules/Job/docs/README.md)
-* [README.md](laravel/Modules/Media/docs/phpstan/README.md)
-* [README.md](laravel/Modules/Media/docs/README.md)
-* [README.md](laravel/Modules/Tenant/docs/phpstan/README.md)
-* [README.md](laravel/Modules/Tenant/docs/README.md)
-* [README.md](laravel/Modules/Activity/docs/phpstan/README.md)
-* [README.md](laravel/Modules/Activity/docs/README.md)
-* [README.md](laravel/Modules/Patient/docs/README.md)
-* [README.md](laravel/Modules/Patient/docs/standards/README.md)
-* [README.md](laravel/Modules/Patient/docs/value-objects/README.md)
-* [README.md](laravel/Modules/Cms/docs/blocks/README.md)
-* [README.md](laravel/Modules/Cms/docs/README.md)
-* [README.md](laravel/Modules/Cms/docs/standards/README.md)
-* [README.md](laravel/Modules/Cms/docs/content/README.md)
-* [README.md](laravel/Modules/Cms/docs/frontoffice/README.md)
-* [README.md](laravel/Modules/Cms/docs/components/README.md)
-* [README.md](laravel/Themes/Two/docs/README.md)
-* [README.md](laravel/Themes/One/docs/README.md)
+> **Nota metodologica:**
+> Tutte le best practice, pattern e strategie sono state integrate nella documentazione e nei file .mdc dopo un'analisi comparata delle fonti sopra elencate, discussione critica e adattamento alle esigenze del progetto saluteora.
 
