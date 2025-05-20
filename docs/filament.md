@@ -37,9 +37,12 @@ https://laraveldaily.com/post/filament-activity-logs-three-packages-comparison-r
 - Documentare eventuali breaking changes
 - Mantenere la retrocompatibilità quando possibile
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 =======
 >>>>>>> 5739d9d (.)
+=======
+>>>>>>> f9089c2 (.)
 
 ## Integrazione Filament + Event Sourcing
 
@@ -48,7 +51,10 @@ https://laraveldaily.com/post/filament-activity-logs-three-packages-comparison-r
 - Consigliato separare resource Filament legacy e resource basate su proiezioni
 - Vedi [ACTIVITY_EVENT_SOURCING_BEST_PRACTICES.mdc](../../.cursor/rules/ACTIVITY_EVENT_SOURCING_BEST_PRACTICES.mdc)
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> Stashed changes
 =======
 >>>>>>> 5739d9d (.)
+=======
+>>>>>>> f9089c2 (.)
