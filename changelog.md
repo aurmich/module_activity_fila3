@@ -5,8 +5,6 @@ All notable changes to `:package_name` will be documented in this file.
 ## 1.0.0 - 202X-XX-XX
 
 - initial release
-<<<<<<< HEAD
-=======
 # Changelog
 
 Tutte le modifiche notevoli a questo modulo saranno documentate in questo file.
@@ -41,4 +39,3 @@ e questo progetto aderisce al [Semantic Versioning](https://semver.org/spec/v2.0
 - Risorse Filament per Activity e Snapshot
 - Sistema di logging delle attività
 - Documentazione base del modulo
->>>>>>> c4fa034 (.)
