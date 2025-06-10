@@ -1,9 +1,9 @@
-# Advanced Event Sourcing Patterns for Healthcare Applications
+# Advanced Event Sourcing Patterns for Data-Intensive Applications
 
 ## Table of Contents
 - [Introduction](#introduction)
 - [Core Concepts](#core-concepts)
-- [Implementation in Healthcare](#implementation-in-healthcare)
+- [Implementation in Multi-Module Applications](#implementation-in-multi-module-applications)
 - [Practical Examples](#practical-examples)
 - [Performance Considerations](#performance-considerations)
 - [Best Practices](#best-practices)
@@ -11,7 +11,7 @@
 
 ## Introduction
 
-Event Sourcing is particularly valuable in healthcare applications like `saluteora` where data integrity, audit trails, and historical tracking are crucial. This document expands on the basic concepts with advanced patterns and practical implementations.
+Event Sourcing is particularly valuable in data-intensive applications where data integrity, audit trails, and historical tracking are crucial. This document expands on the basic concepts with advanced patterns and practical implementations.
 
 ## Core Concepts
 
@@ -27,125 +27,115 @@ Event Sourcing is particularly valuable in healthcare applications like `saluteo
 - **Event Versioning**: Handling schema evolution
 - **Snapshots**: Performance optimization for large aggregates
 
-## Implementation in Healthcare
+## Implementation in Multi-Module Applications
 
-### Patient Management
+### User Management
 ```mermaid
 sequenceDiagram
     participant C as Client
     participant A as API
-    participant AR as PatientAggregate
+    participant AR as UserAggregate
     participant ES as Event Store
     
-    C->>A: Register Patient
-    A->>AR: handle(RegisterPatientCommand)
-    AR->>ES: store(PatientRegistered)
+    C->>A: Register User
+    A->>AR: handle(RegisterUserCommand)
+    AR->>ES: store(UserRegistered)
     AR->>ES: store(ContactInfoUpdated)
     ES-->>A: Events stored
-    A-->>C: Patient ID
+    A-->>C: User ID
     
     Note right of ES: Projectors update read models asynchronously
 ```
 
-### Medical Record System
-- Each medical interaction generates events
+### Record Management System
+- Each interaction generates events
 - Full audit trail of all changes
 - Temporal queries ("show me the record as of last Tuesday")
 
 ## Practical Examples
 
-### 1. Prescription Management
+### 1. Resource Management
 ```php
-class PrescriptionAggregate extends AggregateRoot
+class ResourceAggregate extends AggregateRoot
 {
-    private array $medications = [];
-    private bool $isApproved = false;
+    private array $items = [];
+    private bool $isActive = false;
     
-    public function prescribe(
-        string $patientId, 
-        string $medicationId, 
-        string $dosage,
-        string $doctorId
-    ): void {
-        $this->recordThat(new MedicationPrescribed(
-            prescriptionId: $this->uuid(),
-            patientId: $patientId,
-            medicationId: $medicationId,
-            dosage: $dosage,
-            prescribedBy: $doctorId,
-            prescribedAt: now()
-        ));
+    public function createResource(string $resourceId, array $details): self
+    {
+        $this->recordThat(new ResourceCreated($resourceId, $details));
+        
+        return $this;
     }
     
-    protected function applyMedicationPrescribed(MedicationPrescribed $event): void
+    public function updateDetails(array $details): self
     {
-        $this->medications[$event->medicationId] = [
-            'dosage' => $event->dosage,
-            'status' => 'active',
-            'prescribed_at' => $event->prescribedAt
-        ];
+        $this->recordThat(new ResourceDetailsUpdated($details));
+        
+        return $this;
     }
-}
-```
-
-### 2. Appointment Scheduling
-```php
-class ScheduleAppointmentHandler
-{
-    public function __construct(
-        private EventBus $eventBus,
-        private AppointmentRepository $appointments
-    ) {}
     
-    public function handle(ScheduleAppointmentCommand $command): void
+    public function activate(): self
     {
-        $appointment = Appointment::schedule(
-            $command->appointmentId,
-            $command->patientId,
-            $command->doctorId,
-            $command->scheduledTime,
-            $command->duration
-        );
+        if ($this->isActive) {
+            throw new \DomainException("Resource is already active");
+        }
         
-        $this->appointments->save($appointment);
+        $this->recordThat(new ResourceActivated());
         
-        $this->eventBus->publish(new AppointmentScheduled(
-            $appointment->id,
-            $appointment->patientId,
-            $appointment->doctorId,
-            $appointment->scheduledTime,
-            $appointment->duration
-        ));
+        return $this;
+    }
+    
+    public function deactivate(string $reason): self
+    {
+        if (!$this->isActive) {
+            throw new \DomainException("Resource is already inactive");
+        }
+        
+        $this->recordThat(new ResourceDeactivated($reason));
+        
+        return $this;
+    }
+    
+    protected function applyResourceCreated(ResourceCreated $event): void
+    {
+        $this->items = $event->details;
+    }
+    
+    protected function applyResourceDetailsUpdated(ResourceDetailsUpdated $event): void
+    {
+        $this->items = array_merge($this->items, $event->details);
+    }
+    
+    protected function applyResourceActivated(ResourceActivated $event): void
+    {
+        $this->isActive = true;
+    }
+    
+    protected function applyResourceDeactivated(ResourceDeactivated $event): void
+    {
+        $this->isActive = false;
     }
 }
 ```
 
 ## Performance Considerations
 
-### 1. Snapshotting
+### 1. Snapshots
 ```php
-class PatientAggregate extends AggregateRoot
+class SnapshotAggregate extends AggregateRoot
 {
-    private int $version = 0;
-    private array $events = [];
+    protected int $version = 0;
     
-    public static function reconstituteFromEvents(UuidInterface $uuid, array $events): self
+    protected function shouldTakeSnapshot(): bool
     {
-        $aggregate = new static($uuid);
-        
-        // Apply all events
-        foreach ($events as $event) {
-            $aggregate->apply($event);
-            $aggregate->version++;
-        }
-        
-        return $aggregate;
+        return $this->version % 100 === 0;
     }
     
-    public function snapshot(): PatientSnapshot
+    protected function takeSnapshot(): void
     {
-        return new PatientSnapshot([
-            'aggregate_id' => $this->uuid->toString(),
+        Snapshot::create([
+            'aggregate_uuid' => $this->uuid(),
             'version' => $this->version,
             'state' => [
                 // Current state properties
@@ -170,17 +160,17 @@ class PatientAggregate extends AggregateRoot
 
 ### 2. Testing
 ```php
-class PatientRegistrationTest extends TestCase
+class UserRegistrationTest extends TestCase
 {
     /** @test */
-    public function it_registers_a_new_patient()
+    public function it_registers_a_new_user()
     {
-        $patientId = PatientId::generate();
+        $userId = UserId::generate();
         
         $this->given()
-            ->when(new RegisterPatient($patientId, 'John', 'Doe', 'john@example.com'))
+            ->when(new RegisterUser($userId, 'John', 'Doe', 'john@example.com'))
             ->then([
-                new PatientRegistered($patientId, 'John', 'Doe', 'john@example.com')
+                new UserRegistered($userId, 'John', 'Doe', 'john@example.com')
             ]);
     }
 }
@@ -194,12 +184,12 @@ class PatientRegistrationTest extends TestCase
 ## Real-world Use Cases
 
 ### 1. Audit Trail
-- Track all changes to patient records
-- Support for regulatory compliance (HIPAA, GDPR)
+- Track all changes to records
+- Support for regulatory compliance (GDPR, industry regulations)
 - Forensic analysis of data changes
 
 ### 2. Temporal Queries
-- View patient history at any point in time
+- View history at any point in time
 - Reconstruct state for specific dates
 - Support for "what if" scenarios
 
@@ -210,7 +200,7 @@ class PatientRegistrationTest extends TestCase
 
 ## Conclusion
 
-Event Sourcing provides a robust foundation for healthcare applications by ensuring data integrity, auditability, and flexibility. By implementing these advanced patterns, `saluteora` can build a system that not only meets current requirements but can also evolve with future needs.
+Event Sourcing provides a robust foundation for data-intensive applications by ensuring data integrity, auditability, and flexibility. By implementing these advanced patterns, you can build a system that not only meets current requirements but can also evolve with future needs.
 
 ## References
 - [Event Sourcing in Laravel by Brent Roose](https://event-sourcing-laravel.com/)
