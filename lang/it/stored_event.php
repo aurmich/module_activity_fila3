@@ -2,6 +2,7 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 return array (
   'navigation' => 
   array (
@@ -27,6 +28,8 @@ return array (
 =======
 =======
 >>>>>>> c5f8a42 (.)
+=======
+>>>>>>> b4ea2c9 (.)
 declare(strict_types=1);
 
 return [
@@ -136,6 +139,9 @@ return [
     ],
 ];
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> a0afe1b (.)
 =======
 >>>>>>> c5f8a42 (.)
+=======
+>>>>>>> b4ea2c9 (.)
