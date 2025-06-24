@@ -1,6 +1,7 @@
 <?php
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 return array (
   'navigation' => 
   array (
@@ -24,6 +25,8 @@ return array (
   ),
 );
 =======
+=======
+>>>>>>> c5f8a42 (.)
 declare(strict_types=1);
 
 return [
@@ -132,4 +135,7 @@ return [
         'events_exported' => 'Eventi esportati con successo',
     ],
 ];
+<<<<<<< HEAD
 >>>>>>> a0afe1b (.)
+=======
+>>>>>>> c5f8a42 (.)
