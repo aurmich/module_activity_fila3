@@ -312,6 +312,7 @@ return [
         'filename_pattern' => 'attivita_{date}_{time}',
         'max_records' => 10000,
     ],
+<<<<<<< HEAD
     
     'permissions' => [
         'view' => 'activities.view',
@@ -332,3 +333,6 @@ return [
         'tags' => ['activities', 'monitoring'],
     ],
 ];
+=======
+];
+>>>>>>> 1aff50e (.)
