@@ -250,7 +250,6 @@ return [
         ],
         'replay_warning' => 'Il replay degli eventi può modificare lo stato del sistema. Procedi con cautela.',
     ],
-<<<<<<< HEAD
     
     'export' => [
         'formats' => [
@@ -350,6 +349,3 @@ return [
         'audit_trail' => true,
     ],
 ];
-=======
-];
->>>>>>> 1aff50e (.)
