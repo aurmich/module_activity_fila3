@@ -4,52 +4,52 @@ return [
     'fields' => [
         'id' => [
             'label' => 'ID',
-            'tooltip' => 'Unique identifier of the activity',
+            'tooltip' => 'Identificativo univoco dell\'attività999',
         ],
         'description' => [
-            'label' => 'Description',
-            'tooltip' => 'Description of the activity',
+            'label' => 'Descrizione',
+            'tooltip' => 'Descrizione dell\'attività',
         ],
         'subject_type' => [
-            'label' => 'Subject Type',
-            'tooltip' => 'Type of entity subject to the activity',
+            'label' => 'Tipo Soggetto',
+            'tooltip' => 'Tipo di entità soggetta all\'attività',
         ],
         'subject_id' => [
-            'label' => 'Subject ID',
-            'tooltip' => 'Identifier of the entity subject to the activity',
+            'label' => 'ID Soggetto',
+            'tooltip' => 'Identificativo dell\'entità soggetta all\'attività',
         ],
         'causer_type' => [
-            'label' => 'Causer Type',
-            'tooltip' => 'Type of entity that caused the activity',
+            'label' => 'Tipo Autore',
+            'tooltip' => 'Tipo di entità che ha causato l\'attività',
         ],
         'causer_id' => [
-            'label' => 'Causer ID',
-            'tooltip' => 'Identifier of the entity that caused the activity',
+            'label' => 'ID Autore',
+            'tooltip' => 'Identificativo dell\'entità che ha causato l\'attività',
         ],
         'created_at' => [
-            'label' => 'Created At',
-            'tooltip' => 'Date and time when the activity was created',
+            'label' => 'Data Creazione',
+            'tooltip' => 'Data e ora di creazione dell\'attività',
         ],
     ],
     'actions' => [
         'view' => [
-            'label' => 'View',
-            'tooltip' => 'View activity details',
+            'label' => 'Visualizza',
+            'tooltip' => 'Visualizza i dettagli dell\'attività',
         ],
         'delete' => [
-            'label' => 'Delete',
-            'tooltip' => 'Delete this activity',
-            'confirmation' => 'Are you sure you want to delete this activity?',
+            'label' => 'Elimina',
+            'tooltip' => 'Elimina questa attività',
+            'confirmation' => 'Sei sicuro di voler eliminare questa attività?',
         ],
     ],
     'filters' => [
         'date' => [
-            'label' => 'Date',
-            'tooltip' => 'Filter by creation date',
+            'label' => 'Data',
+            'tooltip' => 'Filtra per data di creazione',
         ],
         'type' => [
-            'label' => 'Type',
-            'tooltip' => 'Filter by activity type',
+            'label' => 'Tipo',
+            'tooltip' => 'Filtra per tipo di attività',
         ],
     ],
     'snapshots' => [
