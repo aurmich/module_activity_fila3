@@ -5,8 +5,13 @@ return [
         'name' => 'Log',
         'plural' => 'Log',
         'group' => [
+<<<<<<< HEAD
             'name' => 'Monitoraggio',
             'description' => 'Gestione dei log di sistema',
+=======
+            'name' => 'Monitoring',
+            'description' => 'System log management',
+>>>>>>> df84417 (.)
         ],
         'label' => 'Log',
         'sort' => '61',
@@ -14,7 +19,11 @@ return [
     ],
     'fields' => [
         'level' => [
+<<<<<<< HEAD
             'label' => 'Livello',
+=======
+            'label' => 'Level',
+>>>>>>> df84417 (.)
             'emergency' => 'Emergency',
             'alert' => 'Alert',
             'critical' => 'Critical',
@@ -24,6 +33,7 @@ return [
             'info' => 'Info',
             'debug' => 'Debug',
         ],
+<<<<<<< HEAD
         'message' => 'Messaggio',
         'context' => [
             'label' => 'Contesto',
@@ -69,6 +79,53 @@ return [
             'error' => 'Errore',
             'warning' => 'Attenzione',
             'notice' => 'Avviso',
+=======
+        'message' => 'Message',
+        'context' => [
+            'label' => 'Context',
+            'exception' => 'Exception',
+            'stack_trace' => 'Stack Trace',
+            'additional' => 'Additional Info',
+        ],
+        'channel' => [
+            'label' => 'Channel',
+            'system' => 'System',
+            'application' => 'Application',
+            'security' => 'Security',
+            'database' => 'Database',
+            'queue' => 'Queues',
+        ],
+        'datetime' => 'Date and Time',
+        'environment' => 'Environment',
+    ],
+    'filters' => [
+        'level' => 'Level',
+        'channel' => 'Channel',
+        'date_range' => 'Date Range',
+        'environment' => 'Environment',
+        'search' => 'Search in message',
+    ],
+    'actions' => [
+        'view_details' => 'View Details',
+        'download' => 'Download',
+        'clear' => 'Clear',
+        'archive' => 'Archive',
+    ],
+    'messages' => [
+        'no_logs' => 'No logs found',
+        'cleared' => 'Logs cleared successfully',
+        'archived' => 'Logs archived successfully',
+        'downloaded' => 'Log file downloaded successfully',
+    ],
+    'badges' => [
+        'level' => [
+            'emergency' => 'Emergency',
+            'alert' => 'Alert',
+            'critical' => 'Critical',
+            'error' => 'Error',
+            'warning' => 'Warning',
+            'notice' => 'Notice',
+>>>>>>> df84417 (.)
             'info' => 'Info',
             'debug' => 'Debug',
         ],

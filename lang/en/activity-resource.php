@@ -56,6 +56,7 @@ return [
         'fields' => [
             'id' => [
                 'label' => 'ID',
+<<<<<<< HEAD
                 'help' => 'Identificativo univoco dello snapshot',
             ],
             'aggregate_uuid' => [
@@ -77,6 +78,29 @@ return [
             'updated_at' => [
                 'label' => 'Data Aggiornamento',
                 'help' => 'Data di ultimo aggiornamento dello snapshot',
+=======
+                'help' => 'Unique identifier of the snapshot',
+            ],
+            'aggregate_uuid' => [
+                'label' => 'Aggregate UUID',
+                'help' => 'UUID of the aggregate',
+            ],
+            'aggregate_version' => [
+                'label' => 'Aggregate Version',
+                'help' => 'Version of the aggregate',
+            ],
+            'state' => [
+                'label' => 'State',
+                'help' => 'State of the snapshot',
+            ],
+            'created_at' => [
+                'label' => 'Creation Date',
+                'help' => 'Creation date of the snapshot',
+            ],
+            'updated_at' => [
+                'label' => 'Last Update',
+                'help' => 'Last update date of the snapshot',
+>>>>>>> df84417 (.)
             ],
         ],
     ],

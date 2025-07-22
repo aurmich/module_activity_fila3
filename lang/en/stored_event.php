@@ -2,6 +2,7 @@
 
 return [
     'navigation' => [
+<<<<<<< HEAD
         'name' => 'Eventi Archiviati',
         'plural' => 'Eventi Archiviati',
         'group' => [
@@ -9,12 +10,22 @@ return [
             'description' => 'Gestione degli eventi di sistema archiviati',
         ],
         'label' => 'Eventi Archiviati',
+=======
+        'name' => 'Stored Events',
+        'plural' => 'Stored Events',
+        'group' => [
+            'name' => 'Monitoring',
+            'description' => 'Management of stored system events',
+        ],
+        'label' => 'Stored Events',
+>>>>>>> df84417 (.)
         'sort' => '62',
         'icon' => 'activity-stored-event-animated',
     ],
     'fields' => [
         'id' => [
             'label' => 'ID',
+<<<<<<< HEAD
             'help' => 'Identificativo unico dell\'evento archiviato',
             'validation' => 'required|integer|min:1',
         ],
@@ -22,61 +33,112 @@ return [
             'label' => 'Classe Evento',
             'placeholder' => 'Inserisci la classe dell\'evento',
             'help' => 'Nome completo della classe che rappresenta l\'evento',
+=======
+            'help' => 'Unique identifier of the stored event',
+            'validation' => 'required|integer|min:1',
+        ],
+        'event_class' => [
+            'label' => 'Event Class',
+            'placeholder' => 'Enter the event class',
+            'help' => 'Full name of the class that represents the event',
+>>>>>>> df84417 (.)
             'validation' => 'required|string|max:255',
             'searchable' => '1',
         ],
         'event_properties' => [
+<<<<<<< HEAD
             'label' => 'Proprietà Evento',
             'placeholder' => 'Proprietà dell\'evento',
             'help' => 'Dati e proprietà specifiche dell\'evento',
+=======
+            'label' => 'Event Properties',
+            'placeholder' => 'Event properties',
+            'help' => 'Specific data and properties of the event',
+>>>>>>> df84417 (.)
             'validation' => 'required|json',
             'type' => 'json',
             'format' => 'json',
         ],
         'aggregate_uuid' => [
+<<<<<<< HEAD
             'label' => 'UUID Aggregato',
             'placeholder' => 'UUID dell\'aggregato',
             'help' => 'Identificativo unico dell\'aggregato di appartenenza',
+=======
+            'label' => 'Aggregate UUID',
+            'placeholder' => 'Aggregate UUID',
+            'help' => 'Unique identifier of the related aggregate',
+>>>>>>> df84417 (.)
             'validation' => 'required|uuid',
             'searchable' => '1',
         ],
         'aggregate_version' => [
+<<<<<<< HEAD
             'label' => 'Versione Aggregato',
             'placeholder' => 'Inserisci la versione',
             'help' => 'Numero di versione dell\'aggregato',
+=======
+            'label' => 'Aggregate Version',
+            'placeholder' => 'Enter version',
+            'help' => 'Version number of the aggregate',
+>>>>>>> df84417 (.)
             'validation' => 'required|integer|min:1',
             'sortable' => '1',
         ],
         'event_version' => [
+<<<<<<< HEAD
             'label' => 'Versione Evento',
             'placeholder' => 'Versione dell\'evento',
             'help' => 'Numero di versione del formato evento',
+=======
+            'label' => 'Event Version',
+            'placeholder' => 'Event version',
+            'help' => 'Version number of the event format',
+>>>>>>> df84417 (.)
             'validation' => 'nullable|string|max:20',
         ],
         'meta_data' => [
             'label' => 'Metadata',
+<<<<<<< HEAD
             'placeholder' => 'Metadata aggiuntivi',
             'help' => 'Informazioni metadata aggiuntive sull\'evento',
+=======
+            'placeholder' => 'Additional metadata',
+            'help' => 'Additional metadata information about the event',
+>>>>>>> df84417 (.)
             'validation' => 'nullable|json',
             'type' => 'json',
             'format' => 'json',
         ],
         'created_at' => [
+<<<<<<< HEAD
             'label' => 'Data Creazione',
             'placeholder' => 'Seleziona data e ora',
             'help' => 'Timestamp di quando l\'evento è stato creato',
+=======
+            'label' => 'Creation Date',
+            'placeholder' => 'Select date and time',
+            'help' => 'Timestamp of when the event was created',
+>>>>>>> df84417 (.)
             'validation' => 'required|date',
             'format' => 'd/m/Y H:i:s',
             'sortable' => '1',
         ],
         'created_by' => [
+<<<<<<< HEAD
             'label' => 'Creato Da',
             'placeholder' => 'Utente creatore',
             'help' => 'Utente che ha generato l\'evento',
+=======
+            'label' => 'Created By',
+            'placeholder' => 'Creating user',
+            'help' => 'User who generated the event',
+>>>>>>> df84417 (.)
             'validation' => 'nullable|integer|exists:users,id',
             'searchable' => '1',
         ],
         'updated_by' => [
+<<<<<<< HEAD
             'label' => 'Aggiornato Da',
             'placeholder' => 'Utente aggiornatore',
             'help' => 'Utente che ha aggiornato l\'evento',
@@ -86,39 +148,75 @@ return [
             'label' => 'Nome Stream',
             'placeholder' => 'Nome del flusso di eventi',
             'help' => 'Identificativo del flusso a cui appartiene l\'evento',
+=======
+            'label' => 'Updated By',
+            'placeholder' => 'Updating user',
+            'help' => 'User who updated the event',
+            'validation' => 'nullable|integer|exists:users,id',
+        ],
+        'stream_name' => [
+            'label' => 'Stream Name',
+            'placeholder' => 'Event stream name',
+            'help' => 'Identifier of the stream the event belongs to',
+>>>>>>> df84417 (.)
             'validation' => 'nullable|string|max:255',
             'searchable' => '1',
         ],
         'stream_position' => [
+<<<<<<< HEAD
             'label' => 'Posizione Stream',
             'placeholder' => 'Posizione nel flusso',
             'help' => 'Posizione sequenziale dell\'evento nel flusso',
+=======
+            'label' => 'Stream Position',
+            'placeholder' => 'Position in stream',
+            'help' => 'Sequential position of the event in the stream',
+>>>>>>> df84417 (.)
             'validation' => 'nullable|integer|min:0',
             'sortable' => '1',
         ],
         'toggleColumns' => [
+<<<<<<< HEAD
             'label' => 'Mostra/Nascondi Colonne',
             'placeholder' => '',
             'help' => 'Configura la visibilità delle colonne nella tabella',
+=======
+            'label' => 'Show/Hide Columns',
+            'placeholder' => '',
+            'help' => 'Configure column visibility in the table',
+>>>>>>> df84417 (.)
         ],
     ],
     'filters' => [
         'event_class' => [
+<<<<<<< HEAD
             'label' => 'Classe Evento',
             'placeholder' => 'Filtra per classe',
             'help' => 'Filtra gli eventi per tipo di classe',
+=======
+            'label' => 'Event Class',
+            'placeholder' => 'Filter by class',
+            'help' => 'Filter events by class type',
+>>>>>>> df84417 (.)
             'type' => 'select',
             'searchable' => '1',
             'multiple' => '1',
         ],
         'aggregate_uuid' => [
+<<<<<<< HEAD
             'label' => 'UUID Aggregato',
             'placeholder' => 'Filtra per aggregato',
             'help' => 'Filtra gli eventi per UUID aggregato',
+=======
+            'label' => 'Aggregate UUID',
+            'placeholder' => 'Filter by aggregate',
+            'help' => 'Filter events by aggregate UUID',
+>>>>>>> df84417 (.)
             'type' => 'text',
             'validation' => 'nullable|uuid',
         ],
         'aggregate_version_range' => [
+<<<<<<< HEAD
             'label' => 'Range Versione Aggregato',
             'placeholder' => 'Da versione - A versione',
             'help' => 'Filtra per range di versioni dell\'aggregato',
@@ -143,19 +241,52 @@ return [
             'label' => 'Nome Stream',
             'placeholder' => 'Filtra per stream',
             'help' => 'Filtra per nome del flusso di eventi',
+=======
+            'label' => 'Aggregate Version Range',
+            'placeholder' => 'From version - To version',
+            'help' => 'Filter by aggregate version range',
+            'type' => 'number_range',
+        ],
+        'date_range' => [
+            'label' => 'Date Range',
+            'placeholder' => 'Select range',
+            'help' => 'Filter events by time period',
+            'type' => 'date_range',
+            'presets' => [
+                'last_hour' => 'Last hour',
+                'today' => 'Today',
+                'yesterday' => 'Yesterday',
+                'last_7_days' => 'Last 7 days',
+                'last_30_days' => 'Last 30 days',
+                'this_month' => 'This month',
+                'last_month' => 'Last month',
+            ],
+        ],
+        'stream_name' => [
+            'label' => 'Stream Name',
+            'placeholder' => 'Filter by stream',
+            'help' => 'Filter by event stream name',
+>>>>>>> df84417 (.)
             'type' => 'select',
             'searchable' => '1',
         ],
         'created_by' => [
+<<<<<<< HEAD
             'label' => 'Creato Da',
             'placeholder' => 'Filtra per utente',
             'help' => 'Filtra per utente creatore',
+=======
+            'label' => 'Created By',
+            'placeholder' => 'Filter by user',
+            'help' => 'Filter by creating user',
+>>>>>>> df84417 (.)
             'type' => 'select',
             'searchable' => '1',
         ],
     ],
     'actions' => [
         'view' => [
+<<<<<<< HEAD
             'label' => 'Visualizza',
             'success' => 'Evento caricato con successo',
             'error' => 'Errore nel caricamento dell\'evento',
@@ -205,10 +336,62 @@ return [
             'success' => 'Replay multiplo completato',
             'error' => 'Errore durante il replay multiplo',
             'confirmation' => 'ATTENZIONE: Vuoi eseguire il replay di tutti gli eventi selezionati? Questa è un\'operazione critica.',
+=======
+            'label' => 'View',
+            'success' => 'Event loaded successfully',
+            'error' => 'Error loading event',
+        ],
+        'view_json' => [
+            'label' => 'View JSON',
+            'icon' => 'heroicon-o-code-bracket',
+            'color' => 'info',
+            'success' => 'JSON data loaded successfully',
+            'error' => 'Error loading JSON data',
+        ],
+        'replay' => [
+            'label' => 'Replay Evento',
+            'success' => 'Event replay completed successfully',
+            'error' => 'Error during event replay',
+            'confirmation' => 'Are you sure you want to replay this event?',
+            'requires_permission' => 'events.replay',
+        ],
+        'replay_from' => [
+            'label' => 'Replay From This Event',
+            'icon' => 'heroicon-o-play',
+            'color' => 'warning',
+            'success' => 'Event replay started successfully',
+            'error' => 'Error starting replay',
+            'confirmation' => 'Do you want to replay all events starting from this one? Potentially impactful operation.',
+            'requires_permission' => 'events.replay_from',
+        ],
+        'export' => [
+            'label' => 'Export Events',
+            'success' => 'Events exported successfully',
+            'error' => 'Error during export',
+            'confirmation' => 'Do you want to export the selected events?',
+        ],
+        'snapshot_create' => [
+            'label' => 'Create Snapshot',
+            'icon' => 'heroicon-o-camera',
+            'color' => 'primary',
+            'success' => 'Snapshot created successfully',
+            'error' => 'Error creating snapshot',
+            'confirmation' => 'Do you want to create a snapshot of the aggregate at this point?',
+            'requires_permission' => 'events.snapshot',
+        ],
+        'bulk_replay' => [
+            'label' => 'Bulk Replay',
+            'icon' => 'heroicon-o-forward',
+            'color' => 'danger',
+            'success' => 'Bulk replay completed',
+            'error' => 'Error during bulk replay',
+            'confirmation' => 'WARNING: Do you want to replay all selected events? This is a critical operation.',
+>>>>>>> df84417 (.)
             'requires_permission' => 'events.bulk_replay',
         ],
     ],
     'messages' => [
+<<<<<<< HEAD
         'no_events' => 'Nessun evento trovato',
         'event_replayed' => 'Evento riprodotto con successo',
         'events_exported' => 'Eventi esportati con successo',
@@ -220,6 +403,19 @@ return [
             'description' => 'Non ci sono eventi archiviati nel sistema. Gli eventi appariranno qui quando verranno generati e archiviati.',
         ],
         'replay_warning' => 'Il replay degli eventi può modificare lo stato del sistema. Procedi con cautela.',
+=======
+        'no_events' => 'No events found',
+        'event_replayed' => 'Event replayed successfully',
+        'events_exported' => 'Events exported successfully',
+        'loading' => 'Loading events...',
+        'error_loading' => 'Error loading events',
+        'snapshot_created' => 'Snapshot created successfully',
+        'empty_state' => [
+            'title' => 'No stored events',
+            'description' => 'There are no events stored in the system. Events will appear here when they are generated and stored.',
+        ],
+        'replay_warning' => 'Event replay can modify the system state. Proceed with caution.',
+>>>>>>> df84417 (.)
     ],
     'export' => [
         'formats' => [
@@ -273,7 +469,11 @@ return [
                 'sortable' => '1',
             ],
         ],
+<<<<<<< HEAD
         'filename_pattern' => 'eventi_archiviati_{date}_{time}',
+=======
+        'filename_pattern' => 'stored_events_{date}_{time}',
+>>>>>>> df84417 (.)
         'max_records' => '50000',
         'include_properties' => '',
     ],

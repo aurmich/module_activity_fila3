@@ -327,6 +327,7 @@ return [
         ],
     ],
     'navigation' => [
+<<<<<<< HEAD
         'name' => 'Attività', // Added missing translation key
         'plural' => 'Attività', // Added missing translation key
         'group' => [
@@ -360,6 +361,41 @@ return [
             'label' => 'Azione', // Added missing translation key
             'placeholder' => 'Seleziona un\'azione', // Added missing translation key
             'help' => 'Azione eseguita dall\'utente', // Added missing translation key
+=======
+        'name' => 'Activity',
+        'plural' => 'Activities',
+        'group' => [
+            'name' => 'Monitoring',
+            'description' => 'System activity monitoring',
+        ],
+        'label' => 'Activity',
+    ],
+    'fields' => [
+        'user' => [
+            'label' => 'User',
+            'placeholder' => 'Select a user',
+            'help' => 'The user who performed the action',
+            'name' => [
+                'label' => 'Name',
+                'placeholder' => 'Enter the name',
+                'help' => 'Full name of the user',
+            ],
+            'email' => [
+                'label' => 'Email',
+                'placeholder' => 'Enter the email',
+                'help' => 'User email address',
+            ],
+            'role' => [
+                'label' => 'Role',
+                'placeholder' => 'Select a role',
+                'help' => 'User role in the system',
+            ],
+        ],
+        'action' => [
+            'label' => 'Action',
+            'placeholder' => 'Select an action',
+            'help' => 'Action performed by the user',
+>>>>>>> df84417 (.)
         ],
     ],
 ];
