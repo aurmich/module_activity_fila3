@@ -5,62 +5,14 @@ return [
         'name' => 'Dashboard',
         'plural' => 'Dashboard',
         'group' => [
-<<<<<<< HEAD
-<<<<<<< HEAD
-            'name' => 'Monitoraggio',
-            'description' => 'Panoramica delle attività',
-=======
             'name' => 'Monitoring',
             'description' => 'Activity overview',
->>>>>>> df84417 (.)
-=======
-            'name' => 'Monitoring',
-            'description' => 'Activity overview',
->>>>>>> 1262d72 (.)
         ],
         'label' => 'Dashboard',
         'sort' => '59',
         'icon' => 'activity-dashboard-animated',
     ],
     'widgets' => [
-<<<<<<< HEAD
-<<<<<<< HEAD
-        'recent_activities' => 'Attività Recenti',
-        'activity_summary' => 'Riepilogo Attività',
-        'top_users' => 'Utenti Più Attivi',
-        'activity_by_type' => 'Attività per Tipo',
-        'system_health' => 'Stato del Sistema',
-        'error_logs' => 'Log di Errore',
-    ],
-    'charts' => [
-        'activities_over_time' => 'Attività nel Tempo',
-        'activities_by_user' => 'Attività per Utente',
-        'activities_by_type' => 'Attività per Tipo',
-        'error_distribution' => 'Distribuzione Errori',
-    ],
-    'metrics' => [
-        'total_activities' => 'Totale Attività',
-        'unique_users' => 'Utenti Unici',
-        'average_actions' => 'Azioni Medie',
-        'error_rate' => 'Tasso di Errore',
-    ],
-    'periods' => [
-        'last_hour' => 'Ultima Ora',
-        'today' => 'Oggi',
-        'yesterday' => 'Ieri',
-        'last_7_days' => 'Ultimi 7 giorni',
-        'last_30_days' => 'Ultimi 30 giorni',
-        'this_month' => 'Questo mese',
-        'last_month' => 'Mese scorso',
-        'custom' => 'Personalizzato',
-    ],
-    'status' => [
-        'healthy' => 'In Salute',
-        'warning' => 'Attenzione',
-        'critical' => 'Critico',
-=======
-=======
->>>>>>> 1262d72 (.)
         'recent_activities' => 'Recent Activities',
         'activity_summary' => 'Activity Summary',
         'top_users' => 'Most Active Users',
@@ -94,9 +46,5 @@ return [
         'healthy' => 'Healthy',
         'warning' => 'Warning',
         'critical' => 'Critical',
-<<<<<<< HEAD
->>>>>>> df84417 (.)
-=======
->>>>>>> 1262d72 (.)
     ],
 ];

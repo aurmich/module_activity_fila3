@@ -56,32 +56,6 @@ return [
         'fields' => [
             'id' => [
                 'label' => 'ID',
-<<<<<<< HEAD
-<<<<<<< HEAD
-                'help' => 'Identificativo univoco dello snapshot',
-            ],
-            'aggregate_uuid' => [
-                'label' => 'UUID Aggregato',
-                'help' => 'UUID dell\'aggregato',
-            ],
-            'aggregate_version' => [
-                'label' => 'Versione Aggregato',
-                'help' => 'Versione dell\'aggregato',
-            ],
-            'state' => [
-                'label' => 'Stato',
-                'help' => 'Stato dello snapshot',
-            ],
-            'created_at' => [
-                'label' => 'Data Creazione',
-                'help' => 'Data di creazione dello snapshot',
-            ],
-            'updated_at' => [
-                'label' => 'Data Aggiornamento',
-                'help' => 'Data di ultimo aggiornamento dello snapshot',
-=======
-=======
->>>>>>> 1262d72 (.)
                 'help' => 'Unique identifier of the snapshot',
             ],
             'aggregate_uuid' => [
@@ -103,10 +77,6 @@ return [
             'updated_at' => [
                 'label' => 'Last Update',
                 'help' => 'Last update date of the snapshot',
-<<<<<<< HEAD
->>>>>>> df84417 (.)
-=======
->>>>>>> 1262d72 (.)
             ],
         ],
     ],

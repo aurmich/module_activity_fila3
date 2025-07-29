@@ -5,18 +5,8 @@ return [
         'name' => 'Log',
         'plural' => 'Log',
         'group' => [
-<<<<<<< HEAD
-<<<<<<< HEAD
-            'name' => 'Monitoraggio',
-            'description' => 'Gestione dei log di sistema',
-=======
             'name' => 'Monitoring',
             'description' => 'System log management',
->>>>>>> df84417 (.)
-=======
-            'name' => 'Monitoring',
-            'description' => 'System log management',
->>>>>>> 1262d72 (.)
         ],
         'label' => 'Log',
         'sort' => '61',
@@ -24,15 +14,7 @@ return [
     ],
     'fields' => [
         'level' => [
-<<<<<<< HEAD
-<<<<<<< HEAD
-            'label' => 'Livello',
-=======
             'label' => 'Level',
->>>>>>> df84417 (.)
-=======
-            'label' => 'Level',
->>>>>>> 1262d72 (.)
             'emergency' => 'Emergency',
             'alert' => 'Alert',
             'critical' => 'Critical',
@@ -42,56 +24,6 @@ return [
             'info' => 'Info',
             'debug' => 'Debug',
         ],
-<<<<<<< HEAD
-<<<<<<< HEAD
-        'message' => 'Messaggio',
-        'context' => [
-            'label' => 'Contesto',
-            'exception' => 'Eccezione',
-            'stack_trace' => 'Stack Trace',
-            'additional' => 'Info Aggiuntive',
-        ],
-        'channel' => [
-            'label' => 'Canale',
-            'system' => 'Sistema',
-            'application' => 'Applicazione',
-            'security' => 'Sicurezza',
-            'database' => 'Database',
-            'queue' => 'Code',
-        ],
-        'datetime' => 'Data e Ora',
-        'environment' => 'Ambiente',
-    ],
-    'filters' => [
-        'level' => 'Livello',
-        'channel' => 'Canale',
-        'date_range' => 'Intervallo Date',
-        'environment' => 'Ambiente',
-        'search' => 'Cerca nel messaggio',
-    ],
-    'actions' => [
-        'view_details' => 'Visualizza Dettagli',
-        'download' => 'Scarica',
-        'clear' => 'Pulisci',
-        'archive' => 'Archivia',
-    ],
-    'messages' => [
-        'no_logs' => 'Nessun log trovato',
-        'cleared' => 'Log eliminati con successo',
-        'archived' => 'Log archiviati con successo',
-        'downloaded' => 'File log scaricato con successo',
-    ],
-    'badges' => [
-        'level' => [
-            'emergency' => 'Emergenza',
-            'alert' => 'Allerta',
-            'critical' => 'Critico',
-            'error' => 'Errore',
-            'warning' => 'Attenzione',
-            'notice' => 'Avviso',
-=======
-=======
->>>>>>> 1262d72 (.)
         'message' => 'Message',
         'context' => [
             'label' => 'Context',
@@ -137,10 +69,6 @@ return [
             'error' => 'Error',
             'warning' => 'Warning',
             'notice' => 'Notice',
-<<<<<<< HEAD
->>>>>>> df84417 (.)
-=======
->>>>>>> 1262d72 (.)
             'info' => 'Info',
             'debug' => 'Debug',
         ],
