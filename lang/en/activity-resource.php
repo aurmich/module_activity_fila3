@@ -57,6 +57,7 @@ return [
             'id' => [
                 'label' => 'ID',
 <<<<<<< HEAD
+<<<<<<< HEAD
                 'help' => 'Identificativo univoco dello snapshot',
             ],
             'aggregate_uuid' => [
@@ -79,6 +80,8 @@ return [
                 'label' => 'Data Aggiornamento',
                 'help' => 'Data di ultimo aggiornamento dello snapshot',
 =======
+=======
+>>>>>>> 1262d72 (.)
                 'help' => 'Unique identifier of the snapshot',
             ],
             'aggregate_uuid' => [
@@ -100,7 +103,10 @@ return [
             'updated_at' => [
                 'label' => 'Last Update',
                 'help' => 'Last update date of the snapshot',
+<<<<<<< HEAD
 >>>>>>> df84417 (.)
+=======
+>>>>>>> 1262d72 (.)
             ],
         ],
     ],

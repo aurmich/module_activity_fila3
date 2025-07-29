@@ -6,18 +6,24 @@ return [
         'plural' => 'Dashboard',
         'group' => [
 <<<<<<< HEAD
+<<<<<<< HEAD
             'name' => 'Monitoraggio',
             'description' => 'Panoramica delle attività',
 =======
             'name' => 'Monitoring',
             'description' => 'Activity overview',
 >>>>>>> df84417 (.)
+=======
+            'name' => 'Monitoring',
+            'description' => 'Activity overview',
+>>>>>>> 1262d72 (.)
         ],
         'label' => 'Dashboard',
         'sort' => '59',
         'icon' => 'activity-dashboard-animated',
     ],
     'widgets' => [
+<<<<<<< HEAD
 <<<<<<< HEAD
         'recent_activities' => 'Attività Recenti',
         'activity_summary' => 'Riepilogo Attività',
@@ -53,6 +59,8 @@ return [
         'warning' => 'Attenzione',
         'critical' => 'Critico',
 =======
+=======
+>>>>>>> 1262d72 (.)
         'recent_activities' => 'Recent Activities',
         'activity_summary' => 'Activity Summary',
         'top_users' => 'Most Active Users',
@@ -86,6 +94,9 @@ return [
         'healthy' => 'Healthy',
         'warning' => 'Warning',
         'critical' => 'Critical',
+<<<<<<< HEAD
 >>>>>>> df84417 (.)
+=======
+>>>>>>> 1262d72 (.)
     ],
 ];

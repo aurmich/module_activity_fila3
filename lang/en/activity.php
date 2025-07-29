@@ -328,6 +328,7 @@ return [
     ],
     'navigation' => [
 <<<<<<< HEAD
+<<<<<<< HEAD
         'name' => 'Attività', // Added missing translation key
         'plural' => 'Attività', // Added missing translation key
         'group' => [
@@ -362,6 +363,8 @@ return [
             'placeholder' => 'Seleziona un\'azione', // Added missing translation key
             'help' => 'Azione eseguita dall\'utente', // Added missing translation key
 =======
+=======
+>>>>>>> 1262d72 (.)
         'name' => 'Activity',
         'plural' => 'Activities',
         'group' => [
@@ -395,7 +398,10 @@ return [
             'label' => 'Action',
             'placeholder' => 'Select an action',
             'help' => 'Action performed by the user',
+<<<<<<< HEAD
 >>>>>>> df84417 (.)
+=======
+>>>>>>> 1262d72 (.)
         ],
     ],
 ];

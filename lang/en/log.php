@@ -6,12 +6,17 @@ return [
         'plural' => 'Log',
         'group' => [
 <<<<<<< HEAD
+<<<<<<< HEAD
             'name' => 'Monitoraggio',
             'description' => 'Gestione dei log di sistema',
 =======
             'name' => 'Monitoring',
             'description' => 'System log management',
 >>>>>>> df84417 (.)
+=======
+            'name' => 'Monitoring',
+            'description' => 'System log management',
+>>>>>>> 1262d72 (.)
         ],
         'label' => 'Log',
         'sort' => '61',
@@ -20,10 +25,14 @@ return [
     'fields' => [
         'level' => [
 <<<<<<< HEAD
+<<<<<<< HEAD
             'label' => 'Livello',
 =======
             'label' => 'Level',
 >>>>>>> df84417 (.)
+=======
+            'label' => 'Level',
+>>>>>>> 1262d72 (.)
             'emergency' => 'Emergency',
             'alert' => 'Alert',
             'critical' => 'Critical',
@@ -33,6 +42,7 @@ return [
             'info' => 'Info',
             'debug' => 'Debug',
         ],
+<<<<<<< HEAD
 <<<<<<< HEAD
         'message' => 'Messaggio',
         'context' => [
@@ -80,6 +90,8 @@ return [
             'warning' => 'Attenzione',
             'notice' => 'Avviso',
 =======
+=======
+>>>>>>> 1262d72 (.)
         'message' => 'Message',
         'context' => [
             'label' => 'Context',
@@ -125,7 +137,10 @@ return [
             'error' => 'Error',
             'warning' => 'Warning',
             'notice' => 'Notice',
+<<<<<<< HEAD
 >>>>>>> df84417 (.)
+=======
+>>>>>>> 1262d72 (.)
             'info' => 'Info',
             'debug' => 'Debug',
         ],
