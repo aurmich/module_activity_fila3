@@ -17,7 +17,11 @@ L'architettura del modulo Prediction Market è progettata seguendo i principi de
   - Emissione di eventi di dominio
 - **Regole di Business**:
   - Un mercato può accettare scommesse solo se nello stato `OPEN`
+<<<<<<< HEAD
   - Le quote vengono ricalcolate ad ogni scommessa secondo la regola LMSR (Logarithmic Market Scoring Rule) per garantire prezzi dinamici e liquidità automatica
+=======
+  - Le quote vengono ricalcolate ad ogni scommessa
+>>>>>>> 6f566e3 (.)
   - La risoluzione è consentita solo dopo la data di chiusura
 
 ##### UserBettingProfile Aggregate
