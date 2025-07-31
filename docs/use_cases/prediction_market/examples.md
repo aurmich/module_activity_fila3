@@ -94,7 +94,6 @@ Incorporare queste lezioni nel nostro sistema migliorerà l'efficacia e l'adozio
 
 # Esempi Pratici - Prediction Market
 
-<<<<<<< HEAD
 ## Calcolo quote con LMSR
 ```php
 $lmsr = new LmsrQuoteCalculator(b: 100);
@@ -103,8 +102,6 @@ $prices = $lmsr->getPrices($quantities);
 // $prices['A'], $prices['B'], $prices['C']
 ```
 
-=======
->>>>>>> 6f566e3 (.)
 ## Comando: Creazione Mercato
 ```php
 $command = new CreateMarket(
