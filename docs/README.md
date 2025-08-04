@@ -87,13 +87,22 @@ Files that don't require processing (such as images and fonts) can be added dire
 Now that you’ve edited your configuration variables and know how to customize your styles and content, let’s build the site.
 
 ```bash
+
 # build static files with Jigsaw
 ./vendor/bin/jigsaw build
 =======
 Il modulo **Activity** gestisce il logging avanzato, la tracciabilità delle azioni utente e la generazione di report sulle attività di sistema. È progettato per integrarsi con gli altri moduli della piattaforma, garantendo audit trail, analytics e conformità normativa (es. GDPR).
 
+<<<<<<< HEAD
 - **Namespace:** `Modules\Activity`
 - **Dipendenze:** [Xot](../../Xot/docs/README.md), [User](../../User/docs/README.md), [spatie/laravel-activitylog](https://spatie.be/docs/laravel-activitylog/v4/introduction), [spatie/laravel-event-sourcing](https://spatie.be/docs/laravel-event-sourcing/v7/introduction)
+=======
+# compile assets with Laravel Mix
+
+# options: dev, prod
+npm run dev
+```
+>>>>>>> 5e7bc52 (.)
 
 ---
 
