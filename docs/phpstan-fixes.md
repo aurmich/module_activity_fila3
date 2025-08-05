@@ -33,6 +33,7 @@ Le migrazioni corrette sono:
 - `2023_10_30_103350_create_stored_events_table.php`
 - `2023_10_31_103350_create_snapshots_table.php`
 
+<<<<<<< HEAD
 ## Errori Identificati - Analisi Dicembre 2024
 
 ### 1. Errori PHPDoc in Filament Resources
@@ -85,6 +86,8 @@ class RouteServiceProvider extends XotBaseRouteServiceProvider
 #### Soluzione
 Utilizzare la proprietà standard `$namespace` secondo le regole dei ServiceProvider.
 
+=======
+>>>>>>> 77182cc (.)
 ## Linee Guida per il Futuro
 
 Per mantenere questo alto livello di qualità del codice, seguire queste linee guida quando si modificano o si aggiungono file al modulo Activity:
@@ -104,6 +107,7 @@ Per mantenere questo alto livello di qualità del codice, seguire queste linee g
 - Utilizzare la dichiarazione dei tipi per tutti i parametri e i valori di ritorno dei metodi
 - Documentare le eccezioni potenziali con `@throws`
 
+<<<<<<< HEAD
 ### 4. Risorse Filament
 
 - Rimuovere PHPDoc non validi o circolari
@@ -136,6 +140,18 @@ Per mantenere questo alto livello di qualità del codice, seguire queste linee g
 
 Il modulo Activity mantiene un'eccellente qualità del codice. Le correzioni apportate migliorano ulteriormente la tipizzazione e la conformità agli standard Laraxot. Queste correzioni possono essere utilizzate come modello per migliorare altri moduli.
 
+=======
+### 4. Metodi e Funzioni
+
+- Usare le funzioni sicure della libreria `thecodingmachine/safe` quando si utilizzano funzioni PHP native che potrebbero restituire `FALSE` invece di generare eccezioni
+
+## Errori Rimanenti a Livello 10
+
+Gli errori rimanenti al livello 10 sono principalmente legati alle migrazioni ed ai tipi mixed. Gli errori sono stati risolti utilizzando annotazioni di tipo appropriate.
+
+## Conclusioni
+
+>>>>>>> 77182cc (.)
 ## Collegamenti
 
 - [Torna a README](./README.md)
@@ -143,6 +159,12 @@ Il modulo Activity mantiene un'eccellente qualità del codice. Le correzioni app
 - [Vai a Bottlenecks](./bottlenecks.md)
 - [Vai a Roadmap](./roadmap.md)
 
+<<<<<<< HEAD
+=======
+
+Il modulo Activity dimostra un'eccellente qualità del codice, raggiungendo il livello 9 di PHPStan. Con le modifiche apportate alle migrazioni, il codice è ancora più solido. Queste correzioni possono essere utilizzate come modello per migliorare altri moduli. 
+
+>>>>>>> 77182cc (.)
 ## Collegamenti tra versioni di phpstan_fixes.md
 * [phpstan_fixes.md](laravel/Modules/Xot/docs/phpstan_fixes.md)
 * [phpstan_fixes.md](laravel/Modules/User/docs/phpstan_fixes.md)
