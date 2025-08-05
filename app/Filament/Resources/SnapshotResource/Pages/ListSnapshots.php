@@ -60,24 +60,14 @@ class ListSnapshots extends XotBaseListRecords
     }
 
     /**
-<<<<<<< HEAD
      * @return array<string, Tables\Actions\Action|Tables\Actions\ActionGroup>
-=======
-     * @return array<Tables\Actions\Action|Tables\Actions\ActionGroup>
->>>>>>> 77182cc (.)
      */
     public function getTableActions(): array
     {
         return [
-<<<<<<< HEAD
             'view' => Tables\Actions\ViewAction::make(),
             'edit' => Tables\Actions\EditAction::make(),
             'delete' => Tables\Actions\DeleteAction::make(),
-=======
-            Tables\Actions\ViewAction::make(),
-            Tables\Actions\EditAction::make(),
-            Tables\Actions\DeleteAction::make(),
->>>>>>> 77182cc (.)
         ];
     }
 
