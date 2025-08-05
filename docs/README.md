@@ -111,11 +111,19 @@ Elimina un'attività (soft delete).
 
 ## Collegamenti
 
+<<<<<<< HEAD
 - [Architettura](./architecture.md)
 - [API Documentation](./api.md)
 - [Filament Resources](./filament-resources.md)
 - [Testing](./testing.md)
 - [Deployment](./deployment.md)
+=======
+- [Architettura](./ARCHITECTURE.md)
+- [API Documentation](./API.md)
+- [Filament Resources](./FILAMENT_RESOURCES.md)
+- [Testing](./TESTING.md)
+- [Deployment](./DEPLOYMENT.md)
+>>>>>>> 8268f9f (.)
 
 *Ultimo aggiornamento: gennaio 2025*
 
