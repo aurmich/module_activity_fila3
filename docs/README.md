@@ -114,15 +114,19 @@ Elimina un'attività (soft delete).
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> c30c35c (.)
 =======
 >>>>>>> fd6d6c2 (.)
+=======
+>>>>>>> 227e43c (.)
 - [Architettura](./architecture.md)
 - [API Documentation](./api.md)
 - [Filament Resources](./filament-resources.md)
 - [Testing](./testing.md)
 - [Deployment](./deployment.md)
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -136,6 +140,8 @@ Elimina un'attività (soft delete).
 >>>>>>> c30c35c (.)
 =======
 >>>>>>> fd6d6c2 (.)
+=======
+>>>>>>> 227e43c (.)
 
 *Ultimo aggiornamento: gennaio 2025*
 

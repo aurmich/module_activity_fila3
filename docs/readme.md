@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # Jigsaw Docs Starter Template
 =======
 # Modulo Activity - Documentazione
@@ -100,6 +101,8 @@ npm run dev
 * [readme.md](laravel/Modules/Activity/docs/readme.md)
 * [readme.md](laravel/Modules/Cms/docs/readme.md)
 =======
+=======
+>>>>>>> 227e43c (.)
 # Modulo Activity - Documentazione
 
 ## Panoramica
@@ -169,6 +172,7 @@ class User extends Authenticatable
 }
 ```
 
+<<<<<<< HEAD
 =======
 class User extends Authenticatable
 {
@@ -180,6 +184,8 @@ class User extends Authenticatable
 ```
 
 >>>>>>> fd6d6c2 (.)
+=======
+>>>>>>> 227e43c (.)
 ## API Endpoints
 
 ### GET /api/activities
@@ -232,7 +238,10 @@ Elimina un'attività (soft delete).
 
 *Ultimo aggiornamento: gennaio 2025*
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> c30c35c (.)
 =======
 >>>>>>> fd6d6c2 (.)
+=======
+>>>>>>> 227e43c (.)
 
