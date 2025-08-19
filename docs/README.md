@@ -112,11 +112,15 @@ Elimina un'attività (soft delete).
 ## Collegamenti
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> c30c35c (.)
 - [Architettura](./architecture.md)
 - [API Documentation](./api.md)
 - [Filament Resources](./filament-resources.md)
 - [Testing](./testing.md)
 - [Deployment](./deployment.md)
+<<<<<<< HEAD
 =======
 - [Architettura](./ARCHITECTURE.md)
 - [API Documentation](./API.md)
@@ -124,6 +128,8 @@ Elimina un'attività (soft delete).
 - [Testing](./TESTING.md)
 - [Deployment](./DEPLOYMENT.md)
 >>>>>>> 8268f9f (.)
+=======
+>>>>>>> c30c35c (.)
 
 *Ultimo aggiornamento: gennaio 2025*
 
