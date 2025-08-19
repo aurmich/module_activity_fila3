@@ -15,10 +15,7 @@ class ListActivities extends XotBaseListRecords
 {
     protected static string $resource = ActivityResource::class;
 
-<<<<<<< HEAD
-=======
     /** @return array<string, \Filament\Tables\Columns\Column> */
->>>>>>> c30c35c (.)
     public function getTableColumns(): array
     {
         return [

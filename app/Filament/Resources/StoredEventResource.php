@@ -13,10 +13,7 @@ class StoredEventResource extends XotBaseResource
 {
     protected static ?string $model = StoredEvent::class;
 
-<<<<<<< HEAD
-=======
     /** @return array<string, \Filament\Forms\Components\Component> */
->>>>>>> c30c35c (.)
     public static function getFormSchema(): array
     {
         return [
@@ -41,20 +38,14 @@ class StoredEventResource extends XotBaseResource
         ];
     }
 
-<<<<<<< HEAD
-=======
     /** @return array<string, string> */
->>>>>>> c30c35c (.)
     public static function getRelations(): array
     {
         return [
         ];
     }
 
-<<<<<<< HEAD
-=======
     /** @return array<string, \Filament\Resources\Pages\PageRegistration> */
->>>>>>> c30c35c (.)
     public static function getPages(): array
     {
         return [
