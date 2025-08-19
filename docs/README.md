@@ -1,17 +1,28 @@
-# Modulo Activity - Documentazione
+# 🏃 Activity Module - Event Sourcing
 
-## Panoramica
-Il modulo Activity gestisce il tracciamento delle attività e degli eventi all'interno dell'applicazione Laravel, fornendo un sistema completo per monitorare le azioni degli utenti e i cambiamenti di stato.
+## 📋 Quick Reference
+| Categoria | Guida | File |
+|-----------|-------| ---- |
+| **Core** | Event Sourcing | [event_sourcing.md](event_sourcing.md) |
+| **Integration** | Filament | [_integration/filament.md](_integration/filament.md) |
+| **Database** | Migrations | [database/migrations.md](database/migrations.md) |
+| **Use Cases** | Examples | [use_cases/](use_cases/) |
+| **Tools** | PHPStan | [phpstan/](phpstan/) |
+| **Troubleshooting** | Errori comuni | [filament/errors/](filament/errors/) |
 
-## Funzionalità Principali
-- **Tracciamento Eventi**: Registrazione automatica di eventi di sistema
-- **Log Utente**: Tracciamento delle azioni degli utenti
-- **Audit Trail**: Cronologia completa delle modifiche
-- **Notifiche**: Integrazione con il sistema di notifiche
-- **Dashboard**: Visualizzazione delle attività in tempo reale
+## 🎯 Core Features
+- **Event Sourcing**: Complete event tracking and replay
+- **Activity Streams**: User and system activity logging
+- **Filament Integration**: Admin panel for activity management
+- **Multi-tenant Support**: Tenant-based activity isolation
 
-## Architettura
+## 📁 Documentation Structure
+- `/use_cases/` - Real-world implementations (bank, shop, prediction_market)
+- `/filament/` - Filament integration and error handling
+- `/database/` - Database schema and migrations
+- `/phpstan/` - Static analysis configurations
 
+<<<<<<< HEAD
 ### Modelli Principali
 - `Activity`: Modello principale per le attività
 - `ActivityType`: Tipi di attività predefiniti
@@ -144,4 +155,8 @@ Elimina un'attività (soft delete).
 >>>>>>> 227e43c (.)
 
 *Ultimo aggiornamento: gennaio 2025*
+=======
+---
+*Principio KISS: Documentazione essenziale, ben organizzata, facile da navigare.*
+>>>>>>> 6de412a (.)
 
