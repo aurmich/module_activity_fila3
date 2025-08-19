@@ -3,6 +3,9 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 376bc0e6 (fix conflitti sync remote repo aurmich)
 # Jigsaw Docs Starter Template
 =======
 # Modulo Activity - Documentazione
@@ -66,6 +69,7 @@ Activity::create([
 // Nel modello
 use Modules\Activity\Traits\LogsActivity;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 # Jigsaw Docs Starter Template
@@ -133,6 +137,8 @@ use Modules\Activity\Traits\LogsActivity;
 
 <<<<<<< HEAD
 >>>>>>> 6de412a (.)
+=======
+>>>>>>> 376bc0e6 (fix conflitti sync remote repo aurmich)
 ---
 
 ### Adding Assets
@@ -170,10 +176,13 @@ npm run dev
 * [readme.md](laravel/Modules/Cms/docs/readme.md)
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 227e43c (.)
 =======
 >>>>>>> 6de412a (.)
+=======
+>>>>>>> 376bc0e6 (fix conflitti sync remote repo aurmich)
 # Modulo Activity - Documentazione
 
 ## Panoramica
@@ -245,6 +254,9 @@ class User extends Authenticatable
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 376bc0e6 (fix conflitti sync remote repo aurmich)
 =======
 class User extends Authenticatable
 {
@@ -256,6 +268,7 @@ class User extends Authenticatable
 ```
 
 >>>>>>> fd6d6c2 (.)
+<<<<<<< HEAD
 =======
 >>>>>>> 227e43c (.)
 =======
@@ -271,6 +284,8 @@ class User extends Authenticatable
 ```
 
 >>>>>>> 665033c (.)
+=======
+>>>>>>> 376bc0e6 (fix conflitti sync remote repo aurmich)
 ## API Endpoints
 
 ### GET /api/activities
@@ -326,6 +341,7 @@ Elimina un'attività (soft delete).
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> c30c35c (.)
 =======
 >>>>>>> fd6d6c2 (.)
@@ -336,4 +352,9 @@ Elimina un'attività (soft delete).
 >>>>>>> 6de412a (.)
 =======
 >>>>>>> 665033c (.)
+=======
+>>>>>>> c30c35c (.)
+=======
+>>>>>>> fd6d6c2 (.)
+>>>>>>> 376bc0e6 (fix conflitti sync remote repo aurmich)
 
