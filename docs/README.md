@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # 🏃 Activity Module - Event Sourcing
 
 ## 📋 Quick Reference
@@ -33,6 +34,32 @@
 - `ActivityUpdated`: Evento generato quando viene aggiornata un'attività
 - `ActivityDeleted`: Evento generato quando viene eliminata un'attività
 
+=======
+# Modulo Activity - Documentazione
+
+## Panoramica
+Il modulo Activity gestisce il tracciamento delle attività e degli eventi all'interno dell'applicazione Laravel, fornendo un sistema completo per monitorare le azioni degli utenti e i cambiamenti di stato.
+
+## Funzionalità Principali
+- **Tracciamento Eventi**: Registrazione automatica di eventi di sistema
+- **Log Utente**: Tracciamento delle azioni degli utenti
+- **Audit Trail**: Cronologia completa delle modifiche
+- **Notifiche**: Integrazione con il sistema di notifiche
+- **Dashboard**: Visualizzazione delle attività in tempo reale
+
+## Architettura
+
+### Modelli Principali
+- `Activity`: Modello principale per le attività
+- `ActivityType`: Tipi di attività predefiniti
+- `ActivityLog`: Log dettagliati delle attività
+
+### Eventi
+- `ActivityCreated`: Evento generato quando viene creata un'attività
+- `ActivityUpdated`: Evento generato quando viene aggiornata un'attività
+- `ActivityDeleted`: Evento generato quando viene eliminata un'attività
+
+>>>>>>> 665033c (.)
 ## Implementazione
 
 ### Configurazione
@@ -126,17 +153,21 @@ Elimina un'attività (soft delete).
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> c30c35c (.)
 =======
 >>>>>>> fd6d6c2 (.)
 =======
 >>>>>>> 227e43c (.)
+=======
+>>>>>>> 665033c (.)
 - [Architettura](./architecture.md)
 - [API Documentation](./api.md)
 - [Filament Resources](./filament-resources.md)
 - [Testing](./testing.md)
 - [Deployment](./deployment.md)
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -159,4 +190,8 @@ Elimina un'attività (soft delete).
 ---
 *Principio KISS: Documentazione essenziale, ben organizzata, facile da navigare.*
 >>>>>>> 6de412a (.)
+=======
+
+*Ultimo aggiornamento: gennaio 2025*
+>>>>>>> 665033c (.)
 
