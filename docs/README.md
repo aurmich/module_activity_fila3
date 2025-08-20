@@ -169,37 +169,14 @@ php artisan test --testsuite=Activity
 # Test PHPStan compliance
 ./vendor/bin/phpstan analyze Modules/Activity --level=9
 
-<<<<<<< HEAD
 # Test event sourcing
 php artisan activity:test-events
 ```
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> c30c35c (.)
-=======
->>>>>>> fd6d6c2 (.)
 - [Architettura](./architecture.md)
 - [API Documentation](./api.md)
 - [Filament Resources](./filament-resources.md)
 - [Testing](./testing.md)
 - [Deployment](./deployment.md)
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-- [Architettura](./ARCHITECTURE.md)
-- [API Documentation](./API.md)
-- [Filament Resources](./FILAMENT_RESOURCES.md)
-- [Testing](./TESTING.md)
-- [Deployment](./DEPLOYMENT.md)
->>>>>>> 8268f9f (.)
-=======
->>>>>>> c30c35c (.)
-=======
->>>>>>> fd6d6c2 (.)
->>>>>>> 376bc0e6 (fix conflitti sync remote repo aurmich)
 
 ## 📚 **Documentazione Completa**
 
