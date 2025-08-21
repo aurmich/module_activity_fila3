@@ -14,7 +14,6 @@ class SnapshotResource extends XotBaseResource
 {
     protected static ?string $model = Snapshot::class;
 
-    /** @return array<string, \Filament\Forms\Components\Component> */
     public static function getFormSchema(): array
     {
         return [
@@ -33,14 +32,12 @@ class SnapshotResource extends XotBaseResource
         ];
     }
 
-    /** @return array<string, string> */
     public static function getRelations(): array
     {
         return [
         ];
     }
 
-    /** @return array<string, \Filament\Resources\Pages\PageRegistration> */
     public static function getPages(): array
     {
         return [
