@@ -18,11 +18,14 @@ use Modules\Activity\Tests\TestCase;
 pest()->extend(TestCase::class)
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     ->use(Illuminate\Foundation\Testing\RefreshDatabase::class)
 =======
 >>>>>>> 1994b89 (.)
 =======
 >>>>>>> 732882f (.)
+=======
+>>>>>>> 5842c7a (.)
     ->in('Feature', 'Unit');
 
 /*
