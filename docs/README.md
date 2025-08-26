@@ -172,6 +172,14 @@ php artisan test --testsuite=Activity
 # Test event sourcing
 php artisan activity:test-events
 ```
+<<<<<<< HEAD
+=======
+- [Architettura](./architecture.md)
+- [API Documentation](./api.md)
+- [Filament Resources](./filament-resources.md)
+- [Testing](./testing.md)
+- [Deployment](./deployment.md)
+>>>>>>> dc99fc2 (.)
 
 ## 📚 **Documentazione Completa**
 
