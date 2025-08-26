@@ -9,6 +9,7 @@ use Tests\CreatesApplication;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Illuminate\Foundation\Testing\RefreshDatabase;
 =======
 >>>>>>> 1994b89 (.)
@@ -16,6 +17,9 @@ use Illuminate\Foundation\Testing\RefreshDatabase;
 >>>>>>> 732882f (.)
 =======
 >>>>>>> 5842c7a (.)
+=======
+use Illuminate\Foundation\Testing\RefreshDatabase;
+>>>>>>> 70f8ef3 (.)
 
 /**
  * Base test case for Activity module tests.

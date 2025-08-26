@@ -19,6 +19,7 @@ pest()->extend(TestCase::class)
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     ->use(Illuminate\Foundation\Testing\RefreshDatabase::class)
 =======
 >>>>>>> 1994b89 (.)
@@ -26,6 +27,9 @@ pest()->extend(TestCase::class)
 >>>>>>> 732882f (.)
 =======
 >>>>>>> 5842c7a (.)
+=======
+    ->use(Illuminate\Foundation\Testing\RefreshDatabase::class)
+>>>>>>> 70f8ef3 (.)
     ->in('Feature', 'Unit');
 
 /*
