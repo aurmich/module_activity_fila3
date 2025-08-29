@@ -1,5 +1,9 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 # Modulo Activity - Documentazione Completa
+=======
+# 📊 **Activity Module** - Sistema Avanzato di Audit e Logging
+>>>>>>> 65c6265 (.)
 =======
 # 📊 **Activity Module** - Sistema Avanzato di Audit e Logging
 >>>>>>> 65c6265 (.)
@@ -11,9 +15,13 @@
 [![Event Sourcing](https://img.shields.io/badge/Event-Sourcing%20Ready-orange.svg)](https://martinfowler.com/eaaDev/EventSourcing.html)
 [![Audit Trail](https://img.shields.io/badge/Audit-Trail%20Ready-yellow.svg)](https://en.wikipedia.org/wiki/Audit_trail)
 <<<<<<< HEAD
+<<<<<<< HEAD
 [![Quality Score](https://img.shields.io/badge/Quality%20Score-85%25-brightgreen.svg)](https://github.com/laraxot/activity-module)
 
 ## Stato del Modulo
+=======
+[![Quality Score](https://img.shields.io/badge/Quality%20Score-94%25-brightgreen.svg)](https://github.com/laraxot/activity-module)
+>>>>>>> 65c6265 (.)
 =======
 [![Quality Score](https://img.shields.io/badge/Quality%20Score-94%25-brightgreen.svg)](https://github.com/laraxot/activity-module)
 >>>>>>> 65c6265 (.)
