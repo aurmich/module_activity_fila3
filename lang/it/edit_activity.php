@@ -1,20 +1,5 @@
 <?php
 
-<<<<<<< HEAD
-return [
-    'actions' => [
-        'delete' => [
-            'label' => 'delete',
-        ],
-        'save' => [
-            'label' => 'save',
-        ],
-        'cancel' => [
-            'label' => 'cancel',
-        ],
-    ],
-];
-=======
 return array (
   'actions' => 
   array (
@@ -32,4 +17,3 @@ return array (
     ),
   ),
 );
->>>>>>> 717f740 (.)

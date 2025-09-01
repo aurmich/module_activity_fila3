@@ -54,11 +54,7 @@ class BaseActivityFactory extends Factory
                 'User logged in',
                 'User logged out',
                 'Password changed',
-<<<<<<< HEAD
                 'Profile updated',
-=======
-                'Profile updated'
->>>>>>> f371b59 (.)
             ]),
         ]);
     }
@@ -74,11 +70,7 @@ class BaseActivityFactory extends Factory
                 'User created',
                 'User updated',
                 'User deleted',
-<<<<<<< HEAD
                 'User profile modified',
-=======
-                'User profile modified'
->>>>>>> f371b59 (.)
             ]),
         ]);
     }

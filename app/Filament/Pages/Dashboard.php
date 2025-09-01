@@ -4,23 +4,14 @@ declare(strict_types=1);
 
 namespace Modules\Activity\Filament\Pages;
 
-<<<<<<< HEAD
-=======
 use Filament\Pages\Page;
->>>>>>> f371b59 (.)
 use Modules\Xot\Filament\Pages\XotBaseDashboard;
 
 class Dashboard extends XotBaseDashboard
 {
-<<<<<<< HEAD
-    // protected static ?string $navigationIcon = 'heroicon-o-home';
-
-    // protected static string $view = 'activity::filament.pages.dashboard';
-=======
     //protected static ?string $navigationIcon = 'heroicon-o-home';
 
     //protected static string $view = 'activity::filament.pages.dashboard';
->>>>>>> f371b59 (.)
 
     // public function mount(): void
     // {

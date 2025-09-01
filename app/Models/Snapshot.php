@@ -18,10 +18,6 @@ use Spatie\EventSourcing\Snapshots\EloquentSnapshot as SpatieSnapshot;
  * @property \Illuminate\Support\Carbon|null $updated_at
  * @property string|null $updated_by
  * @property string|null $created_by
-<<<<<<< HEAD
- *
-=======
->>>>>>> f371b59 (.)
  * @method static \Illuminate\Database\Eloquent\Builder|Snapshot newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Snapshot newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Snapshot query()
@@ -34,29 +30,16 @@ use Spatie\EventSourcing\Snapshots\EloquentSnapshot as SpatieSnapshot;
  * @method static \Illuminate\Database\Eloquent\Builder|Snapshot whereState($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Snapshot whereUpdatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Snapshot whereUpdatedBy($value)
-<<<<<<< HEAD
- *
-=======
->>>>>>> f371b59 (.)
  * @mixin IdeHelperSnapshot
  * @mixin \Eloquent
  */
 class Snapshot extends SpatieSnapshot
 {
     use HasFactory;
-<<<<<<< HEAD
-
-    /** @var string */
-    protected $connection = 'activity';
-
-    /** @var list<string> */
-    protected $fillable = ['id', 'aggregate_uuid', 'aggregate_version', 'state', 'created_at', 'updated_at'];
-=======
     /** @var string */
     protected $connection = 'activity';
     
     /** @var list<string> */
     protected $fillable = ['id', 'aggregate_uuid', 'aggregate_version', 'state', 'created_at', 'updated_at'];
 
->>>>>>> f371b59 (.)
 }

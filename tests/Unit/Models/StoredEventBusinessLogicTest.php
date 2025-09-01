@@ -6,33 +6,19 @@ use Modules\Activity\Models\StoredEvent;
 
 describe('StoredEvent Business Logic', function () {
     test('stored event has correct connection configured', function () {
-<<<<<<< HEAD
-        $storedEvent = new StoredEvent;
-
-=======
         $storedEvent = new StoredEvent();
         
->>>>>>> f371b59 (.)
         expect($storedEvent->getConnectionName())->toBe('activity');
     });
 
     test('stored event has correct table configured', function () {
-<<<<<<< HEAD
-        $storedEvent = new StoredEvent;
-
-=======
         $storedEvent = new StoredEvent();
         
->>>>>>> f371b59 (.)
         expect($storedEvent->getTable())->toBe('stored_events');
     });
 
     test('stored event has expected fillable fields for event sourcing', function () {
-<<<<<<< HEAD
-        $storedEvent = new StoredEvent;
-=======
         $storedEvent = new StoredEvent();
->>>>>>> f371b59 (.)
         $expectedFillable = [
             'id',
             'aggregate_uuid',
@@ -45,11 +31,7 @@ describe('StoredEvent Business Logic', function () {
             'updated_by',
             'created_by',
         ];
-<<<<<<< HEAD
-
-=======
         
->>>>>>> f371b59 (.)
         expect($storedEvent->getFillable())->toEqual($expectedFillable);
     });
 
@@ -59,11 +41,7 @@ describe('StoredEvent Business Logic', function () {
 
     test('stored event has factory trait for testing', function () {
         $traits = class_uses(StoredEvent::class);
-<<<<<<< HEAD
-
-=======
         
->>>>>>> f371b59 (.)
         expect($traits)->toHaveKey(\Illuminate\Database\Eloquent\Factories\HasFactory::class);
     });
 
@@ -78,8 +56,4 @@ describe('StoredEvent Business Logic', function () {
     test('stored event has where event scope method', function () {
         expect(method_exists(StoredEvent::class, 'scopeWhereEvent'))->toBeTrue();
     });
-<<<<<<< HEAD
 });
-=======
-});
->>>>>>> f371b59 (.)

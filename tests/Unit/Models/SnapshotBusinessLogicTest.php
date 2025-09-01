@@ -6,37 +6,22 @@ use Modules\Activity\Models\Snapshot;
 
 describe('Snapshot Business Logic', function () {
     test('snapshot has correct connection configured', function () {
-<<<<<<< HEAD
-        $snapshot = new Snapshot;
-
-=======
         $snapshot = new Snapshot();
         
->>>>>>> f371b59 (.)
         expect($snapshot->getConnectionName())->toBe('activity');
     });
 
     test('snapshot has expected fillable fields for event sourcing', function () {
-<<<<<<< HEAD
-        $snapshot = new Snapshot;
-=======
         $snapshot = new Snapshot();
->>>>>>> f371b59 (.)
         $expectedFillable = [
             'id',
             'aggregate_uuid',
             'aggregate_version',
             'state',
             'created_at',
-<<<<<<< HEAD
-            'updated_at',
-        ];
-
-=======
             'updated_at'
         ];
         
->>>>>>> f371b59 (.)
         expect($snapshot->getFillable())->toEqual($expectedFillable);
     });
 
@@ -46,11 +31,7 @@ describe('Snapshot Business Logic', function () {
 
     test('snapshot has factory trait for testing', function () {
         $traits = class_uses(Snapshot::class);
-<<<<<<< HEAD
-
-=======
         
->>>>>>> f371b59 (.)
         expect($traits)->toHaveKey(\Illuminate\Database\Eloquent\Factories\HasFactory::class);
     });
 
@@ -61,8 +42,4 @@ describe('Snapshot Business Logic', function () {
     test('snapshot can query by aggregate version', function () {
         expect(method_exists(Snapshot::class, 'whereAggregateVersion'))->toBeTrue();
     });
-<<<<<<< HEAD
 });
-=======
-});
->>>>>>> f371b59 (.)

@@ -21,8 +21,4 @@ abstract class ActivityBasePolicy
 
         return null;
     }
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> f371b59 (.)

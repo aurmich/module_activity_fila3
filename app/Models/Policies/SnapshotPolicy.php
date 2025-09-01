@@ -64,8 +64,4 @@ class SnapshotPolicy extends ActivityBasePolicy
     {
         return $user->hasPermissionTo('snapshot.forceDelete');
     }
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> f371b59 (.)
