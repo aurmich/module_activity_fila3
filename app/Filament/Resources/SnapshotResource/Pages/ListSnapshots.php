@@ -6,6 +6,10 @@ namespace Modules\Activity\Filament\Resources\SnapshotResource\Pages;
 
 use Filament\Tables;
 use Filament\Tables\Columns\TextColumn;
+<<<<<<< HEAD
+=======
+use Filament\Tables\Columns\ViewColumn;
+>>>>>>> f371b59 (.)
 use Modules\Activity\Filament\Resources\SnapshotResource;
 use Modules\Xot\Filament\Resources\Pages\XotBaseListRecords;
 

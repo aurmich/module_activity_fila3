@@ -2,8 +2,13 @@
 
 declare(strict_types=1);
 
+<<<<<<< HEAD
 use Illuminate\Support\Str;
 use Modules\Activity\Models\Activity;
+=======
+use Modules\Activity\Models\Activity;
+use Illuminate\Support\Str;
+>>>>>>> f371b59 (.)
 
 describe('Activity Business Logic', function () {
     it('can create activity with basic information', function () {

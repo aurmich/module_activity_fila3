@@ -64,4 +64,8 @@ class StoredEventPolicy extends ActivityBasePolicy
     {
         return $user->hasPermissionTo('stored_event.forceDelete');
     }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> f371b59 (.)

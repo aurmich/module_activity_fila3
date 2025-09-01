@@ -64,4 +64,8 @@ class ActivityPolicy extends ActivityBasePolicy
     {
         return $user->hasPermissionTo('activity.forceDelete');
     }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> f371b59 (.)

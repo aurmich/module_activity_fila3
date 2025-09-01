@@ -25,4 +25,8 @@ class ActivityFactory extends Factory
             'updated_at' => $this->faker->dateTimeBetween('-1 year'),
         ];
     }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> f371b59 (.)
