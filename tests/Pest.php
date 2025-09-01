@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-use Modules\Activity\Tests\TestCase;
+namespace Modules\Activity\Tests;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,7 +15,8 @@ use Modules\Activity\Tests\TestCase;
 |
 */
 
-pest()->extend(TestCase::class)
+uses(TestCase::class)
+    ->uses(\Illuminate\Foundation\Testing\DatabaseTransactions::class)
     ->in('Feature', 'Unit');
 
 /*
