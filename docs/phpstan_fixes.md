@@ -73,8 +73,8 @@ Gli errori rimanenti al livello 10 sono principalmente legati alle migrazioni ed
 Il modulo Activity dimostra un'eccellente qualità del codice, raggiungendo il livello 9 di PHPStan. Con le modifiche apportate alle migrazioni, il codice è ancora più solido. Queste correzioni possono essere utilizzate come modello per migliorare altri moduli. 
 
 ## Collegamenti tra versioni di phpstan_fixes.md
-* [phpstan_fixes.md](laravel/Modules/Xot/docs/phpstan_fixes.md)
-* [phpstan_fixes.md](laravel/Modules/User/docs/phpstan_fixes.md)
-* [phpstan_fixes.md](laravel/Modules/User/docs/fixes/phpstan_fixes.md)
-* [phpstan_fixes.md](laravel/Modules/Activity/docs/phpstan_fixes.md)
+* [phpstan_fixes.md](laravel/Modules/Xot/project_docs/phpstan_fixes.md)
+* [phpstan_fixes.md](laravel/Modules/User/project_docs/phpstan_fixes.md)
+* [phpstan_fixes.md](laravel/Modules/User/project_docs/fixes/phpstan_fixes.md)
+* [phpstan_fixes.md](laravel/Modules/Activity/project_docs/phpstan_fixes.md)
 

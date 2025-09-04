@@ -69,10 +69,10 @@ app/Domain/PredictionMarket/
 - All'interno del modulo, seguire pattern Domain (Events, Actions, ecc.)
 
 ## Collegamenti correlati
-- [Documentazione Laravel Modules](https://laravelmodules.com/docs/12/getting-started/introduction)
-- [Event Sourcing Spatie](https://spatie.be/docs/laravel-event-sourcing)
+- [Documentazione Laravel Modules](https://laravelmodules.com/project_docs/12/getting-started/introduction)
+- [Event Sourcing Spatie](https://spatie.be/project_docs/laravel-event-sourcing)
 - [CQRS e DDD](https://martinfowler.com/bliki/CQRS.html)
-- [Best practice modularità](https://laravelmodules.com/docs/12/basic-usage/creating-a-module)
+- [Best practice modularità](https://laravelmodules.com/project_docs/12/basic-usage/creating-a-module)
 - [Esempi di modularizzazione](https://github.com/nWidart/laravel-modules)
 - [Indice prediction_market](./README.md)
 - [Architettura prediction_market](./02_architettura.md)

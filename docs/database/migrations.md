@@ -34,8 +34,8 @@ Questo documento descrive le migrazioni del database per il modulo Activity. Ogn
 ## Collegamenti
 * [migration-morphs-polymorphic.md](../../../../../.cursor/rules/migration-morphs-polymorphic.md) - Regole morphs e migrazioni
 * [migration-complete-rules.mdc](../../../../../.cursor/rules/migration-complete-rules.mdc) - Regole complete migrazioni
-* [migrations.md](../../../Gdpr/docs/migrations.md) - Migrazioni Gdpr
-* [migrations.md](../../../Notify/docs/migrations.md) - Migrazioni Notify
+* [migrations.md](../../../Gdpr/project_docs/migrations.md) - Migrazioni Gdpr
+* [migrations.md](../../../Notify/project_docs/migrations.md) - Migrazioni Notify
 
 ## Filosofia Laraxot
 > *"Una tabella, una migrazione, una verità. Il tempo scorre attraverso i timestamp, la struttura evolve, ma la responsabilità rimane unica. I morphs sono universali come l'amore: devono abbracciare ogni formato ID senza discriminazioni."*
