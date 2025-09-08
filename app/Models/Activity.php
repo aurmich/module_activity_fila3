@@ -4,13 +4,12 @@ declare(strict_types=1);
 
 namespace Modules\Activity\Models;
 
-use Spatie\Activitylog\Models\Activity as SpatieActivity;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
-
+use Spatie\Activitylog\Models\Activity as SpatieActivity;
 
 /**
  * Class Activity.
- * 
+ *
  * This class extends the BaseActivity model to represent activities in the application.
  *
  * @property int $id
@@ -29,9 +28,10 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
  * @property string|null $created_by
  * @property string|null $deleted_at
  * @property string|null $deleted_by
- * @property-read \Illuminate\Database\Eloquent\Model|\Eloquent $causer
+ * @property-read \Illuminate\Database\Eloquent\Model $causer
  * @property-read \Illuminate\Support\Collection<int, mixed> $changes
- * @property-read \Illuminate\Database\Eloquent\Model|\Eloquent|null $subject
+ * @property-read \Illuminate\Database\Eloquent\Model|null $subject
+ *
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Activity causedBy(\Illuminate\Database\Eloquent\Model $causer)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Activity forBatch(string $batchUuid)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Activity forEvent(string $event)
@@ -41,6 +41,8 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Activity newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Activity newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Activity query()
+ * @method static int count()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Activity where(string $column, mixed $operator = null, mixed $value = null, string $boolean = 'and')
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Activity whereBatchUuid($value)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Activity whereCauserId($value)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Activity whereCauserType($value)
@@ -57,7 +59,18 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Activity whereSubjectType($value)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Activity whereUpdatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Activity whereUpdatedBy($value)
+ *
  * @mixin IdeHelperActivity
+ *
+ * @method static \Modules\Activity\Database\Factories\ActivityFactory factory($count = null, $state = [])
+ * @method static Activity|null first()
+ * @method static \Illuminate\Database\Eloquent\Collection<int, Activity> get()
+ * @method static Activity create(array $attributes = [])
+ * @method static Activity firstOrCreate(array $attributes = [], array $values = [])
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Activity where(string|\Closure $column, mixed $operator = null, mixed $value = null, string $boolean = 'and')
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Activity whereNotNull(string|\Illuminate\Contracts\Database\Query\Expression $columns)
+ * @method static int count(string $columns = '*')
+ *
  * @mixin \Eloquent
  */
 class Activity extends SpatieActivity
@@ -66,13 +79,12 @@ class Activity extends SpatieActivity
 
     /**
      * Create a new factory instance for the model.
-     *
-     * @return \Modules\Activity\Database\Factories\ActivityFactory
      */
     protected static function newFactory(): \Modules\Activity\Database\Factories\ActivityFactory
     {
         return \Modules\Activity\Database\Factories\ActivityFactory::new();
     }
+
     /** @var list<string> */
     protected $fillable = [
         'id',

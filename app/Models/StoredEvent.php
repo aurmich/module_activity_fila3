@@ -5,13 +5,12 @@ declare(strict_types=1);
 namespace Modules\Activity\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
-
 use Spatie\EventSourcing\StoredEvents\Models\EloquentStoredEvent;
 use Spatie\EventSourcing\StoredEvents\Models\EloquentStoredEvent as SpatieStoredEvent;
 
 /**
  * Class StoredEvent.
- * 
+ *
  * Represents a stored event in the activity module.
  *
  * @property int $id
@@ -25,6 +24,7 @@ use Spatie\EventSourcing\StoredEvents\Models\EloquentStoredEvent as SpatieStored
  * @property string|null $updated_by
  * @property string|null $created_by
  * @property-read \Spatie\EventSourcing\StoredEvents\ShouldBeStored|null $event
+ *
  * @method static \Spatie\EventSourcing\StoredEvents\Models\EloquentStoredEventQueryBuilder<static>|StoredEvent afterVersion(int $version)
  * @method static \Spatie\EventSourcing\StoredEvents\Models\EloquentStoredEventCollection<EloquentStoredEvent> all()
  * @method static \Spatie\EventSourcing\StoredEvents\Models\EloquentStoredEventCollection<EloquentStoredEvent> get()
@@ -32,6 +32,8 @@ use Spatie\EventSourcing\StoredEvents\Models\EloquentStoredEvent as SpatieStored
  * @method static \Spatie\EventSourcing\StoredEvents\Models\EloquentStoredEventQueryBuilder<static>|StoredEvent newModelQuery()
  * @method static \Spatie\EventSourcing\StoredEvents\Models\EloquentStoredEventQueryBuilder<static>|StoredEvent newQuery()
  * @method static \Spatie\EventSourcing\StoredEvents\Models\EloquentStoredEventQueryBuilder<static>|StoredEvent query()
+ * @method static int count()
+ * @method static \Spatie\EventSourcing\StoredEvents\Models\EloquentStoredEventQueryBuilder<static>|StoredEvent where(string $column, mixed $operator = null, mixed $value = null, string $boolean = 'and')
  * @method static \Spatie\EventSourcing\StoredEvents\Models\EloquentStoredEventQueryBuilder<static>|StoredEvent startingFrom(int $storedEventId)
  * @method static \Spatie\EventSourcing\StoredEvents\Models\EloquentStoredEventQueryBuilder<static>|StoredEvent whereAggregateRoot(string $uuid)
  * @method static \Spatie\EventSourcing\StoredEvents\Models\EloquentStoredEventQueryBuilder<static>|StoredEvent whereAggregateUuid($value)
@@ -48,15 +50,24 @@ use Spatie\EventSourcing\StoredEvents\Models\EloquentStoredEvent as SpatieStored
  * @method static \Spatie\EventSourcing\StoredEvents\Models\EloquentStoredEventQueryBuilder<static>|StoredEvent wherePropertyIsNot(string $property, ?mixed $value)
  * @method static \Spatie\EventSourcing\StoredEvents\Models\EloquentStoredEventQueryBuilder<static>|StoredEvent whereUpdatedBy($value)
  * @method static \Spatie\EventSourcing\StoredEvents\Models\EloquentStoredEventQueryBuilder<static>|StoredEvent withMetaDataAttributes()
+ * @method static StoredEvent|null first()
+ * @method static \Illuminate\Database\Eloquent\Collection<int, StoredEvent> get()
+ * @method static StoredEvent create(array $attributes = [])
+ * @method static StoredEvent firstOrCreate(array $attributes = [], array $values = [])
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|StoredEvent where(string|\Closure $column, mixed $operator = null, mixed $value = null, string $boolean = 'and')
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|StoredEvent whereNotNull(string|\Illuminate\Contracts\Database\Query\Expression $columns)
+ * @method static int count(string $columns = '*')
+ *
  * @mixin IdeHelperStoredEvent
  * @mixin \Eloquent
  */
 class StoredEvent extends SpatieStoredEvent
 {
     use HasFactory;
-    
+
     /** @var string */
     protected $connection = 'activity';
+
     /** @var string */
     protected $table = 'stored_events';
 
@@ -73,5 +84,4 @@ class StoredEvent extends SpatieStoredEvent
         'updated_by',
         'created_by',
     ];
-
 }
