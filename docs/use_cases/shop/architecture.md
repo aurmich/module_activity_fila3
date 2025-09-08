@@ -13,7 +13,7 @@ Il progetto `laravel-shop-main` è un'applicazione completa che dimostra l'uso d
   - **Order**: Traccia gli ordini con eventi come `OrderPlaced`, `OrderPaid`.
 - **Http/Controllers**: Punto di ingresso per interagire con il carrello tramite azioni come aggiungere articoli o completare il checkout.
 
-Il flusso degli eventi è descritto in un diagramma temporale (`/project_docs/timeline.png`), che mostra come gli eventi modificano lo stato del carrello.
+Il flusso degli eventi è descritto in un diagramma temporale (`/docs/timeline.png`), che mostra come gli eventi modificano lo stato del carrello.
 
 ## Struttura di Laravel Shop Command Bus
 

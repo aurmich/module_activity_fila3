@@ -73,15 +73,9 @@ test('activity batch processing with multiple models', function () {
         'aggregate_uuid' => $aggregateUuid,
         'state' => [
             'batch_id' => $batchUuid,
-<<<<<<< HEAD
             'activities_count' => $activities->count(),
             'user_id' => $user->id
         ]
-=======
-            'activities_count' => $activities->count()/** @phpstan-ignore method.nonObject */,
-            'user_id' => $user->id,
-        ],
->>>>>>> c095b6e (.)
     ]);
     
     $storedEvents = StoredEvent::factory()->count(3)->create([

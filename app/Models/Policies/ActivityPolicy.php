@@ -5,63 +5,63 @@ declare(strict_types=1);
 namespace Modules\Activity\Models\Policies;
 
 use Modules\Activity\Models\Activity;
-use Modules\Xot\Contracts\ProfileContract;
+use Modules\Xot\Contracts\UserContract;
 
 class ActivityPolicy extends ActivityBasePolicy
 {
     /**
      * Determine whether the user can view any models.
      */
-    public function viewAny(ProfileContract $user): bool
+    public function viewAny(UserContract $user): bool
     {
-        return $user->hasPermissionTo('activity.viewAny'); /** @phpstan-ignore method.nonObject */
+        return $user->hasPermissionTo('activity.viewAny');
     }
 
     /**
      * Determine whether the user can view the model.
      */
-    public function view(ProfileContract $user, Activity $activity): bool
+    public function view(UserContract $user, Activity $activity): bool
     {
-        return $user->hasPermissionTo('activity.view'); /** @phpstan-ignore method.nonObject */
+        return $user->hasPermissionTo('activity.view');
     }
 
     /**
      * Determine whether the user can create models.
      */
-    public function create(ProfileContract $user): bool
+    public function create(UserContract $user): bool
     {
-        return $user->hasPermissionTo('activity.create'); /** @phpstan-ignore method.nonObject */
+        return $user->hasPermissionTo('activity.create');
     }
 
     /**
      * Determine whether the user can update the model.
      */
-    public function update(ProfileContract $user, Activity $activity): bool
+    public function update(UserContract $user, Activity $activity): bool
     {
-        return $user->hasPermissionTo('activity.update'); /** @phpstan-ignore method.nonObject */
+        return $user->hasPermissionTo('activity.update');
     }
 
     /**
      * Determine whether the user can delete the model.
      */
-    public function delete(ProfileContract $user, Activity $activity): bool
+    public function delete(UserContract $user, Activity $activity): bool
     {
-        return $user->hasPermissionTo('activity.delete'); /** @phpstan-ignore method.nonObject */
+        return $user->hasPermissionTo('activity.delete');
     }
 
     /**
      * Determine whether the user can restore the model.
      */
-    public function restore(ProfileContract $user, Activity $activity): bool
+    public function restore(UserContract $user, Activity $activity): bool
     {
-        return $user->hasPermissionTo('activity.restore'); /** @phpstan-ignore method.nonObject */
+        return $user->hasPermissionTo('activity.restore');
     }
 
     /**
      * Determine whether the user can permanently delete the model.
      */
-    public function forceDelete(ProfileContract $user, Activity $activity): bool
+    public function forceDelete(UserContract $user, Activity $activity): bool
     {
-        return $user->hasPermissionTo('activity.forceDelete'); /** @phpstan-ignore method.nonObject */
+        return $user->hasPermissionTo('activity.forceDelete');
     }
 }

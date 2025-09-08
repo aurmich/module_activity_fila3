@@ -5,63 +5,63 @@ declare(strict_types=1);
 namespace Modules\Activity\Models\Policies;
 
 use Modules\Activity\Models\Snapshot;
-use Modules\Xot\Contracts\ProfileContract;
+use Modules\Xot\Contracts\UserContract;
 
 class SnapshotPolicy extends ActivityBasePolicy
 {
     /**
      * Determine whether the user can view any models.
      */
-    public function viewAny(ProfileContract $user): bool
+    public function viewAny(UserContract $user): bool
     {
-        return $user->hasPermissionTo('snapshot.viewAny'); /** @phpstan-ignore method.nonObject */
+        return $user->hasPermissionTo('snapshot.viewAny');
     }
 
     /**
      * Determine whether the user can view the model.
      */
-    public function view(ProfileContract $user, Snapshot $snapshot): bool
+    public function view(UserContract $user, Snapshot $snapshot): bool
     {
-        return $user->hasPermissionTo('snapshot.view'); /** @phpstan-ignore method.nonObject */
+        return $user->hasPermissionTo('snapshot.view');
     }
 
     /**
      * Determine whether the user can create models.
      */
-    public function create(ProfileContract $user): bool
+    public function create(UserContract $user): bool
     {
-        return $user->hasPermissionTo('snapshot.create'); /** @phpstan-ignore method.nonObject */
+        return $user->hasPermissionTo('snapshot.create');
     }
 
     /**
      * Determine whether the user can update the model.
      */
-    public function update(ProfileContract $user, Snapshot $snapshot): bool
+    public function update(UserContract $user, Snapshot $snapshot): bool
     {
-        return $user->hasPermissionTo('snapshot.update'); /** @phpstan-ignore method.nonObject */
+        return $user->hasPermissionTo('snapshot.update');
     }
 
     /**
      * Determine whether the user can delete the model.
      */
-    public function delete(ProfileContract $user, Snapshot $snapshot): bool
+    public function delete(UserContract $user, Snapshot $snapshot): bool
     {
-        return $user->hasPermissionTo('snapshot.delete'); /** @phpstan-ignore method.nonObject */
+        return $user->hasPermissionTo('snapshot.delete');
     }
 
     /**
      * Determine whether the user can restore the model.
      */
-    public function restore(ProfileContract $user, Snapshot $snapshot): bool
+    public function restore(UserContract $user, Snapshot $snapshot): bool
     {
-        return $user->hasPermissionTo('snapshot.restore'); /** @phpstan-ignore method.nonObject */
+        return $user->hasPermissionTo('snapshot.restore');
     }
 
     /**
      * Determine whether the user can permanently delete the model.
      */
-    public function forceDelete(ProfileContract $user, Snapshot $snapshot): bool
+    public function forceDelete(UserContract $user, Snapshot $snapshot): bool
     {
-        return $user->hasPermissionTo('snapshot.forceDelete'); /** @phpstan-ignore method.nonObject */
+        return $user->hasPermissionTo('snapshot.forceDelete');
     }
 }

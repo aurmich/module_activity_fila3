@@ -4,7 +4,7 @@
 
 Larabank è un'applicazione di esempio sviluppata da Spatie per dimostrare l'uso dell'Event Sourcing in Laravel, utilizzando aggregate e proiettori. Questo caso d'uso è stato analizzato e documentato per il modulo `Activity` per mostrare come i concetti di Event Sourcing possono essere applicati a un sistema bancario, con regole specifiche come limiti di saldo e notifiche automatiche.
 
-Il repository di riferimento è [larabank-aggregates](https://github.com/spatie/larabank-aggregates), parte della documentazione di [laravel-event-sourcing](https://spatie.be/project_docs/laravel-event-sourcing).
+Il repository di riferimento è [larabank-aggregates](https://github.com/spatie/larabank-aggregates), parte della documentazione di [laravel-event-sourcing](https://spatie.be/docs/laravel-event-sourcing).
 
 ## Obiettivi
 

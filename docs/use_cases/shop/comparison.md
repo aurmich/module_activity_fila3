@@ -15,7 +15,7 @@ Spatie ha sviluppato due progetti principali per dimostrare l'uso dell'Event Sou
   - Fornisce controller per interazioni come aggiungere articoli o checkout.
 - **Vantaggi**:
   - Facile da usare come punto di partenza per un progetto personalizzato.
-  - Include un diagramma temporale (`/project_docs/timeline.png`) per comprendere il flusso degli eventi.
+  - Include un diagramma temporale (`/docs/timeline.png`) per comprendere il flusso degli eventi.
 - **Svantaggi**:
   - Meno strutturato come pacchetto riutilizzabile, più adatto come esempio.
   - Richiede adattamenti significativi per progetti complessi.
