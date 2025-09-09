@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Modulo Activity - Documentazione Completa
 
 [![Laravel 12.x](https://img.shields.io/badge/Laravel-12.x-red.svg)](https://laravel.com/)
@@ -10,11 +9,9 @@
 [![Quality Score](https://img.shields.io/badge/Quality%20Score-85%25-brightgreen.svg)](https://github.com/laraxot/activity-module)
 
 ## Stato del Modulo
-=======
 # Activity Module Documentation
 
 Business logic module providing domain-specific functionality.
->>>>>>> bfad114 (.)
 
 ## Quick Reference
 - **Domain Logic**: Core business rules and processes
