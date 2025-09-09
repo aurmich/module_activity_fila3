@@ -6,14 +6,9 @@ namespace Modules\Activity\Models\Policies;
 
 use Modules\Activity\Models\Activity;
 use Modules\Xot\Contracts\UserContract;
-<<<<<<< HEAD
-
-class ActivityPolicy extends ActivityBasePolicy
-=======
 use Modules\User\Models\Policies\UserBasePolicy;
 
 class ActivityPolicy extends UserBasePolicy
->>>>>>> a31efc9 (.)
 {
     /**
      * Determine whether the user can view any models.
@@ -70,8 +65,4 @@ class ActivityPolicy extends UserBasePolicy
     {
         return $user->hasPermissionTo('activity.forceDelete');
     }
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> a31efc9 (.)

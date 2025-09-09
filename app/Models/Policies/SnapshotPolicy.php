@@ -6,14 +6,9 @@ namespace Modules\Activity\Models\Policies;
 
 use Modules\Activity\Models\Snapshot;
 use Modules\Xot\Contracts\UserContract;
-<<<<<<< HEAD
-
-class SnapshotPolicy extends ActivityBasePolicy
-=======
 use Modules\User\Models\Policies\UserBasePolicy;
 
 class SnapshotPolicy extends UserBasePolicy
->>>>>>> a31efc9 (.)
 {
     /**
      * Determine whether the user can view any models.
@@ -70,8 +65,4 @@ class SnapshotPolicy extends UserBasePolicy
     {
         return $user->hasPermissionTo('snapshot.forceDelete');
     }
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> a31efc9 (.)
