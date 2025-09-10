@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Modulo Activity - Documentazione Completa
 
 [![Laravel 12.x](https://img.shields.io/badge/Laravel-12.x-red.svg)](https://laravel.com/)
@@ -417,7 +416,6 @@ php artisan activity:test-dashboard
 **🐛 PHPStan Level 9**: File core certificati ✅  
 **🌐 Translation Standards**: File traduzione certificati ✅  
 **🚀 Performance**: 94/100 score 
-=======
 # Modulo Activity - Documentazione
 
 ## Panoramica
@@ -539,4 +537,3 @@ Elimina un'attività (soft delete).
 
 *Ultimo aggiornamento: gennaio 2025*
 
->>>>>>> 51ad079 (.)

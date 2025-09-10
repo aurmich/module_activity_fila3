@@ -470,13 +470,8 @@ return [
         'enabled' => true,
         'models' => [
             'App\Models\User',
-<<<<<<< HEAD
-            'Modules\<nome modulo>\Models\Appointment',
-            'Modules\<nome modulo>\Models\Patient',
-=======
             'Modules\SaluteOra\Models\Appointment',
             'Modules\SaluteOra\Models\Patient',
->>>>>>> 51ad079 (.)
         ],
         'events' => [
             'created', 'updated', 'deleted'

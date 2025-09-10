@@ -6,22 +6,13 @@ use Modules\Activity\Models\Activity;
 
 describe('Activity Business Logic', function () {
     test('activity has correct connection configured', function () {
-<<<<<<< HEAD
         $activity = new Activity();
         
-=======
-        $activity = new Activity;
-
->>>>>>> 51ad079 (.)
         expect($activity->getConnectionName())->toBe('activity');
     });
 
     test('activity has expected fillable fields', function () {
-<<<<<<< HEAD
         $activity = new Activity();
-=======
-        $activity = new Activity;
->>>>>>> 51ad079 (.)
         $expectedFillable = [
             'id',
             'log_name',
@@ -36,11 +27,7 @@ describe('Activity Business Logic', function () {
             'created_at',
             'updated_at',
         ];
-<<<<<<< HEAD
         
-=======
-
->>>>>>> 51ad079 (.)
         expect($activity->getFillable())->toEqual($expectedFillable);
     });
 
@@ -59,8 +46,4 @@ describe('Activity Business Logic', function () {
     test('activity has batch scope method', function () {
         expect(method_exists(Activity::class, 'scopeHasBatch'))->toBeTrue();
     });
-<<<<<<< HEAD
 });
-=======
-});
->>>>>>> 51ad079 (.)

@@ -10,12 +10,9 @@ return new class extends XotBaseMigration
     public function up(): void
     {
         $this->tableCreate(
-<<<<<<< HEAD
             /**
              * @param Blueprint $table
              */
-=======
->>>>>>> 51ad079 (.)
             function (Blueprint $table) {
                 $table->bigIncrements('id');
                 $table->string('log_name')->nullable();
@@ -30,12 +27,9 @@ return new class extends XotBaseMigration
         );
 
         $this->tableUpdate(
-<<<<<<< HEAD
             /**
              * @param Blueprint $table
              */
-=======
->>>>>>> 51ad079 (.)
             function (Blueprint $table) {
                 $this->updateTimestamps($table, true);
             }

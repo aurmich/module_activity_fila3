@@ -1,8 +1,5 @@
-<<<<<<< HEAD
 # Struttura Corretta dei Test di Login - Analisi Completa 
-=======
 # Struttura Corretta dei Test di Login - Analisi Completa SaluteOra
->>>>>>> 51ad079 (.)
 
 ## 🎯 **Struttura del Sistema di Autenticazione**
 
