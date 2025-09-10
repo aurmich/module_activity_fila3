@@ -30,11 +30,7 @@ parameters:
 
     bootstrapFiles:
         - ../../phpstan_constants.php
-<<<<<<< HEAD
-        - ../../vendor/amenadiel/jpgraph/src/config.inc.php
-=======
         #- ../../vendor/amenadiel/jpgraph/src/config.inc.php
->>>>>>> df12768 (.)
 
     scanFiles:
         - ../../Modules/Xot/Helpers/Helper.php

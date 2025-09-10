@@ -32,11 +32,7 @@ class ActivityServiceProvider extends SpatieActivitylogServiceProvider
             // Ignora attività di basso valore come visualizzazioni semplici
             if ($activity->description === 'viewed' && !in_array($activity->subject_type, [
                 'Modules\\User\\Models\\User',
-<<<<<<< HEAD
-                'Modules\\SaluteOra\\Models\\Patient',
-=======
                 'Modules\\<nome modulo>\\Models\\Patient',
->>>>>>> df12768 (.)
                 // Altri modelli critici...
             ])) {
                 return false;

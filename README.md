@@ -470,13 +470,8 @@ return [
         'enabled' => true,
         'models' => [
             'App\Models\User',
-<<<<<<< HEAD
-            'Modules\SaluteOra\Models\Appointment',
-            'Modules\SaluteOra\Models\Patient',
-=======
             'Modules\<nome modulo>\Models\Appointment',
             'Modules\<nome modulo>\Models\Patient',
->>>>>>> df12768 (.)
         ],
         'events' => [
             'created', 'updated', 'deleted'
