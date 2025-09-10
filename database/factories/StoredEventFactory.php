@@ -9,16 +9,26 @@ use Modules\Activity\Models\StoredEvent;
 
 /**
  * StoredEvent Factory
+<<<<<<< HEAD
  * 
  * Factory for creating StoredEvent model instances for testing and seeding.
  * 
+=======
+ *
+ * Factory for creating StoredEvent model instances for testing and seeding.
+ *
+>>>>>>> 51ad079 (.)
  * @extends Factory<StoredEvent>
  */
 class StoredEventFactory extends Factory
 {
     /**
      * The name of the factory's corresponding model.
+<<<<<<< HEAD
      * 
+=======
+     *
+>>>>>>> 51ad079 (.)
      * @var class-string<StoredEvent>
      */
     protected $model = StoredEvent::class;
@@ -59,9 +69,12 @@ class StoredEventFactory extends Factory
 
     /**
      * Create stored event with specific UUID.
+<<<<<<< HEAD
      *
      * @param string $uuid
      * @return static
+=======
+>>>>>>> 51ad079 (.)
      */
     public function withUuid(string $uuid): static
     {
@@ -72,9 +85,12 @@ class StoredEventFactory extends Factory
 
     /**
      * Create stored event with specific version.
+<<<<<<< HEAD
      *
      * @param int $version
      * @return static
+=======
+>>>>>>> 51ad079 (.)
      */
     public function withVersion(int $version): static
     {
@@ -85,9 +101,12 @@ class StoredEventFactory extends Factory
 
     /**
      * Create stored event with specific event class.
+<<<<<<< HEAD
      *
      * @param string $eventClass
      * @return static
+=======
+>>>>>>> 51ad079 (.)
      */
     public function withEventClass(string $eventClass): static
     {
@@ -98,8 +117,11 @@ class StoredEventFactory extends Factory
 
     /**
      * Create user-related stored event.
+<<<<<<< HEAD
      *
      * @return static
+=======
+>>>>>>> 51ad079 (.)
      */
     public function userEvent(): static
     {
@@ -114,4 +136,8 @@ class StoredEventFactory extends Factory
             ),
         ]);
     }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 51ad079 (.)

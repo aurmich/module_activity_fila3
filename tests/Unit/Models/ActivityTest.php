@@ -28,15 +28,25 @@ test('activity has required attributes', function () {
 
 test('activity can be soft deleted', function () {
     $activity = createActivity();
+<<<<<<< HEAD
     
     $activity->delete();
     
+=======
+
+    $activity->delete();
+
+>>>>>>> 51ad079 (.)
     expect($activity->trashed())->toBeTrue();
 });
 
 test('activity factory creates valid instances', function () {
     $activity = Activity::factory()->make();
+<<<<<<< HEAD
     
+=======
+
+>>>>>>> 51ad079 (.)
     expect($activity)
         ->toBeActivity()
         ->and($activity->name)->toBeString()

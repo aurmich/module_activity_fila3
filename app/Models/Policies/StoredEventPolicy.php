@@ -4,11 +4,18 @@ declare(strict_types=1);
 
 namespace Modules\Activity\Models\Policies;
 
+<<<<<<< HEAD
 use Modules\Xot\Contracts\UserContract;
 use Modules\Activity\Models\StoredEvent;
 use Modules\User\Models\Policies\UserBasePolicy;
 
 class StoredEventPolicy extends UserBasePolicy
+=======
+use Modules\Activity\Models\StoredEvent;
+use Modules\Xot\Contracts\UserContract;
+
+class StoredEventPolicy extends ActivityBasePolicy
+>>>>>>> 51ad079 (.)
 {
     /**
      * Determine whether the user can view any models.
@@ -65,4 +72,8 @@ class StoredEventPolicy extends UserBasePolicy
     {
         return $user->hasPermissionTo('stored_event.forceDelete');
     }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 51ad079 (.)

@@ -2,7 +2,11 @@
 
 declare(strict_types=1);
 
+<<<<<<< HEAD
 use Modules\Activity\Tests\TestCase;
+=======
+namespace Modules\Activity\Tests;
+>>>>>>> 51ad079 (.)
 
 /*
 |--------------------------------------------------------------------------
@@ -15,7 +19,12 @@ use Modules\Activity\Tests\TestCase;
 |
 */
 
+<<<<<<< HEAD
 pest()->extend(TestCase::class)
+=======
+uses(TestCase::class)
+    ->uses(\Illuminate\Foundation\Testing\DatabaseTransactions::class)
+>>>>>>> 51ad079 (.)
     ->in('Feature', 'Unit');
 
 /*

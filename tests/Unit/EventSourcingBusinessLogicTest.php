@@ -5,16 +5,26 @@ declare(strict_types=1);
 namespace Modules\Activity\Tests\Unit;
 
 use Carbon\Carbon;
+<<<<<<< HEAD
 use Tests\TestCase;
 use Modules\Activity\Models\Activity;
 use Modules\Activity\Models\Snapshot;
 use Modules\Activity\Models\StoredEvent;
 use Illuminate\Foundation\Testing\RefreshDatabase;
+=======
+use Modules\Activity\Models\Activity;
+use Modules\Activity\Models\Snapshot;
+use Tests\TestCase;
+>>>>>>> 51ad079 (.)
 
 uses(TestCase::class);
 
 describe('Event Sourcing Business Logic', function () {
+<<<<<<< HEAD
     
+=======
+
+>>>>>>> 51ad079 (.)
     beforeEach(function () {
         // In-memory test objects following CLAUDE.md guidelines - no database
         $this->activityData = [
@@ -23,7 +33,11 @@ describe('Event Sourcing Business Logic', function () {
             'description' => 'User login attempt',
             'subject_type' => 'App\\Models\\User',
             'subject_id' => 123,
+<<<<<<< HEAD
             'causer_type' => 'App\\Models\\User', 
+=======
+            'causer_type' => 'App\\Models\\User',
+>>>>>>> 51ad079 (.)
             'causer_id' => 123,
             'properties' => [
                 'ip_address' => '192.168.1.1',
@@ -73,10 +87,17 @@ describe('Event Sourcing Business Logic', function () {
     });
 
     describe('Activity Logging Business Logic', function () {
+<<<<<<< HEAD
         
         it('records activity with proper causer and subject relationship', function () {
             $activity = (object) $this->activityData;
             
+=======
+
+        it('records activity with proper causer and subject relationship', function () {
+            $activity = (object) $this->activityData;
+
+>>>>>>> 51ad079 (.)
             // Business Logic: Activity must have both causer and subject
             expect($activity->causer_id)->toBe(123);
             expect($activity->subject_id)->toBe(123);
@@ -87,21 +108,33 @@ describe('Event Sourcing Business Logic', function () {
         it('validates activity properties structure', function () {
             $activity = (object) $this->activityData;
             $properties = $activity->properties;
+<<<<<<< HEAD
             
+=======
+
+>>>>>>> 51ad079 (.)
             // Business Logic: Properties must contain tracking data
             expect($properties)->toHaveKey('ip_address');
             expect($properties)->toHaveKey('user_agent');
             expect($properties)->toHaveKey('session_id');
             expect($properties)->toHaveKey('old_values');
             expect($properties)->toHaveKey('new_values');
+<<<<<<< HEAD
             
+=======
+
+>>>>>>> 51ad079 (.)
             // IP validation business logic
             expect($properties['ip_address'])->toMatch('/^\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}$/');
         });
 
         it('handles batch activity grouping', function () {
             $activity = (object) $this->activityData;
+<<<<<<< HEAD
             
+=======
+
+>>>>>>> 51ad079 (.)
             // Business Logic: Batch activities must have same UUID
             expect($activity->batch_uuid)->toBe('batch-uuid-123');
             expect($activity->batch_uuid)->toStartWith('batch-');
@@ -110,13 +143,21 @@ describe('Event Sourcing Business Logic', function () {
         it('validates activity event types', function () {
             $validEvents = ['created', 'updated', 'deleted', 'restored', 'viewed', 'logged_in', 'logged_out'];
             $activity = (object) $this->activityData;
+<<<<<<< HEAD
             
+=======
+
+>>>>>>> 51ad079 (.)
             expect($validEvents)->toContain($activity->event);
         });
 
         it('ensures proper activity description format', function () {
             $activity = (object) $this->activityData;
+<<<<<<< HEAD
             
+=======
+
+>>>>>>> 51ad079 (.)
             // Business Logic: Description should be human readable
             expect($activity->description)->toBeString();
             expect($activity->description)->not->toBeEmpty();
@@ -125,10 +166,17 @@ describe('Event Sourcing Business Logic', function () {
     });
 
     describe('Event Sourcing Business Logic', function () {
+<<<<<<< HEAD
         
         it('maintains event ordering with versions', function () {
             $event = (object) $this->storedEventData;
             
+=======
+
+        it('maintains event ordering with versions', function () {
+            $event = (object) $this->storedEventData;
+
+>>>>>>> 51ad079 (.)
             // Business Logic: Event versions must be sequential
             expect($event->aggregate_version)->toBe(1);
             expect($event->event_version)->toBe(1);
@@ -137,7 +185,11 @@ describe('Event Sourcing Business Logic', function () {
 
         it('validates event class structure', function () {
             $event = (object) $this->storedEventData;
+<<<<<<< HEAD
             
+=======
+
+>>>>>>> 51ad079 (.)
             // Business Logic: Event class must be valid PHP class name
             expect($event->event_class)->toMatch('/^[A-Z][a-zA-Z0-9\\\\]*$/');
             expect($event->event_class)->toContain('\\');
@@ -146,7 +198,11 @@ describe('Event Sourcing Business Logic', function () {
         it('ensures event properties contain business data', function () {
             $event = (object) $this->storedEventData;
             $properties = $event->event_properties;
+<<<<<<< HEAD
             
+=======
+
+>>>>>>> 51ad079 (.)
             // Business Logic: Event properties must have identifiers
             expect($properties)->toHaveKey('user_id');
             expect($properties)->toHaveKey('timestamp');
@@ -157,19 +213,31 @@ describe('Event Sourcing Business Logic', function () {
         it('validates metadata structure for tracing', function () {
             $event = (object) $this->storedEventData;
             $metadata = $event->meta_data;
+<<<<<<< HEAD
             
+=======
+
+>>>>>>> 51ad079 (.)
             // Business Logic: Metadata must support distributed tracing
             expect($metadata)->toHaveKey('source');
             expect($metadata)->toHaveKey('correlation_id');
             expect($metadata)->toHaveKey('causation_id');
+<<<<<<< HEAD
             
+=======
+
+>>>>>>> 51ad079 (.)
             expect($metadata['correlation_id'])->toStartWith('corr-');
             expect($metadata['causation_id'])->toStartWith('cause-');
         });
 
         it('maintains aggregate UUID consistency', function () {
             $event = (object) $this->storedEventData;
+<<<<<<< HEAD
             
+=======
+
+>>>>>>> 51ad079 (.)
             // Business Logic: Aggregate UUID must be consistent across events
             expect($event->aggregate_uuid)->toBe('user-uuid-456');
             expect($event->aggregate_uuid)->toMatch('/^[a-z]+-uuid-\d+$/');
@@ -177,10 +245,17 @@ describe('Event Sourcing Business Logic', function () {
     });
 
     describe('Snapshot Business Logic', function () {
+<<<<<<< HEAD
         
         it('creates snapshots at version intervals', function () {
             $snapshot = (object) $this->snapshotData;
             
+=======
+
+        it('creates snapshots at version intervals', function () {
+            $snapshot = (object) $this->snapshotData;
+
+>>>>>>> 51ad079 (.)
             // Business Logic: Snapshots created every 10 versions
             expect($snapshot->aggregate_version)->toBe(10);
             expect($snapshot->aggregate_version % 10)->toBe(0);
@@ -189,14 +264,22 @@ describe('Event Sourcing Business Logic', function () {
         it('preserves complete aggregate state', function () {
             $snapshot = (object) $this->snapshotData;
             $state = $snapshot->state;
+<<<<<<< HEAD
             
+=======
+
+>>>>>>> 51ad079 (.)
             // Business Logic: Snapshot must contain complete state
             expect($state)->toHaveKey('user_id');
             expect($state)->toHaveKey('login_count');
             expect($state)->toHaveKey('last_login');
             expect($state)->toHaveKey('preferences');
             expect($state)->toHaveKey('profile_complete');
+<<<<<<< HEAD
             
+=======
+
+>>>>>>> 51ad079 (.)
             // State validation
             expect($state['user_id'])->toBeInt();
             expect($state['login_count'])->toBeInt();
@@ -206,7 +289,11 @@ describe('Event Sourcing Business Logic', function () {
 
         it('validates snapshot performance requirements', function () {
             $snapshot = (object) $this->snapshotData;
+<<<<<<< HEAD
             
+=======
+
+>>>>>>> 51ad079 (.)
             // Business Logic: Snapshots must be relatively recent
             $ageInHours = Carbon::now()->diffInHours($snapshot->created_at);
             expect($ageInHours)->toBeLessThan(24); // Snapshots should be recent
@@ -214,12 +301,20 @@ describe('Event Sourcing Business Logic', function () {
 
         it('ensures snapshot state serialization', function () {
             $snapshot = (object) $this->snapshotData;
+<<<<<<< HEAD
             
+=======
+
+>>>>>>> 51ad079 (.)
             // Business Logic: State must be serializable
             $serialized = json_encode($snapshot->state);
             expect($serialized)->toBeString();
             expect($serialized)->not->toBe('false'); // JSON encoding successful
+<<<<<<< HEAD
             
+=======
+
+>>>>>>> 51ad079 (.)
             $deserialized = json_decode($serialized, true);
             expect($deserialized)->toBeArray();
             expect($deserialized)->toBe($snapshot->state);
@@ -227,6 +322,7 @@ describe('Event Sourcing Business Logic', function () {
     });
 
     describe('Event Replay Business Logic', function () {
+<<<<<<< HEAD
         
         it('handles event chronological ordering', function () {
             $events = [
@@ -239,6 +335,20 @@ describe('Event Sourcing Business Logic', function () {
             for ($i = 1; $i < count($events); $i++) {
                 expect($events[$i]->created_at->isAfter($events[$i-1]->created_at))->toBeTrue();
                 expect($events[$i]->aggregate_version)->toBe($events[$i-1]->aggregate_version + 1);
+=======
+
+        it('handles event chronological ordering', function () {
+            $events = [
+                (object) ['created_at' => Carbon::now()->subMinutes(30), 'aggregate_version' => 1],
+                (object) ['created_at' => Carbon::now()->subMinutes(20), 'aggregate_version' => 2],
+                (object) ['created_at' => Carbon::now()->subMinutes(10), 'aggregate_version' => 3],
+            ];
+
+            // Business Logic: Events must be in chronological order for replay
+            for ($i = 1; $i < count($events); $i++) {
+                expect($events[$i]->created_at->isAfter($events[$i - 1]->created_at))->toBeTrue();
+                expect($events[$i]->aggregate_version)->toBe($events[$i - 1]->aggregate_version + 1);
+>>>>>>> 51ad079 (.)
             }
         });
 
@@ -249,7 +359,11 @@ describe('Event Sourcing Business Logic', function () {
                 ['type' => 'login', 'data' => ['timestamp' => '2024-12-01 10:00:00']],
                 ['type' => 'profile_update', 'data' => ['field' => 'email', 'value' => 'new@email.com']],
             ];
+<<<<<<< HEAD
             
+=======
+
+>>>>>>> 51ad079 (.)
             // Business Logic: Event replay must reconstruct state correctly
             $finalState = $baseState;
             foreach ($events as $event) {
@@ -258,7 +372,11 @@ describe('Event Sourcing Business Logic', function () {
                     $finalState['last_login'] = $event['data']['timestamp'];
                 }
             }
+<<<<<<< HEAD
             
+=======
+
+>>>>>>> 51ad079 (.)
             expect($finalState['login_count'])->toBe(2);
             expect($finalState['last_login'])->toBe('2024-12-01 10:00:00');
         });
@@ -270,11 +388,19 @@ describe('Event Sourcing Business Logic', function () {
                 ['aggregate_version' => 8, 'event' => 'gap_in_sequence'], // Gap!
                 ['aggregate_version' => 7, 'event' => 'out_of_order'],
             ];
+<<<<<<< HEAD
             
             // Business Logic: Must detect version gaps and ordering issues
             foreach ($incomingEvents as $event) {
                 $isValidSequence = $event['aggregate_version'] === ($currentVersion + 1);
                 
+=======
+
+            // Business Logic: Must detect version gaps and ordering issues
+            foreach ($incomingEvents as $event) {
+                $isValidSequence = $event['aggregate_version'] === ($currentVersion + 1);
+
+>>>>>>> 51ad079 (.)
                 if ($event['aggregate_version'] === 6) {
                     expect($isValidSequence)->toBeTrue();
                 } else {
@@ -285,11 +411,19 @@ describe('Event Sourcing Business Logic', function () {
     });
 
     describe('Performance and Scalability Logic', function () {
+<<<<<<< HEAD
         
         it('validates batch processing efficiency', function () {
             $batchSize = 100;
             $events = array_fill(0, $batchSize, $this->storedEventData);
             
+=======
+
+        it('validates batch processing efficiency', function () {
+            $batchSize = 100;
+            $events = array_fill(0, $batchSize, $this->storedEventData);
+
+>>>>>>> 51ad079 (.)
             // Business Logic: Batch processing should handle reasonable loads
             expect(count($events))->toBe($batchSize);
             expect($batchSize)->toBeLessThanOrEqual(1000); // Reasonable batch limit
@@ -298,7 +432,11 @@ describe('Event Sourcing Business Logic', function () {
         it('ensures event stream partitioning logic', function () {
             $aggregateTypes = ['user', 'order', 'product', 'payment'];
             $aggregateUuid = 'user-uuid-456';
+<<<<<<< HEAD
             
+=======
+
+>>>>>>> 51ad079 (.)
             // Business Logic: Event streams should be partitionable by type
             $partitionKey = explode('-', $aggregateUuid)[0];
             expect($aggregateTypes)->toContain($partitionKey);
@@ -308,10 +446,18 @@ describe('Event Sourcing Business Logic', function () {
             $oldEvent = Carbon::now()->subYears(2);
             $recentEvent = Carbon::now()->subDays(30);
             $maxRetentionYears = 5;
+<<<<<<< HEAD
             
+=======
+
+>>>>>>> 51ad079 (.)
             // Business Logic: Events should have retention limits
             expect($oldEvent->diffInYears(Carbon::now()))->toBeLessThan($maxRetentionYears);
             expect($recentEvent->diffInDays(Carbon::now()))->toBeLessThan(365);
         });
     });
+<<<<<<< HEAD
 });
+=======
+});
+>>>>>>> 51ad079 (.)
