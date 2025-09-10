@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 # Struttura Corretta dei Test di Login - Analisi Completa SaluteOra
+=======
+# Struttura Corretta dei Test di Login - Analisi Completa 
+>>>>>>> df12768 (.)
 
 ## 🎯 **Struttura del Sistema di Autenticazione**
 
