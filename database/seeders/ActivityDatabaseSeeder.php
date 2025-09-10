@@ -18,11 +18,17 @@ class ActivityDatabaseSeeder extends Seeder
 
         $this->call([
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
             \Database\Seeders\ActivitySeeder::class,
             \Database\Seeders\SnapshotSeeder::class,
             \Database\Seeders\StoredEventSeeder::class,
 >>>>>>> 51ad079 (.)
+=======
+            \Modules\Activity\Database\Seeders\ActivitySeeder::class,
+            \Modules\Activity\Database\Seeders\SnapshotSeeder::class,
+            \Modules\Activity\Database\Seeders\StoredEventSeeder::class,
+>>>>>>> c35e3bd (.)
         ]);
     }
 }
