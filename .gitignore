@@ -7,17 +7,26 @@
 *.lock
 *.cache
 *.phar
+<<<<<<< HEAD
 *.jar
 package-lock.json
 yarn-error.log
 npm-debug.log
 composer.lock
+=======
+package-lock.json
+yarn-error.log
+npm-debug.log
+>>>>>>> 39e4cff (.)
 .phpunit.result.cache
 .php-cs-fixer.cache
 
 # Log files
 *.log
+<<<<<<< HEAD
 error_log
+=======
+>>>>>>> 39e4cff (.)
 
 # Build directories
 /build/
@@ -34,20 +43,26 @@ public_html/hot
 storage/*.key
 .env
 
+<<<<<<< HEAD
 # Database directories
 database/Factories_
 database/Factories_old
 database/Migrations_old
 
+=======
+>>>>>>> 39e4cff (.)
 # Local configurations
 Homestead.yaml
 Homestead.json
 /.vagrant
 
+<<<<<<< HEAD
 # IDE specific
 /.idea
 .phpintel
 
+=======
+>>>>>>> 39e4cff (.)
 # Git specific
 .git-blame-ignore-revs
 .git-rewrite/
@@ -65,14 +80,26 @@ Homestead.json
 *.old1
 *.backup
 *.backup.*
+<<<<<<< HEAD
 *.bak
 *.new
+=======
+>>>>>>> 39e4cff (.)
 
 # Documentation and cache
 docs/phpstan/
 docs/cache/
 cache/
 
+<<<<<<< HEAD
 # Development tools
 .windsurf/
 .cursor/
+=======
+# Old directories
+resources/views/Components_old
+database/Migrations_old
+database/Seeders_old
+database/Factories_old
+database_old
+>>>>>>> 39e4cff (.)
