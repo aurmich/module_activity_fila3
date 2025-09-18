@@ -1,39 +1,33 @@
-# Dependencies and packages
+# 🔧 Activity Module .gitignore
+# File di configurazione per ignorare file e directory nel modulo Activity
+
+# 📦 Dipendenze e packages
 /vendor/
 /node_modules/
 /docs/vendor/
 
-# Lock files and cache
+# 🔒 Lock files e cache
 *.lock
 *.cache
 *.phar
-<<<<<<< HEAD
 *.jar
 package-lock.json
-yarn-error.log
-npm-debug.log
 composer.lock
-=======
-package-lock.json
 yarn-error.log
 npm-debug.log
->>>>>>> 39e4cff (.)
 .phpunit.result.cache
 .php-cs-fixer.cache
 
-# Log files
+# 📝 Log files
 *.log
-<<<<<<< HEAD
 error_log
-=======
->>>>>>> 39e4cff (.)
 
-# Build directories
+# 🏗️ Build directories
 /build/
 /build
 build/
 
-# Laravel specific
+# 📱 Laravel specifici
 bootstrap/compiled.php
 app/storage/
 public/storage
@@ -42,64 +36,56 @@ public_html/storage
 public_html/hot
 storage/*.key
 .env
+.env.*
 
-<<<<<<< HEAD
-# Database directories
-database/Factories_
+# 🗃️ Database directories
 database/Factories_old
 database/Migrations_old
+database/Seeders_old
+database_old
 
-=======
->>>>>>> 39e4cff (.)
-# Local configurations
+# ⚙️ Configurazioni locali
 Homestead.yaml
 Homestead.json
 /.vagrant
 
-<<<<<<< HEAD
-# IDE specific
+# 🛠️ IDE e editor
 /.idea
 .phpintel
+.vscode/
+*.swp
+*.swo
+*~
 
-=======
->>>>>>> 39e4cff (.)
-# Git specific
+# 🔄 Git specifici
 .git-blame-ignore-revs
 .git-rewrite/
 .git-rewrite
 
-# Temporary and system files
+# 🗂️ File temporanei e di sistema
 *.tmp
-*.swp
-*.swo
 *.stackdump
 *.exe
 *:Zone.Identifier
 .DS_Store
+Thumbs.db
+
+# 📋 Backup files
 *.old
 *.old1
 *.backup
 *.backup.*
-<<<<<<< HEAD
 *.bak
 *.new
-=======
->>>>>>> 39e4cff (.)
 
-# Documentation and cache
+# 📚 Documentation e cache
 docs/phpstan/
 docs/cache/
 cache/
 
-<<<<<<< HEAD
-# Development tools
+# 🎨 Risorse e componenti
+resources/views/Components_old
+
+# 🔧 Development tools
 .windsurf/
 .cursor/
-=======
-# Old directories
-resources/views/Components_old
-database/Migrations_old
-database/Seeders_old
-database/Factories_old
-database_old
->>>>>>> 39e4cff (.)
