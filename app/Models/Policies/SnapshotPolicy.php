@@ -12,9 +12,14 @@ use Modules\Xot\Contracts\UserContract;
 class SnapshotPolicy extends UserBasePolicy
 =======
 use Modules\Xot\Contracts\UserContract;
+use Modules\User\Models\Policies\UserBasePolicy;
 
+<<<<<<< HEAD
 class SnapshotPolicy extends ActivityBasePolicy
 >>>>>>> 2eb70e0 (.)
+=======
+class SnapshotPolicy extends UserBasePolicy
+>>>>>>> 1c3e476 (.)
 {
     /**
      * Determine whether the user can view any models.

@@ -12,9 +12,14 @@ use Modules\Xot\Contracts\UserContract;
 class ActivityPolicy extends UserBasePolicy
 =======
 use Modules\Xot\Contracts\UserContract;
+use Modules\User\Models\Policies\UserBasePolicy;
 
+<<<<<<< HEAD
 class ActivityPolicy extends ActivityBasePolicy
 >>>>>>> 2eb70e0 (.)
+=======
+class ActivityPolicy extends UserBasePolicy
+>>>>>>> 1c3e476 (.)
 {
     /**
      * Determine whether the user can view any models.

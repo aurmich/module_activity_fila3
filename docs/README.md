@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Modulo Activity - Documentazione Completa
 <<<<<<< HEAD
 # 📊 **Activity Module** - Sistema Avanzato di Audit e Logging
@@ -20,6 +19,7 @@
 ## Stato del Modulo
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 [![Quality Score](https://img.shields.io/badge/Quality%20Score-94%25-brightgreen.svg)](https://github.com/laraxot/activity-module)
 [![Quality Score](https://img.shields.io/badge/Quality%20Score-85%25-brightgreen.svg)](https://github.com/laraxot/activity-module)
 
@@ -37,9 +37,10 @@
 =======
 # Activity Module Documentation
 >>>>>>> 7c7f27a (.)
+=======
+>>>>>>> 1c3e476 (.)
 
-Business logic module providing domain-specific functionality.
->>>>>>> bfad114 (.)
+> **🚀 Modulo Activity**: Sistema completo per audit trail, event sourcing e logging avanzato con dashboard Filament e analytics in tempo reale.
 
 ## Quick Reference
 - **Domain Logic**: Core business rules and processes
