@@ -9,16 +9,26 @@ use Modules\Activity\Models\StoredEvent;
 
 /**
  * StoredEvent Factory
+<<<<<<< HEAD
  *
  * Factory for creating StoredEvent model instances for testing and seeding.
  *
+=======
+ * 
+ * Factory for creating StoredEvent model instances for testing and seeding.
+ * 
+>>>>>>> 2eb70e0 (.)
  * @extends Factory<StoredEvent>
  */
 class StoredEventFactory extends Factory
 {
     /**
      * The name of the factory's corresponding model.
+<<<<<<< HEAD
      *
+=======
+     * 
+>>>>>>> 2eb70e0 (.)
      * @var class-string<StoredEvent>
      */
     protected $model = StoredEvent::class;
@@ -65,7 +75,11 @@ class StoredEventFactory extends Factory
      */
     public function withUuid(string $uuid): static
     {
+<<<<<<< HEAD
         return $this->state(fn(array $_attributes): array => [
+=======
+        return $this->state(fn (array $attributes): array => [
+>>>>>>> 2eb70e0 (.)
             'aggregate_uuid' => $uuid,
         ]);
     }
@@ -78,7 +92,11 @@ class StoredEventFactory extends Factory
      */
     public function withVersion(int $version): static
     {
+<<<<<<< HEAD
         return $this->state(fn(array $_attributes): array => [
+=======
+        return $this->state(fn (array $attributes): array => [
+>>>>>>> 2eb70e0 (.)
             'aggregate_version' => $version,
         ]);
     }
@@ -91,7 +109,11 @@ class StoredEventFactory extends Factory
      */
     public function withEventClass(string $eventClass): static
     {
+<<<<<<< HEAD
         return $this->state(fn(array $_attributes): array => [
+=======
+        return $this->state(fn (array $attributes): array => [
+>>>>>>> 2eb70e0 (.)
             'event_class' => $eventClass,
         ]);
     }
@@ -103,6 +125,7 @@ class StoredEventFactory extends Factory
      */
     public function userEvent(): static
     {
+<<<<<<< HEAD
         return $this->state(fn(array $attributes): array => [
             'event_class' => 'App\\Events\\UserRegistered',
             'event_properties' => array_merge((array) ($attributes['event_properties'] ?? []), [
@@ -112,3 +135,17 @@ class StoredEventFactory extends Factory
         ]);
     }
 }
+=======
+        return $this->state(fn (array $attributes): array => [
+            'event_class' => 'App\\Events\\UserRegistered',
+            'event_properties' => array_merge(
+                (array) ($attributes['event_properties'] ?? []),
+                [
+                    'user_id' => $this->faker->numberBetween(1, 100),
+                    'action' => 'user_registered',
+                ]
+            ),
+        ]);
+    }
+}
+>>>>>>> 2eb70e0 (.)

@@ -11,9 +11,15 @@ class AdminPanelProvider extends XotBasePanelProvider
 {
     protected string $module = 'Activity';
 
+<<<<<<< HEAD
     #[\Override]
     public function panel(Panel $panel): Panel
     {
+=======
+    public function panel(Panel $panel): Panel
+    {
+
+>>>>>>> 2eb70e0 (.)
         $panel = parent::panel($panel);
 
         return $panel;

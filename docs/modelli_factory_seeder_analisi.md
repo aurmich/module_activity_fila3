@@ -139,7 +139,10 @@ Modulo specifico per Modena, attualmente non utilizzato attivamente.
 ## Riepilogo Generale
 
 ### Totale Modelli Analizzati
+<<<<<<< HEAD
 - **<nome progetto>**: 20 modelli attivi, 7 obsoleti
+=======
+>>>>>>> 2eb70e0 (.)
 - **SaluteOra**: 20 modelli attivi, 7 obsoleti
 - **User**: 35+ modelli attivi
 - **Geo**: 12 modelli attivi, 1 obsoleto
@@ -170,7 +173,10 @@ Modulo specifico per Modena, attualmente non utilizzato attivamente.
 4. **Documentazione**: Aggiornare documentazione moduli
 
 ### Moduli Critici per Business Logic
+<<<<<<< HEAD
 1. **<nome progetto>** - Core sanitario ✅ Completo
+=======
+>>>>>>> 2eb70e0 (.)
 1. **SaluteOra** - Core sanitario ✅ Completo
 2. **User** - Autenticazione ✅ Completo  
 3. **Notify** - Comunicazioni ✅ Completo
@@ -186,5 +192,8 @@ Modulo specifico per Modena, attualmente non utilizzato attivamente.
 6. **Xot** - Framework base ✅ Completo
 
 *Ultimo aggiornamento: Gennaio 2025*
+<<<<<<< HEAD
 *Analisi completa sistema <nome progetto>: 150+ modelli, 14 moduli*
+=======
+>>>>>>> 2eb70e0 (.)
 *Analisi completa sistema SaluteOra: 150+ modelli, 14 moduli*

@@ -16,6 +16,14 @@ class ActivityDatabaseSeeder extends Seeder
     {
         Model::unguard();
 
+<<<<<<< HEAD
         $this->call([]);
+=======
+        $this->call([
+            \Database\Seeders\ActivitySeeder::class,
+            \Database\Seeders\SnapshotSeeder::class,
+            \Database\Seeders\StoredEventSeeder::class,
+        ]);
+>>>>>>> 2eb70e0 (.)
     }
 }

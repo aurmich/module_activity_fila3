@@ -1,8 +1,11 @@
 <?php
 
+<<<<<<< HEAD
 declare(strict_types=1);
 
 
+=======
+>>>>>>> 2eb70e0 (.)
 namespace Modules\Activity\Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
@@ -28,4 +31,8 @@ class ActivityFactory extends Factory
             'updated_at' => $this->faker->dateTimeBetween('-1 year'),
         ];
     }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 2eb70e0 (.)

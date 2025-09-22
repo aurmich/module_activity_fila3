@@ -43,7 +43,10 @@ class ActivityServiceProvider extends XotBaseServiceProvider
      *
      * @return void
      */
+<<<<<<< HEAD
     #[\Override]
+=======
+>>>>>>> 2eb70e0 (.)
     public function boot(): void
     {
         parent::boot();
@@ -57,20 +60,39 @@ class ActivityServiceProvider extends XotBaseServiceProvider
      *
      * @return void
      */
+<<<<<<< HEAD
     
 
+=======
+    public function register(): void
+    {
+        parent::register();
+        // Additional register logic can be added here
+    }
+    
+>>>>>>> 2eb70e0 (.)
     /**
      * Registra le configurazioni del modulo.
      *
      * @return void
      */
+<<<<<<< HEAD
     #[\Override]
+=======
+>>>>>>> 2eb70e0 (.)
     protected function registerConfig(): void
     {
         $this->publishes([
             module_path($this->name, 'config/config.php') => config_path('activity.php'),
         ], 'config');
+<<<<<<< HEAD
 
         $this->mergeConfigFrom(module_path($this->name, 'config/config.php'), 'activity');
+=======
+        
+        $this->mergeConfigFrom(
+            module_path($this->name, 'config/config.php'), 'activity'
+        );
+>>>>>>> 2eb70e0 (.)
     }
 }

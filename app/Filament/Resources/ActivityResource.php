@@ -24,13 +24,18 @@ use Modules\Xot\Filament\Resources\XotBaseResource;
  */
 class ActivityResource extends XotBaseResource
 {
+<<<<<<< HEAD
     protected static null|string $model = Activity::class;
+=======
+    protected static ?string $model = Activity::class;
+>>>>>>> 2eb70e0 (.)
 
     /**
      * Define the form schema for the Activity resource.
      *
      * @return array<string, \Filament\Forms\Components\Component>
      */
+<<<<<<< HEAD
     #[\Override]
     public static function getFormSchema(): array
     {
@@ -43,6 +48,38 @@ class ActivityResource extends XotBaseResource
             'causer_id' => TextInput::make('causer_id')->numeric(),
             'properties' => KeyValue::make('properties')->columnSpanFull(),
             'batch_uuid' => TextInput::make('batch_uuid')->maxLength(36),
+=======
+    public static function getFormSchema(): array
+    {
+        return [
+            'log_name' => TextInput::make('log_name')
+                ->required()
+                ->maxLength(255),
+
+            'description' => TextInput::make('description')
+                ->required()
+                ->maxLength(255),
+
+            'subject_type' => TextInput::make('subject_type')
+                ->required()
+                ->maxLength(255),
+
+            'subject_id' => TextInput::make('subject_id')
+                ->numeric()
+                ->required(),
+
+            'causer_type' => TextInput::make('causer_type')
+                ->maxLength(255),
+
+            'causer_id' => TextInput::make('causer_id')
+                ->numeric(),
+
+            'properties' => KeyValue::make('properties')
+                ->columnSpanFull(),
+
+            'batch_uuid' => TextInput::make('batch_uuid')
+                ->maxLength(36),
+>>>>>>> 2eb70e0 (.)
         ];
     }
 }

@@ -7,7 +7,11 @@ use Modules\Activity\Models\Snapshot;
 describe('Snapshot Business Logic', function () {
     test('snapshot has correct connection configured', function () {
         $snapshot = new Snapshot();
+<<<<<<< HEAD
 
+=======
+        
+>>>>>>> 2eb70e0 (.)
         expect($snapshot->getConnectionName())->toBe('activity');
     });
 
@@ -19,9 +23,15 @@ describe('Snapshot Business Logic', function () {
             'aggregate_version',
             'state',
             'created_at',
+<<<<<<< HEAD
             'updated_at',
         ];
 
+=======
+            'updated_at'
+        ];
+        
+>>>>>>> 2eb70e0 (.)
         expect($snapshot->getFillable())->toEqual($expectedFillable);
     });
 
@@ -31,7 +41,11 @@ describe('Snapshot Business Logic', function () {
 
     test('snapshot has factory trait for testing', function () {
         $traits = class_uses(Snapshot::class);
+<<<<<<< HEAD
 
+=======
+        
+>>>>>>> 2eb70e0 (.)
         expect($traits)->toHaveKey(\Illuminate\Database\Eloquent\Factories\HasFactory::class);
     });
 
@@ -42,4 +56,8 @@ describe('Snapshot Business Logic', function () {
     test('snapshot can query by aggregate version', function () {
         expect(method_exists(Snapshot::class, 'whereAggregateVersion'))->toBeTrue();
     });
+<<<<<<< HEAD
 });
+=======
+});
+>>>>>>> 2eb70e0 (.)

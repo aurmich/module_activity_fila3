@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 # Struttura Corretta dei Test di Login - Analisi Completa 
+=======
+>>>>>>> 2eb70e0 (.)
 # Struttura Corretta dei Test di Login - Analisi Completa SaluteOra
 
 ## 🎯 **Struttura del Sistema di Autenticazione**
