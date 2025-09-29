@@ -1,15 +1,22 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 5fea3d40 (.)
 # 🔧 Activity Module .gitignore
 # File di configurazione per ignorare file e directory nel modulo Activity
 
 # 📦 Dipendenze e packages
+<<<<<<< HEAD
 =======
 # Dependencies and packages
 >>>>>>> 2eb70e0 (.)
+=======
+>>>>>>> 5fea3d40 (.)
 /vendor/
 /node_modules/
 /docs/vendor/
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 # 🔒 Lock files e cache
 *.lock
@@ -20,16 +27,25 @@ package-lock.json
 composer.lock
 =======
 # Lock files and cache
+=======
+# 🔒 Lock files e cache
+>>>>>>> 5fea3d40 (.)
 *.lock
 *.cache
 *.phar
+*.jar
 package-lock.json
+<<<<<<< HEAD
 >>>>>>> 2eb70e0 (.)
+=======
+composer.lock
+>>>>>>> 5fea3d40 (.)
 yarn-error.log
 npm-debug.log
 .phpunit.result.cache
 .php-cs-fixer.cache
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 # 📝 Log files
 *.log
@@ -38,19 +54,31 @@ error_log
 # 🏗️ Build directories
 =======
 # Log files
+=======
+# 📝 Log files
+>>>>>>> 5fea3d40 (.)
 *.log
+error_log
 
+<<<<<<< HEAD
 # Build directories
 >>>>>>> 2eb70e0 (.)
+=======
+# 🏗️ Build directories
+>>>>>>> 5fea3d40 (.)
 /build/
 /build
 build/
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 # 📱 Laravel specifici
 =======
 # Laravel specific
 >>>>>>> 2eb70e0 (.)
+=======
+# 📱 Laravel specifici
+>>>>>>> 5fea3d40 (.)
 bootstrap/compiled.php
 app/storage/
 public/storage
@@ -59,6 +87,7 @@ public_html/storage
 public_html/hot
 storage/*.key
 .env
+<<<<<<< HEAD
 <<<<<<< HEAD
 .env.*
 
@@ -73,11 +102,25 @@ database_old
 
 # Local configurations
 >>>>>>> 2eb70e0 (.)
+=======
+.env.*
+
+# 🗃️ Database directories
+database/Factories_old
+database/Migrations_old
+database/Seeders_old
+database_old
+
+# ⚙️ Configurazioni locali
+>>>>>>> 5fea3d40 (.)
 Homestead.yaml
 Homestead.json
 /.vagrant
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 5fea3d40 (.)
 # 🛠️ IDE e editor
 /.idea
 .phpintel
@@ -87,13 +130,17 @@ Homestead.json
 *~
 
 # 🔄 Git specifici
+<<<<<<< HEAD
 =======
 # Git specific
 >>>>>>> 2eb70e0 (.)
+=======
+>>>>>>> 5fea3d40 (.)
 .git-blame-ignore-revs
 .git-rewrite/
 .git-rewrite
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 # 🗂️ File temporanei e di sistema
 *.tmp
@@ -103,20 +150,31 @@ Homestead.json
 *.swp
 *.swo
 >>>>>>> 2eb70e0 (.)
+=======
+# 🗂️ File temporanei e di sistema
+*.tmp
+>>>>>>> 5fea3d40 (.)
 *.stackdump
 *.exe
 *:Zone.Identifier
 .DS_Store
+<<<<<<< HEAD
 <<<<<<< HEAD
 Thumbs.db
 
 # 📋 Backup files
 =======
 >>>>>>> 2eb70e0 (.)
+=======
+Thumbs.db
+
+# 📋 Backup files
+>>>>>>> 5fea3d40 (.)
 *.old
 *.old1
 *.backup
 *.backup.*
+<<<<<<< HEAD
 <<<<<<< HEAD
 *.bak
 *.new
@@ -138,9 +196,23 @@ resources/views/Components_old
 laravel
 public_html
 =======
+=======
+*.bak
+*.new
+>>>>>>> 5fea3d40 (.)
 
-# Documentation and cache
+# 📚 Documentation e cache
 docs/phpstan/
 docs/cache/
 cache/
+<<<<<<< HEAD
 >>>>>>> 2eb70e0 (.)
+=======
+
+# 🎨 Risorse e componenti
+resources/views/Components_old
+
+# 🔧 Development tools
+.windsurf/
+.cursor/
+>>>>>>> 5fea3d40 (.)
