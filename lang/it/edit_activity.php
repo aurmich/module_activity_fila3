@@ -1,23 +1,5 @@
 <?php
 
-<<<<<<< HEAD
-declare(strict_types=1);
-
-
-return [
-    'actions' => [
-        'delete' => [
-            'label' => 'delete',
-        ],
-        'save' => [
-            'label' => 'save',
-        ],
-        'cancel' => [
-            'label' => 'cancel',
-        ],
-    ],
-];
-=======
 return array (
   'actions' => 
   array (
@@ -35,4 +17,3 @@ return array (
     ),
   ),
 );
->>>>>>> 2eb70e0 (.)

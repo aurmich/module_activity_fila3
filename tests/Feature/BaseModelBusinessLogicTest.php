@@ -4,19 +4,11 @@ declare(strict_types=1);
 
 namespace Modules\Activity\Tests\Feature;
 
-<<<<<<< HEAD
-use Illuminate\Foundation\Testing\RefreshDatabase;
-use Illuminate\Support\Carbon;
-use Illuminate\Support\Str;
-use Modules\Activity\Models\BaseModel;
-use Tests\TestCase;
-=======
 use Modules\Activity\Models\BaseModel;
 use Tests\TestCase;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Str;
->>>>>>> 2eb70e0 (.)
 
 class BaseModelBusinessLogicTest extends TestCase
 {
@@ -28,11 +20,7 @@ class BaseModelBusinessLogicTest extends TestCase
         // Creiamo una classe concreta che estende BaseModel per i test
         $concreteModel = new class extends BaseModel {
             protected $table = 'test_models';
-<<<<<<< HEAD
-
-=======
             
->>>>>>> 2eb70e0 (.)
             /** @var list<string> */
             protected $fillable = ['name', 'value'];
         };
@@ -102,33 +90,6 @@ class BaseModelBusinessLogicTest extends TestCase
         };
 
         $casts = $concreteModel->getCasts();
-<<<<<<< HEAD
-
-        $this->assertArrayHasKey('id', $casts);
-        $this->assertEquals('string', $casts['id']);
-
-        $this->assertArrayHasKey('uuid', $casts);
-        $this->assertEquals('string', $casts['uuid']);
-
-        $this->assertArrayHasKey('created_at', $casts);
-        $this->assertEquals('datetime', $casts['created_at']);
-
-        $this->assertArrayHasKey('updated_at', $casts);
-        $this->assertEquals('datetime', $casts['updated_at']);
-
-        $this->assertArrayHasKey('deleted_at', $casts);
-        $this->assertEquals('datetime', $casts['deleted_at']);
-
-        $this->assertArrayHasKey('updated_by', $casts);
-        $this->assertEquals('string', $casts['updated_by']);
-
-        $this->assertArrayHasKey('created_by', $casts);
-        $this->assertEquals('string', $casts['created_by']);
-
-        $this->assertArrayHasKey('deleted_by', $casts);
-        $this->assertEquals('string', $casts['deleted_by']);
-
-=======
         
         $this->assertArrayHasKey('id', $casts);
         $this->assertEquals('string', $casts['id']);
@@ -154,7 +115,6 @@ class BaseModelBusinessLogicTest extends TestCase
         $this->assertArrayHasKey('deleted_by', $casts);
         $this->assertEquals('string', $casts['deleted_by']);
         
->>>>>>> 2eb70e0 (.)
         $this->assertArrayHasKey('published_at', $casts);
         $this->assertEquals('datetime', $casts['published_at']);
     }
@@ -164,11 +124,7 @@ class BaseModelBusinessLogicTest extends TestCase
     {
         $concreteModel = new class extends BaseModel {
             protected $table = 'test_models';
-<<<<<<< HEAD
-
-=======
             
->>>>>>> 2eb70e0 (.)
             /** @var list<string> */
             protected $fillable = ['name', 'value'];
         };
@@ -204,11 +160,7 @@ class BaseModelBusinessLogicTest extends TestCase
     {
         $concreteModel = new class extends BaseModel {
             protected $table = 'test_models';
-<<<<<<< HEAD
-
-=======
             
->>>>>>> 2eb70e0 (.)
             /** @var list<string> */
             protected $fillable = ['uuid', 'name'];
         };
@@ -226,11 +178,7 @@ class BaseModelBusinessLogicTest extends TestCase
     {
         $concreteModel = new class extends BaseModel {
             protected $table = 'test_models';
-<<<<<<< HEAD
-
-=======
             
->>>>>>> 2eb70e0 (.)
             /** @var list<string> */
             protected $fillable = ['name'];
         };
@@ -248,11 +196,7 @@ class BaseModelBusinessLogicTest extends TestCase
     {
         $concreteModel = new class extends BaseModel {
             protected $table = 'test_models';
-<<<<<<< HEAD
-
-=======
             
->>>>>>> 2eb70e0 (.)
             /** @var list<string> */
             protected $fillable = ['name'];
         };
@@ -268,11 +212,7 @@ class BaseModelBusinessLogicTest extends TestCase
     {
         $concreteModel = new class extends BaseModel {
             protected $table = 'test_models';
-<<<<<<< HEAD
-
-=======
             
->>>>>>> 2eb70e0 (.)
             /** @var list<string> */
             protected $fillable = ['name'];
         };
@@ -288,11 +228,7 @@ class BaseModelBusinessLogicTest extends TestCase
     {
         $concreteModel = new class extends BaseModel {
             protected $table = 'test_models';
-<<<<<<< HEAD
-
-=======
             
->>>>>>> 2eb70e0 (.)
             /** @var list<string> */
             protected $fillable = ['name'];
         };
@@ -314,11 +250,7 @@ class BaseModelBusinessLogicTest extends TestCase
         };
 
         $hidden = $concreteModel->getHidden();
-<<<<<<< HEAD
-
-=======
         
->>>>>>> 2eb70e0 (.)
         // Verifica che gli attributi nascosti siano configurati correttamente
         $this->assertIsArray($hidden);
         // Nota: il BaseModel ha un array vuoto per $hidden, quindi non dovrebbe contenere 'password'
@@ -367,11 +299,7 @@ class BaseModelBusinessLogicTest extends TestCase
 
         $this->assertTrue($concreteModel->usesTimestamps());
         $this->assertTrue($concreteModel->timestamps);
-<<<<<<< HEAD
-
-=======
         
->>>>>>> 2eb70e0 (.)
         $this->assertEquals('created_at', $concreteModel->getCreatedAtColumn());
         $this->assertEquals('updated_at', $concreteModel->getUpdatedAtColumn());
     }
@@ -384,11 +312,7 @@ class BaseModelBusinessLogicTest extends TestCase
         };
 
         $this->assertEquals(30, $concreteModel->getPerPage());
-<<<<<<< HEAD
-
-=======
         
->>>>>>> 2eb70e0 (.)
         // Test setPerPage
         $concreteModel->setPerPage(50);
         $this->assertEquals(50, $concreteModel->getPerPage());
@@ -402,19 +326,11 @@ class BaseModelBusinessLogicTest extends TestCase
         };
 
         $this->assertTrue($concreteModel::$snakeAttributes);
-<<<<<<< HEAD
-
-        // Test setSnakeAttributes
-        $concreteModel::$snakeAttributes = false;
-        $this->assertFalse($concreteModel::$snakeAttributes);
-
-=======
         
         // Test setSnakeAttributes
         $concreteModel::$snakeAttributes = false;
         $this->assertFalse($concreteModel::$snakeAttributes);
         
->>>>>>> 2eb70e0 (.)
         // Ripristina il valore originale
         $concreteModel::$snakeAttributes = true;
         $this->assertTrue($concreteModel::$snakeAttributes);
@@ -432,11 +348,7 @@ class BaseModelBusinessLogicTest extends TestCase
         $this->assertArrayHasKey('id', $casts);
         $this->assertArrayHasKey('created_at', $casts);
         $this->assertArrayHasKey('updated_at', $casts);
-<<<<<<< HEAD
-
-=======
         
->>>>>>> 2eb70e0 (.)
         // Test setCasts
         $newCasts = ['test_field' => 'string'];
         $concreteModel->setCasts($newCasts);
@@ -448,11 +360,7 @@ class BaseModelBusinessLogicTest extends TestCase
     {
         $concreteModel = new class extends BaseModel {
             protected $table = 'test_models';
-<<<<<<< HEAD
-
-=======
             
->>>>>>> 2eb70e0 (.)
             /** @var list<string> */
             protected $fillable = ['name', 'value'];
         };
@@ -461,11 +369,7 @@ class BaseModelBusinessLogicTest extends TestCase
         $this->assertIsArray($fillable);
         $this->assertContains('name', $fillable);
         $this->assertContains('value', $fillable);
-<<<<<<< HEAD
-
-=======
         
->>>>>>> 2eb70e0 (.)
         // Test setFillable
         $newFillable = ['new_field'];
         $concreteModel->setFillable($newFillable);
@@ -477,11 +381,7 @@ class BaseModelBusinessLogicTest extends TestCase
     {
         $concreteModel = new class extends BaseModel {
             protected $table = 'test_models';
-<<<<<<< HEAD
-
-=======
             
->>>>>>> 2eb70e0 (.)
             /** @var list<string> */
             protected $hidden = ['secret_field'];
         };
@@ -489,11 +389,7 @@ class BaseModelBusinessLogicTest extends TestCase
         $hidden = $concreteModel->getHidden();
         $this->assertIsArray($hidden);
         $this->assertContains('secret_field', $hidden);
-<<<<<<< HEAD
-
-=======
         
->>>>>>> 2eb70e0 (.)
         // Test setHidden
         $newHidden = ['new_secret'];
         $concreteModel->setHidden($newHidden);

@@ -9,26 +9,16 @@ use Modules\Activity\Models\Snapshot;
 
 /**
  * Snapshot Factory
-<<<<<<< HEAD
- *
- * Factory for creating Snapshot model instances for testing and seeding.
- *
-=======
  * 
  * Factory for creating Snapshot model instances for testing and seeding.
  * 
->>>>>>> 2eb70e0 (.)
  * @extends Factory<Snapshot>
  */
 class SnapshotFactory extends Factory
 {
     /**
      * The name of the factory's corresponding model.
-<<<<<<< HEAD
-     *
-=======
      * 
->>>>>>> 2eb70e0 (.)
      * @var class-string<Snapshot>
      */
     protected $model = Snapshot::class;
@@ -62,11 +52,7 @@ class SnapshotFactory extends Factory
      */
     public function withUuid(string $uuid): static
     {
-<<<<<<< HEAD
-        return $this->state(fn(array $_attributes): array => [
-=======
         return $this->state(fn (array $attributes): array => [
->>>>>>> 2eb70e0 (.)
             'aggregate_uuid' => $uuid,
         ]);
     }
@@ -79,11 +65,7 @@ class SnapshotFactory extends Factory
      */
     public function withVersion(int $version): static
     {
-<<<<<<< HEAD
-        return $this->state(fn(array $_attributes): array => [
-=======
         return $this->state(fn (array $attributes): array => [
->>>>>>> 2eb70e0 (.)
             'aggregate_version' => $version,
         ]);
     }
@@ -96,16 +78,8 @@ class SnapshotFactory extends Factory
      */
     public function withState(array $state): static
     {
-<<<<<<< HEAD
-        return $this->state(fn(array $_attributes): array => [
-            'state' => $state,
-        ]);
-    }
-}
-=======
         return $this->state(fn (array $attributes): array => [
             'state' => $state,
         ]);
     }
 }
->>>>>>> 2eb70e0 (.)

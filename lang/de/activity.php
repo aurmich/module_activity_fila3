@@ -1,11 +1,5 @@
 <?php
 
-<<<<<<< HEAD
-declare(strict_types=1);
-
-
-=======
->>>>>>> 2eb70e0 (.)
 return [
     'navigation' => [
         'name' => 'Aktivität',

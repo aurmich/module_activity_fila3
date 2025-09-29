@@ -7,21 +7,13 @@ use Modules\Activity\Models\StoredEvent;
 describe('StoredEvent Business Logic', function () {
     test('stored event has correct connection configured', function () {
         $storedEvent = new StoredEvent();
-<<<<<<< HEAD
-
-=======
         
->>>>>>> 2eb70e0 (.)
         expect($storedEvent->getConnectionName())->toBe('activity');
     });
 
     test('stored event has correct table configured', function () {
         $storedEvent = new StoredEvent();
-<<<<<<< HEAD
-
-=======
         
->>>>>>> 2eb70e0 (.)
         expect($storedEvent->getTable())->toBe('stored_events');
     });
 
@@ -39,32 +31,17 @@ describe('StoredEvent Business Logic', function () {
             'updated_by',
             'created_by',
         ];
-<<<<<<< HEAD
-
-=======
         
->>>>>>> 2eb70e0 (.)
         expect($storedEvent->getFillable())->toEqual($expectedFillable);
     });
 
     test('stored event extends eloquent stored event for event sourcing', function () {
-<<<<<<< HEAD
-        expect(is_subclass_of(
-            StoredEvent::class,
-            \Spatie\EventSourcing\StoredEvents\Models\EloquentStoredEvent::class,
-        ))->toBeTrue();
-=======
         expect(is_subclass_of(StoredEvent::class, \Spatie\EventSourcing\StoredEvents\Models\EloquentStoredEvent::class))->toBeTrue();
->>>>>>> 2eb70e0 (.)
     });
 
     test('stored event has factory trait for testing', function () {
         $traits = class_uses(StoredEvent::class);
-<<<<<<< HEAD
-
-=======
         
->>>>>>> 2eb70e0 (.)
         expect($traits)->toHaveKey(\Illuminate\Database\Eloquent\Factories\HasFactory::class);
     });
 
@@ -79,8 +56,4 @@ describe('StoredEvent Business Logic', function () {
     test('stored event has where event scope method', function () {
         expect(method_exists(StoredEvent::class, 'scopeWhereEvent'))->toBeTrue();
     });
-<<<<<<< HEAD
 });
-=======
-});
->>>>>>> 2eb70e0 (.)

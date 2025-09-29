@@ -5,12 +5,8 @@ declare(strict_types=1);
 use Illuminate\Database\Schema\Blueprint;
 use Modules\Xot\Database\Migrations\XotBaseMigration;
 
-<<<<<<< HEAD
-return new class extends XotBaseMigration {
-=======
 return new class extends XotBaseMigration
 {
->>>>>>> 2eb70e0 (.)
     public function up(): void
     {
         $this->tableCreate(
@@ -27,11 +23,7 @@ return new class extends XotBaseMigration
                 $table->index('log_name');
                 $table->uuid('batch_uuid')->nullable();
                 $table->string('event')->nullable();
-<<<<<<< HEAD
-            },
-=======
             }
->>>>>>> 2eb70e0 (.)
         );
 
         $this->tableUpdate(
@@ -44,11 +36,7 @@ return new class extends XotBaseMigration
                     $table->string('causer_id')->nullable()->change();
                 }
                 $this->updateTimestamps($table, true);
-<<<<<<< HEAD
-            },
-=======
             }
->>>>>>> 2eb70e0 (.)
         );
     }
 };

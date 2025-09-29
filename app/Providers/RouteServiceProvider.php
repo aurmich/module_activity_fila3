@@ -13,11 +13,7 @@ use Modules\Xot\Providers\XotBaseRouteServiceProvider;
  */
 class RouteServiceProvider extends XotBaseRouteServiceProvider
 {
-<<<<<<< HEAD
-    /**
-=======
    /**
->>>>>>> 2eb70e0 (.)
      * The module namespace to assume when generating URLs to actions.
      */
     protected string $moduleNamespace = 'Modules\Activity\Http\Controllers';

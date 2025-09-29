@@ -1,12 +1,9 @@
 # Modulo Activity - Documentazione Completa
-<<<<<<< HEAD
 # 📊 **Activity Module** - Sistema Avanzato di Audit e Logging
 # Modulo Activity - Documentazione Completa
 # Modulo Activity - Documentazione Completa
 # 📊 **Activity Module** - Sistema Avanzato di Audit e Logging
 # Modulo Activity - Documentazione Completa
-=======
->>>>>>> 2eb70e0 (.)
 
 [![Laravel 12.x](https://img.shields.io/badge/Laravel-12.x-red.svg)](https://laravel.com/)
 [![Filament 3.x](https://img.shields.io/badge/Filament-3.x-blue.svg)](https://filamentphp.com/)
@@ -17,9 +14,6 @@
 [![Quality Score](https://img.shields.io/badge/Quality%20Score-85%25-brightgreen.svg)](https://github.com/laraxot/activity-module)
 
 ## Stato del Modulo
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 [![Quality Score](https://img.shields.io/badge/Quality%20Score-94%25-brightgreen.svg)](https://github.com/laraxot/activity-module)
 [![Quality Score](https://img.shields.io/badge/Quality%20Score-85%25-brightgreen.svg)](https://github.com/laraxot/activity-module)
 
@@ -31,14 +25,7 @@
 [![Quality Score](https://img.shields.io/badge/Quality%20Score-85%25-brightgreen.svg)](https://github.com/laraxot/activity-module)
 
 ## Stato del Modulo
-=======
->>>>>>> 2eb70e0 (.)
-=======
-=======
 # Activity Module Documentation
->>>>>>> 7c7f27a (.)
-=======
->>>>>>> 1c3e476 (.)
 
 > **🚀 Modulo Activity**: Sistema completo per audit trail, event sourcing e logging avanzato con dashboard Filament e analytics in tempo reale.
 

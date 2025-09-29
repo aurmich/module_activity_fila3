@@ -5,20 +5,13 @@ declare(strict_types=1);
 namespace Modules\Activity\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
-<<<<<<< HEAD
-=======
 
->>>>>>> 2eb70e0 (.)
 use Spatie\EventSourcing\StoredEvents\Models\EloquentStoredEvent;
 use Spatie\EventSourcing\StoredEvents\Models\EloquentStoredEvent as SpatieStoredEvent;
 
 /**
  * Class StoredEvent.
-<<<<<<< HEAD
- *
-=======
  * 
->>>>>>> 2eb70e0 (.)
  * Represents a stored event in the activity module.
  *
  * @property int $id
@@ -61,11 +54,7 @@ use Spatie\EventSourcing\StoredEvents\Models\EloquentStoredEvent as SpatieStored
 class StoredEvent extends SpatieStoredEvent
 {
     use HasFactory;
-<<<<<<< HEAD
-
-=======
     
->>>>>>> 2eb70e0 (.)
     /** @var string */
     protected $connection = 'activity';
     /** @var string */
@@ -84,8 +73,5 @@ class StoredEvent extends SpatieStoredEvent
         'updated_by',
         'created_by',
     ];
-<<<<<<< HEAD
-=======
 
->>>>>>> 2eb70e0 (.)
 }

@@ -11,30 +11,6 @@ use Modules\Xot\Filament\Resources\XotBaseResource;
 
 class StoredEventResource extends XotBaseResource
 {
-<<<<<<< HEAD
-    protected static null|string $model = StoredEvent::class;
-
-    #[\Override]
-    public static function getFormSchema(): array
-    {
-        return [
-            'event_class' => Forms\Components\TextInput::make('event_class')->required()->maxLength(255),
-            'event_properties' => Forms\Components\KeyValue::make('event_properties')->columnSpanFull(),
-            'aggregate_uuid' => Forms\Components\TextInput::make('aggregate_uuid')->maxLength(36),
-            'aggregate_version' => Forms\Components\TextInput::make('aggregate_version')->numeric(),
-            'meta_data' => Forms\Components\Textarea::make('meta_data')->columnSpanFull(),
-            'created_at' => Forms\Components\DateTimePicker::make('created_at')->required(),
-        ];
-    }
-
-    #[\Override]
-    public static function getRelations(): array
-    {
-        return [];
-    }
-
-    #[\Override]
-=======
     protected static ?string $model = StoredEvent::class;
 
     public static function getFormSchema(): array
@@ -67,7 +43,6 @@ class StoredEventResource extends XotBaseResource
         ];
     }
 
->>>>>>> 2eb70e0 (.)
     public static function getPages(): array
     {
         return [

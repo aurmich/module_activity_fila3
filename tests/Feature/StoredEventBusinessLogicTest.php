@@ -4,19 +4,11 @@ declare(strict_types=1);
 
 namespace Modules\Activity\Tests\Feature;
 
-<<<<<<< HEAD
-use Illuminate\Foundation\Testing\RefreshDatabase;
-use Illuminate\Support\Carbon;
-use Illuminate\Support\Str;
-use Modules\Activity\Models\StoredEvent;
-use Tests\TestCase;
-=======
 use Modules\Activity\Models\StoredEvent;
 use Tests\TestCase;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Str;
->>>>>>> 2eb70e0 (.)
 
 class StoredEventBusinessLogicTest extends TestCase
 {
@@ -430,11 +422,7 @@ class StoredEventBusinessLogicTest extends TestCase
     public function it_can_handle_event_with_timestamps(): void
     {
         $now = now();
-<<<<<<< HEAD
-
-=======
         
->>>>>>> 2eb70e0 (.)
         $storedEvent = StoredEvent::create([
             'aggregate_uuid' => Str::uuid()->toString(),
             'aggregate_version' => 1,
